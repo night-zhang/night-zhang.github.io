@@ -1,7 +1,10 @@
 ---
 title: VxWorks操作系统简介
 date: 2019-07-25 10:34:49
-tags: 固件分析,VxWorks
+categories:
+- 固件分析
+tags:
+- VxWorks
 ---
 # 前言
 近期在做固件分析的相关知识，由于不明白VxWorks系统不了解，所以想先从正向了解一下系统的基础知识再进行逆向分析。

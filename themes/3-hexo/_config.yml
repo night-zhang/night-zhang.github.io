@@ -194,7 +194,7 @@ mathjax:
 
 ##########评论设置#############
 comment:
-  on: false
+  on: true
   type: gitalk  # 评论系统：gitalk、disqus、gentie、gitment,注意：使用时，在下方对应位置进行配置
   comment_count: true  # 文章标题下方显示评论数
   preload_comment: false  # 预加载评论区
@@ -216,12 +216,12 @@ gentie:
 gitalk:
   githubID: night-zhang
   repo: night-zhang.github.io
-  ClientID:
-  ClientSecret:
+  ClientID: 13f89acfe465630b6c09
+  ClientSecret: 5f93ec2a657b86b36e0b54b3beff39fde093a989
   adminUser: night-zhang
   distractionFreeMode: true
   language: zh-CN
-  perPage: 10
+  perPage: 20
 # gitalk：利用github issue制作的第三方聊天插件
 # https://github.com/gitalk/gitalk
 # 参数介绍：
