@@ -8,13 +8,19 @@
       <link href="/2019/07/25/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
       <url>/2019/07/25/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
       
-        <content type="html"><![CDATA[<h1 id="OSS-（操作支持子系统）"><a href="#OSS-（操作支持子系统）" class="headerlink" title="OSS （操作支持子系统）"></a>OSS （操作支持子系统）</h1><blockquote><p>OSS是一种操作支持子系统。操作支持子系统（OSS）需完成许多任务，包括移动用户管理、移动设备管理以及网路操作和维护。</p></blockquote><h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h1><blockquote><p>不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序。</p></blockquote><blockquote><p>最常见的有两种：<br>1． Little-endian：将低序字节存储在起始地址（低位编址）<br>2． Big-endian：将高序字节存储在起始地址（高位编址）</p></blockquote><blockquote><p>LE（little-endian）：<br>最符合人的思维的字节序：地址低位存储值的低位，地址高位存储值的高位。<br>怎么讲是最符合人的思维的字节序，是因为从人的第一观感来说：低位值小，就应该放在内存地址小的地方，也即内存地址低位；反之，高位值就应该放在内存地址大的地方，也即内存地址高位</p></blockquote><blockquote><p>BE（big-endian）：<br>最直观的字节序：地址低位存储值的高位，地址高位存储值的低位。<br>为什么说直观，不要考虑对应关系：只需要把内存地址从左到右按照由低到高的顺序写出，把值按照通常的高位到低位的顺序写出；两者对照，一个字节一个字节的填充进去</p></blockquote><p>例子：如果我们将0x1234abcd写入到以0x0000开始的内存中，则结果为<br>内存 big-endian    little-endian<br>0x0000    0x12    0xcd<br>0x0001    0x34    0xab<br>0x0002    0xab    0x34<br>0x0003    0xcd    0x12</p><p>x86系列的CPU都是little-endian的字节序。</p><h1 id="BSS端"><a href="#BSS端" class="headerlink" title="BSS端"></a>BSS端</h1><blockquote><p>BSS（Block Started by Symbol）通常是指用来存放程序中未初始化的全局变量和静态变量的一块内存区域。特点是:可读写的，在程序执行之前BSS段会自动清0。所以，未初始的全局变量在程序执行之前已经成0了。</p></blockquote><ul><li>存放全局、静态变量</li><li>执行之前为0<blockquote><p>扩展：可执行程序包括BSS段、数据段（data段）、代码段（也称文本段text段）。</p></blockquote></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="OSS-（操作支持子系统）"><a href="#OSS-（操作支持子系统）" class="headerlink" title="OSS （操作支持子系统）"></a>OSS （操作支持子系统）</h1><blockquote><p>OSS是一种操作支持子系统。操作支持子系统（OSS）需完成许多任务，包括移动用户管理、移动设备管理以及网路操作和维护。</p></blockquote><h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h1><blockquote><p>不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序。</p></blockquote><blockquote><p>最常见的有两种：<br>1． Little-endian：将低序字节存储在起始地址（低位编址）<br>2． Big-endian：将高序字节存储在起始地址（高位编址）</p></blockquote><blockquote><p>LE（little-endian）：<br>最符合人的思维的字节序：地址低位存储值的低位，地址高位存储值的高位。<br>怎么讲是最符合人的思维的字节序，是因为从人的第一观感来说：低位值小，就应该放在内存地址小的地方，也即内存地址低位；反之，高位值就应该放在内存地址大的地方，也即内存地址高位</p></blockquote><blockquote><p>BE（big-endian）：<br>最直观的字节序：地址低位存储值的高位，地址高位存储值的低位。<br>为什么说直观，不要考虑对应关系：只需要把内存地址从左到右按照由低到高的顺序写出，把值按照通常的高位到低位的顺序写出；两者对照，一个字节一个字节的填充进去</p></blockquote><p>例子：如果我们将0x1234abcd写入到以0x0000开始的内存中，则结果为<br>内存 big-endian    little-endian<br>0x0000    0x12    0xcd<br>0x0001    0x34    0xab<br>0x0002    0xab    0x34<br>0x0003    0xcd    0x12</p><p>x86系列的CPU都是little-endian的字节序。</p><h1 id="BSS端"><a href="#BSS端" class="headerlink" title="BSS端"></a>BSS端</h1><blockquote><p>BSS（Block Started by Symbol）通常是指用来存放程序中未初始化的全局变量和静态变量的一块内存区域。特点是:可读写的，在程序执行之前BSS段会自动清0。所以，未初始的全局变量在程序执行之前已经成0了。</p></blockquote><ul><li>存放全局、静态变量</li><li>执行之前为0</li></ul><blockquote><p>扩展：可执行程序包括BSS段、数据段（data段）、代码段（也称文本段text段）。</p></blockquote>]]></content>
       
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> 笔记 </tag>
+            <tag> 名词 </tag>
             
         </tags>
       
@@ -30,10 +36,16 @@
         <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>近期在做固件分析的相关知识，由于不明白VxWorks系统不了解，所以想先从正向了解一下系统的基础知识再进行逆向分析。</p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote><p>VxWorks 是美国 Wind River System 公司（ 简称风河 公司 ，即 WRS 公司）推出的一个==实时操作系统==。</p></blockquote><blockquote><p>VxWorks操作系统由以下5部分构成：板级支持包BSP、微内核wind、网络系统、文件系统以及I/O系统</p></blockquote><blockquote><p>实时多任务操作系统是能在确定的时间内执行其功能，并对外部的异步事件作出响应的计算机系统</p></blockquote><h1 id="BSP"><a href="#BSP" class="headerlink" title="BSP"></a>BSP</h1><h2 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h2><blockquote><p>BSP(Borad Support Packet),板级支持包对单板的硬件功能提供了统一的==软件接口==，它包括硬件初始化、中断的产生和处理、硬件时钟和计时器管理、内存地址映射、内存分配等等。每个板级支持包括一个 ROM 启动（Boot ROM）或其它启动机制。<br>板级支持包（BSP）（Board Support Package）是介于主板硬件和操作系统中驱动层程序之间的一层，一般认为它属于操作系统一部分，主要是实现对操作系统的支持，==为上层的驱动程序提供访问硬件设备寄存器的函数包==，使之能够更好的运行于硬件主板。在嵌入式系统软件的组成中，就有BSP。BSP是相对于操作系统而言的，不同的操作系统对应于不同定义形式的BSP,例如VxWorks的BSP和Linux的BSP相对于某一CPU来说尽管实现的功能一样，可是写法和接口定义是完全不同的，所以写BSP一定要按照该系统BSP的定义形式来写（BSP的编程过程大多数是在某一个成型的BSP模板上进行修改）。这样才能与上层OS保持正确的接口，良好的支持上层OS。 ——百度百科</p></blockquote><p><strong>也就是说，可以简单的理解为操作系统用来操作硬件的工具包</strong></p><p><img src="//night-zhang.github.io/2019/07/25/vxworks/2019-07-25-10-52-33.png" alt="2019-07-25-10-52-33.png"></p><p>oss：此处应该为开源软件的意思</p><h2 id="VxWorks中的BPS"><a href="#VxWorks中的BPS" class="headerlink" title="VxWorks中的BPS"></a>VxWorks中的BPS</h2><blockquote><p>最小系统BSP：包含了CPU系统的初始化程序以及网口，串口，系统时钟等设备的驱动程序。</p></blockquote><blockquote><p>针对某类CPU的硬件单板，VxWorks通常提供有其DEMO板的BSP,也就是我们所说的最小系统BSP。</p></blockquote><blockquote><p>一般来说，我们在硬件系统设计好之后，都会先找到一个与自己系统相近的DEMO板BSP,并以此为基础,开发自己单板的BSP。</p></blockquote><blockquote><p>VxWorks为了最大限度的支持不同的硬件环境，也提供了一些常用硬件芯片的驱动程序，它们通常是与具体CPU无关的设备，如一些PCI网口芯片，串口芯片等。这些驱动程序大多实现为CPU无关或很容易移植，可以方便的用于其他CPU平台。这也是开发驱动程序所应该遵循的原理。另外，我们的最小系统BSP,往往在==默认情况下，使用这些驱动程序==。</p></blockquote><p><strong>也就是说我们做的VxWorks开发就是BSP的开发？</strong></p><h3 id="BSP功能"><a href="#BSP功能" class="headerlink" title="BSP功能"></a>BSP功能</h3><ul><li>给VxWorks提供硬件环境接口</li><li>BSP 主要负责:硬件上电初始化；支持 VxWorks访问硬件驱动；把硬件相关和无关的软件很好地结合到VxWorks。</li><li>BSP不是硬件驱动程序 :是一种访问硬件的硬件驱动程序；硬件驱动分为通用和BSP有关两类；通用驱动管理可在目标环境间移动的设备 (如以太网芯片)；BSP 驱动管理特定目标环境的设备 (如中断控制器）。<br>BSP与VxWorks的关系：<br><img src="//night-zhang.github.io/2019/07/25/vxworks/2019-07-25-11-22-34.png" alt="2019-07-25-11-22-34.png"></li></ul><p><strong>BSP用来调硬件驱动的驱动</strong></p><h2 id="BootRom"><a href="#BootRom" class="headerlink" title="BootRom"></a>BootRom</h2><blockquote><p>VxWorks借鉴了传统PC操作系统的引导原理，其将整个引导过程分为两个阶段：1、BOOTROM启动2、通过BOOTROM加载VxWorks映象</p></blockquote><blockquote><p>BOOTROM相当于PC机中的BIOS，它完成对加载过程中所需设备的初始化及驱动；然后通过某种可选择的通讯手段（如网口，串口），将VxWorks内核映象到内存中，并执行。此处的VxWorks映象就相当于我们在PC机上装的操作系统，如DOS,Windows。</p></blockquote><blockquote><p>BOOTROM和VxWorks使用不同方法来编译生成。<br><strong>BootRom用来初始化设备和驱动，然后加载VxWorks内核</strong></p></blockquote><h1 id="Tornado"><a href="#Tornado" class="headerlink" title="Tornado"></a>Tornado</h1><blockquote><p>Tornado 是WRS 公司推出的一套实时操作系统开发环境，提供了丰富的调试、仿真环境和工具。</p></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> 固件分析 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> 固件分析,VxWorks </tag>
+            <tag> VxWorks </tag>
             
         </tags>
       
@@ -49,25 +61,18 @@
         <content type="html"><![CDATA[<h2 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a>pycharm创建虚拟环境出错</h2><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780832508.png" alt="1563780832508"></p><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780797384.png" alt="1563780797384"></p><h2 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a>Anaconda安装的时候千万不要关闭弹出来的命令行</h2>]]></content>
       
       
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
       
         <tags>
             
             <tag> 笔记 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello Hexo</title>
-      <link href="/2019/07/24/hello-world/"/>
-      <url>/2019/07/24/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><h3 id="快捷部署"><a href="#快捷部署" class="headerlink" title="快捷部署"></a>快捷部署</h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
       
     </entry>
     
