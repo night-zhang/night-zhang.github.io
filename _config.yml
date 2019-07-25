@@ -4,8 +4,8 @@
 
 # Site
 title: 夜晚将会美丽、
-subtitle:
-description:
+subtitle: 
+description: 本blog仅为个人日常记录，如有疑问请及时联系我
 keywords:
 author: Night Zhang
 language:
@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://night-zhang.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -70,10 +70,13 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
+search:
+  path: search.xml
+  field: post
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: 3-hexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
