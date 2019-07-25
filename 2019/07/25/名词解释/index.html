@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>日常笔记 | 夜晚将会美丽、</title>
+  <title>名词解释 | 夜晚将会美丽、</title>
   <meta name="keywords" content=" 笔记 ">
-  <meta name="description" content="日常笔记 | 夜晚将会美丽、">
+  <meta name="description" content="名词解释 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="OSS （操作支持子系统） OSS是一种操作支持子系统。操作支持子系统（OSS）需完成许多任务，包括移动用户管理、移动设备管理以及网路操作和维护。  Endian 不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序。   最常见的有两种：1． Little-endian：将低序字节存储在起始地址（低位编址）2． Big-endian：将高序字节存储在起始地址（高位编址）   LE">
 <meta name="keywords" content="笔记">
@@ -238,9 +238,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-日常笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-名词解释" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">日常笔记</h1>
+        <h1 class="article-title">名词解释</h1>
     
     <div class="article-meta">
         
@@ -256,7 +256,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-25 13:49:36'>2019-07-24 16:41</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-25 14:26:22'>2019-07-25 13:47</time>
         
     </div>
     <div class="article-meta">
@@ -278,7 +278,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pycharm创建虚拟环境出错"><span class="toc-text">pycharm创建虚拟环境出错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Anaconda安装的时候千万不要关闭弹出来的命令行"><span class="toc-text">Anaconda安装的时候千万不要关闭弹出来的命令行</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#OSS-（操作支持子系统）"><span class="toc-text">OSS （操作支持子系统）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Endian"><span class="toc-text">Endian</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BSS端"><span class="toc-text">BSS端</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -293,10 +293,34 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a>pycharm创建虚拟环境出错</h2><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p>
-<p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780832508.png" alt="1563780832508"></p>
-<p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780797384.png" alt="1563780797384"></p>
-<h2 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a>Anaconda安装的时候千万不要关闭弹出来的命令行</h2>
+        <h1 id="OSS-（操作支持子系统）"><a href="#OSS-（操作支持子系统）" class="headerlink" title="OSS （操作支持子系统）"></a>OSS （操作支持子系统）</h1><blockquote>
+<p>OSS是一种操作支持子系统。操作支持子系统（OSS）需完成许多任务，包括移动用户管理、移动设备管理以及网路操作和维护。</p>
+</blockquote>
+<h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h1><blockquote>
+<p>不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序。</p>
+</blockquote>
+<blockquote>
+<p>最常见的有两种：<br>1． Little-endian：将低序字节存储在起始地址（低位编址）<br>2． Big-endian：将高序字节存储在起始地址（高位编址）</p>
+</blockquote>
+<blockquote>
+<p>LE（little-endian）：<br>最符合人的思维的字节序：地址低位存储值的低位，地址高位存储值的高位。<br>怎么讲是最符合人的思维的字节序，是因为从人的第一观感来说：低位值小，就应该放在内存地址小的地方，也即内存地址低位；反之，高位值就应该放在内存地址大的地方，也即内存地址高位</p>
+</blockquote>
+<blockquote>
+<p>BE（big-endian）：<br>最直观的字节序：地址低位存储值的高位，地址高位存储值的低位。<br>为什么说直观，不要考虑对应关系：只需要把内存地址从左到右按照由低到高的顺序写出，把值按照通常的高位到低位的顺序写出；两者对照，一个字节一个字节的填充进去</p>
+</blockquote>
+<p>例子：如果我们将0x1234abcd写入到以0x0000开始的内存中，则结果为<br>内存 big-endian    little-endian<br>0x0000    0x12    0xcd<br>0x0001    0x34    0xab<br>0x0002    0xab    0x34<br>0x0003    0xcd    0x12</p>
+<p>x86系列的CPU都是little-endian的字节序。</p>
+<h1 id="BSS端"><a href="#BSS端" class="headerlink" title="BSS端"></a>BSS端</h1><blockquote>
+<p>BSS（Block Started by Symbol）通常是指用来存放程序中未初始化的全局变量和静态变量的一块内存区域。特点是:可读写的，在程序执行之前BSS段会自动清0。所以，未初始的全局变量在程序执行之前已经成0了。</p>
+</blockquote>
+<ul>
+<li>存放全局、静态变量</li>
+<li>执行之前为0<blockquote>
+<p>扩展：可执行程序包括BSS段、数据段（data段）、代码段（也称文本段text段）。</p>
+</blockquote>
+</li>
+</ul>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
     </div>
@@ -309,12 +333,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>日常笔记</p>
+    <p><span class="copy-title">文章标题:</span>名词解释</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-24, 16:41:55</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-25, 13:49:36</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/24/日常笔记/" title="日常笔记">https://night-zhang.github.io/2019/07/24/日常笔记/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-25, 13:47:30</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-25, 14:26:22</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/25/名词解释/" title="名词解释">https://night-zhang.github.io/2019/07/25/名词解释/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
