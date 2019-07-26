@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>日常笔记 | 夜晚将会美丽、</title>
-  <meta name="keywords" content=" 笔记 ">
-  <meta name="description" content="日常笔记 | 夜晚将会美丽、">
+  <title>LeetCode in Python-283. Move Zeros 移动零 | 夜晚将会美丽、</title>
+  <meta name="keywords" content=" LeetCode ">
+  <meta name="description" content="LeetCode in Python-283. Move Zeros 移动零 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="前言近期在做固件分析的相关知识，由于不明白VxWorks系统不了解，所以想先从正向了解一下系统的基础知识再进行逆向分析。 简介 VxWorks 是美国 Wind River System 公司（ 简称风河 公司 ，即 WRS 公司）推出的一个==实时操作系统==。   VxWorks操作系统由以下5部分构成：板级支持包BSP、微内核wind、网络系统、文件系统以及I/O系统   实时多任务操作系统">
 <meta name="keywords" content="VxWorks">
@@ -405,33 +405,31 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-日常笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-LeetCode-in-Python-283-Move-Zeros-移动零" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">日常笔记</h1>
+        <h1 class="article-title">LeetCode in Python-283. Move Zeros 移动零</h1>
     
     <div class="article-meta">
-        
-        <span class="top"><a href="javascript:">置顶</a></span>
         
         
         
         <span class="book">
             
-                <a href="javascript:" data-rel="笔记">笔记</a>
+                <a href="javascript:" data-rel="Leetcode">Leetcode</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">笔记</a>
+            <a href="javascript:" class="color4">LeetCode</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-26 08:50:02'>2019-07-24 16:41</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-26 17:36:16'>2019-07-26 17:35</time>
         
     </div>
     <div class="article-meta">
@@ -464,7 +462,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#npm安装提醒audit"><span class="toc-text">npm安装提醒audit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pycharm创建虚拟环境出错"><span class="toc-text">pycharm创建虚拟环境出错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Anaconda安装的时候千万不要关闭弹出来的命令行"><span class="toc-text">Anaconda安装的时候千万不要关闭弹出来的命令行</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目描述"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注意点"><span class="toc-text">注意点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法1、利用位置标记替换元素后补0"><span class="toc-text">解法1、利用位置标记替换元素后补0</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法2、借助filter和enumerate"><span class="toc-text">解法2、借助filter和enumerate</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法3、sort"><span class="toc-text">解法3、sort</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#出处"><span class="toc-text">出处</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -479,11 +477,52 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="npm安装提醒audit"><a href="#npm安装提醒audit" class="headerlink" title="npm安装提醒audit"></a>npm安装提醒audit</h2><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/2019-07-25-22-31-11.png" alt="2019-07-25-22-31-11.png"><br>此处版本不合理问题，如果按照提示执行<code>npm audit</code>相关指令还是没效果，可以不用理会，不影响正常使用</p>
-<h2 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a>pycharm创建虚拟环境出错</h2><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p>
-<p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780832508.png" alt="1563780832508"></p>
-<p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780797384.png" alt="1563780797384"></p>
-<h2 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a>Anaconda安装的时候千万不要关闭弹出来的命令行</h2><p>弹出来的命令行是在安装相关的组件，不然conda什么的都会没有。。。</p>
+        <ul>
+<li><a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0">题目描述</a></li>
+<li><a href="#%e6%b3%a8%e6%84%8f%e7%82%b9">注意点</a></li>
+<li><a href="#%e8%a7%a3%e6%b3%951%e5%88%a9%e7%94%a8%e4%bd%8d%e7%bd%ae%e6%a0%87%e8%ae%b0%e6%9b%bf%e6%8d%a2%e5%85%83%e7%b4%a0%e5%90%8e%e8%a1%a50">解法1、利用位置标记替换元素后补0</a></li>
+<li><a href="#%e8%a7%a3%e6%b3%952%e5%80%9f%e5%8a%a9filter%e5%92%8cenumerate">解法2、借助filter和enumerate</a></li>
+<li><a href="#%e8%a7%a3%e6%b3%953sort">解法3、sort</a></li>
+<li><a href="#%e5%87%ba%e5%a4%84">出处</a></li>
+</ul>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-283-Move-Zeros-移动零/2019-07-26-17-35-51.png" alt="移动零"></p>
+<h1 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h1><p>必须在原数组上操作，不能拷贝额外的数组<br>PS：修改nums即可，不必有新的返回值</p>
+<h1 id="解法1、利用位置标记替换元素后补0"><a href="#解法1、利用位置标记替换元素后补0" class="headerlink" title="解法1、利用位置标记替换元素后补0"></a>解法1、利用位置标记替换元素后补0</h1><pre><code class="python">class Solution:
+    def moveZeroes(self, nums: List[int]) -&gt; None:
+        &quot;&quot;&quot;
+        Do not return anything, modify nums in-place instead.
+        &quot;&quot;&quot;
+        pos = 0
+        for i in range(len(nums)):
+            if nums[i]:
+                nums[pos] = nums[i]
+                pos += 1
+        for i in range(pos, len(nums)):
+            nums[i] = 0</code></pre>
+<p>在for循环的时候虽然会修改nums的内容，但是长度没变，所以不影响循环判断</p>
+<h1 id="解法2、借助filter和enumerate"><a href="#解法2、借助filter和enumerate" class="headerlink" title="解法2、借助filter和enumerate"></a>解法2、借助filter和enumerate</h1><pre><code class="python">class Solution:
+    def moveZeroes(self, nums: List[int]) -&gt; None:
+        &quot;&quot;&quot;
+        Do not return anything, modify nums in-place instead.
+        &quot;&quot;&quot;
+        i = 0
+        for i, n in enumerate(filter(lambda x: x, nums)):
+            nums[i] = n
+        for i in range(i + 1, len(nums)):
+            nums[i] = 0</code></pre>
+<p>1、enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p>
+<p><em>enumerate(sequence, [start=0])<br>sequence – 一个序列、迭代器或其他支持迭代对象。<br>start – 下标起始位置。</em></p>
+<p>2、filter() 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。</p>
+<p>该接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。</p>
+<h1 id="解法3、sort"><a href="#解法3、sort" class="headerlink" title="解法3、sort"></a>解法3、sort</h1><pre><code class="python">class Solution:
+    def moveZeroes(self, nums: List[int]) -&gt; None:
+        &quot;&quot;&quot;
+        Do not return anything, modify nums in-place instead.
+        &quot;&quot;&quot;
+        nums.sort(key=bool, reverse=True)</code></pre>
+<p>list.sort( key=None, reverse=False)</p>
+<p>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。<br>reverse – 排序规则，reverse = True 降序， reverse = False 升序（默认）。</p>
+<h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、<a href="https://www.bilibili.com/video/av50408908" target="_blank" rel="noopener">https://www.bilibili.com/video/av50408908</a><br>2、3、对应题目下<strong>Knife丶</strong>的题解</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -497,12 +536,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>日常笔记</p>
+    <p><span class="copy-title">文章标题:</span>LeetCode in Python-283. Move Zeros 移动零</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-24, 16:41:55</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-26, 08:50:02</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/24/日常笔记/" title="日常笔记">https://night-zhang.github.io/2019/07/24/日常笔记/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-26, 17:35:31</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-26, 17:36:16</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/26/LeetCode-in-Python-283-Move-Zeros-移动零/" title="LeetCode in Python-283. Move Zeros 移动零">https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-283-Move-Zeros-移动零/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

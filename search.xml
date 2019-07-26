@@ -4,11 +4,263 @@
   
     
     <entry>
+      <title>LeetCode in Python-28. Implement strStr() 实现strStr()</title>
+      <link href="/2019/07/26/LeetCode-in-Python-28-Implement-strStr-%E5%AE%9E%E7%8E%B0strStr/"/>
+      <url>/2019/07/26/LeetCode-in-Python-28-Implement-strStr-%E5%AE%9E%E7%8E%B0strStr/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li><li><a href="#%e8%a7%a3%e6%b3%951">解法1、</a></li><li><a href="#%e5%87%ba%e5%a4%84">出处</a></li></ul><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/2019-07-26-17-37-05.png" alt="实现strStr"></p><h1 id="解法1、"><a href="#解法1、" class="headerlink" title="解法1、"></a>解法1、</h1><pre><code class="python">class Solution:    def strStr(self, haystack: str, needle: str) -&gt; int:        for i in range(len(haystack) - len(needle) + 1):            if haystack[i:i+len(needle)] == needle:                return i        return -1</code></pre><h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、对应题目下<strong>Knife丶</strong>的题解</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode in Python-283. Move Zeros 移动零</title>
+      <link href="/2019/07/26/LeetCode-in-Python-283-Move-Zeros-%E7%A7%BB%E5%8A%A8%E9%9B%B6/"/>
+      <url>/2019/07/26/LeetCode-in-Python-283-Move-Zeros-%E7%A7%BB%E5%8A%A8%E9%9B%B6/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0">题目描述</a></li><li><a href="#%e6%b3%a8%e6%84%8f%e7%82%b9">注意点</a></li><li><a href="#%e8%a7%a3%e6%b3%951%e5%88%a9%e7%94%a8%e4%bd%8d%e7%bd%ae%e6%a0%87%e8%ae%b0%e6%9b%bf%e6%8d%a2%e5%85%83%e7%b4%a0%e5%90%8e%e8%a1%a50">解法1、利用位置标记替换元素后补0</a></li><li><a href="#%e8%a7%a3%e6%b3%952%e5%80%9f%e5%8a%a9filter%e5%92%8cenumerate">解法2、借助filter和enumerate</a></li><li><a href="#%e8%a7%a3%e6%b3%953sort">解法3、sort</a></li><li><a href="#%e5%87%ba%e5%a4%84">出处</a></li></ul><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-283-Move-Zeros-移动零/2019-07-26-17-35-51.png" alt="移动零"></p><h1 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h1><p>必须在原数组上操作，不能拷贝额外的数组<br>PS：修改nums即可，不必有新的返回值</p><h1 id="解法1、利用位置标记替换元素后补0"><a href="#解法1、利用位置标记替换元素后补0" class="headerlink" title="解法1、利用位置标记替换元素后补0"></a>解法1、利用位置标记替换元素后补0</h1><pre><code class="python">class Solution:    def moveZeroes(self, nums: List[int]) -&gt; None:        &quot;&quot;&quot;        Do not return anything, modify nums in-place instead.        &quot;&quot;&quot;        pos = 0        for i in range(len(nums)):            if nums[i]:                nums[pos] = nums[i]                pos += 1        for i in range(pos, len(nums)):            nums[i] = 0</code></pre><p>在for循环的时候虽然会修改nums的内容，但是长度没变，所以不影响循环判断</p><h1 id="解法2、借助filter和enumerate"><a href="#解法2、借助filter和enumerate" class="headerlink" title="解法2、借助filter和enumerate"></a>解法2、借助filter和enumerate</h1><pre><code class="python">class Solution:    def moveZeroes(self, nums: List[int]) -&gt; None:        &quot;&quot;&quot;        Do not return anything, modify nums in-place instead.        &quot;&quot;&quot;        i = 0        for i, n in enumerate(filter(lambda x: x, nums)):            nums[i] = n        for i in range(i + 1, len(nums)):            nums[i] = 0</code></pre><p>1、enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p><p><em>enumerate(sequence, [start=0])<br>sequence – 一个序列、迭代器或其他支持迭代对象。<br>start – 下标起始位置。</em></p><p>2、filter() 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。</p><p>该接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。</p><h1 id="解法3、sort"><a href="#解法3、sort" class="headerlink" title="解法3、sort"></a>解法3、sort</h1><pre><code class="python">class Solution:    def moveZeroes(self, nums: List[int]) -&gt; None:        &quot;&quot;&quot;        Do not return anything, modify nums in-place instead.        &quot;&quot;&quot;        nums.sort(key=bool, reverse=True)</code></pre><p>list.sort( key=None, reverse=False)</p><p>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。<br>reverse – 排序规则，reverse = True 降序， reverse = False 升序（默认）。</p><h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、<a href="https://www.bilibili.com/video/av50408908" target="_blank" rel="noopener">https://www.bilibili.com/video/av50408908</a><br>2、3、对应题目下<strong>Knife丶</strong>的题解</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode in Python-21. Merge Two Sorted Lists 合并两个有序链表</title>
+      <link href="/2019/07/26/LeetCode-in-Python-21-Merge-Two-Sorted-Lists-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/"/>
+      <url>/2019/07/26/LeetCode-in-Python-21-Merge-Two-Sorted-Lists-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li><li><a href="#%e8%a7%a3%e6%b3%951">解法1、</a></li><li><a href="#%e8%a7%a3%e6%b3%952">解法2、</a></li><li><a href="#%e5%87%ba%e5%a4%84">出处</a></li></ul><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-21-Merge-Two-Sorted-Lists-合并两个有序链表/2019-07-26-17-34-11.png" alt="合并两个有序链表"></p><h1 id="解法1、"><a href="#解法1、" class="headerlink" title="解法1、"></a>解法1、</h1><pre><code class="python"># Definition for singly-linked list.# class ListNode:#     def __init__(self, x):#         self.val = x#         self.next = Noneclass Solution:    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&gt; ListNode:        curr = dummy = ListNode(0)        while l1 and l2:            if l1.val &lt; l2.val:                curr.next = l1                l1 = l1.next            else:                curr.next = l2                l2 = l2.next            curr = curr.next        curr.next = l1 or l2        return dummy.nextif __name__ == &quot;__main__&quot;:    l1 = ListNode(1)    l1.next = ListNode(2)    l1.next.next = ListNode(4)    l2 = ListNode(1)    l2.next = ListNode(3)    l2.next.next = ListNode(4)    r = Solution().mergeTwoLists(l1, l2)    while r:        print(r.val)        r = r.next</code></pre><p>1、两个变量指向新链表，curr用来更新链表</p><h1 id="解法2、"><a href="#解法2、" class="headerlink" title="解法2、"></a>解法2、</h1><pre><code class="python"># Definition for singly-linked list.# class ListNode:#     def __init__(self, x):#         self.val = x#         self.next = Noneclass Solution:    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&gt; ListNode:        if l1 and l2:            if l1.val &gt; l2.val: l1, l2 = l2, l1            l1.next = self.mergeTwoLists(l1.next, l2)        return l1 or l2</code></pre><h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、<a href="https://www.bilibili.com/video/av45843264" target="_blank" rel="noopener">https://www.bilibili.com/video/av45843264</a><br>2、对应题目下<strong>Knife丶</strong>的题解</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode in Python-14. Longest Common Prefix 最长公共前缀</title>
+      <link href="/2019/07/26/LeetCode-in-Python-14-Longest-Common-Prefix-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/"/>
+      <url>/2019/07/26/LeetCode-in-Python-14-Longest-Common-Prefix-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li><li><a href="#%e8%a7%a3%e6%b3%951%e9%80%90%e4%bd%8d%e6%af%94%e8%be%83">解法1、逐位比较</a></li><li><a href="#%e8%a7%a3%e6%b3%952%e5%88%a9%e7%94%a8%e9%9b%86%e5%90%88%e6%80%a7%e8%b4%a8">解法2、利用集合性质</a></li><li><a href="#%e8%a7%a3%e6%b3%953zipsets">解法3、zip+sets</a></li><li><a href="#%e8%a7%a3%e6%b3%954%e5%80%9f%e5%8a%a9os%e6%a8%a1%e5%9d%97%e8%87%aa%e5%b8%a6%e5%87%bd%e6%95%b0">解法4、借助os模块自带函数。。。</a></li><li><a href="#%e5%87%ba%e5%a4%84">出处</a></li></ul><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-14-Longest-Common-Prefix-最长公共前缀/2019-07-26-17-30-52.png" alt="最长公共前缀"></p><h1 id="解法1、逐位比较"><a href="#解法1、逐位比较" class="headerlink" title="解法1、逐位比较"></a>解法1、逐位比较</h1><pre><code class="python">class Solution:    def longestCommonPrefix(self, strs):        if not strs:            return &quot;&quot;        for i in range(len(strs[0])):            for string in strs[1:]:                if i &gt;= len(string) or string[i] != strs[0][i]:                    return strs[0][:i]        return strs[0]# 当strs = [&quot;&quot;]时，strs视为存在，所以此处我们直接返回第一个元素，即“”</code></pre><p>以第一个单词作为基准，不同就返回前i位<br>注意第二个单词可能比第一个单词短，防止超出循环范围，先比较<em>i &gt;= len(string)</em></p><h1 id="解法2、利用集合性质"><a href="#解法2、利用集合性质" class="headerlink" title="解法2、利用集合性质"></a>解法2、利用集合性质</h1><pre><code class="python">class Solution:    def longestCommonPrefix(self, strs):        result = &quot;&quot;        i = 0        while True:            try:                sets = set(string[i] for string in strs)                if len(sets) == 1:                    result += sets.pop()                    i += 1                else:                    break            except Exception as e:                break        return result</code></pre><p>1、分别把所有单词的对应位放入集合，若集合长度不为1就返回<br>2、用while True时注意及时跳出，常借助try except</p><h1 id="解法3、zip-sets"><a href="#解法3、zip-sets" class="headerlink" title="解法3、zip+sets"></a>解法3、zip+sets</h1><pre><code class="python">class Solution:    def longestCommonPrefix(self, strs):        r = [len(set(c)) == 1 for c in zip(*strs)] + [0]        return strs[0][:r.index(0)] if strs else &#39;&#39;</code></pre><p>1、zip(<em>)解压，zip(</em>star)的结果（输入：strs = [“flower”, “flow”, “flight”]）<br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-14-Longest-Common-Prefix-最长公共前缀/2019-07-26-17-31-13.png" alt="zip(*star)"><br>2、因为在python中0==False，此处index(0)结果为2<br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-14-Longest-Common-Prefix-最长公共前缀/2019-07-26-17-31-22.png" alt><br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-14-Longest-Common-Prefix-最长公共前缀/2019-07-26-17-31-29.png" alt></p><h1 id="解法4、借助os模块自带函数。。。"><a href="#解法4、借助os模块自带函数。。。" class="headerlink" title="解法4、借助os模块自带函数。。。"></a>解法4、借助os模块自带函数。。。</h1><pre><code class="python">class Solution:    def longestCommonPrefix(self, strs: List[str]) -&gt; str:        return os.path.commonprefix(strs)</code></pre><h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、2、<a href="https://www.bilibili.com/video/av45842114" target="_blank" rel="noopener">https://www.bilibili.com/video/av45842114</a><br>3、对应题目下<strong>Knife丶</strong>的题解</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode in Python-13. Roman to Integer 罗马数字转整数</title>
+      <link href="/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/"/>
+      <url>/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li><li><a href="#%e8%a7%a3%e6%b3%951%e5%ad%97%e5%85%b8map">解法1、字典map</a></li><li><a href="#%e8%a7%a3%e6%b3%952">解法2、</a></li><li><a href="#%e5%87%ba%e5%a4%84">出处</a></li></ul><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-31.png" alt="罗马数字转整数"><br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-37.png" alt="罗马数字转整数"></p><h1 id="解法1、字典map"><a href="#解法1、字典map" class="headerlink" title="解法1、字典map"></a>解法1、字典map</h1><pre><code class="python">class Solution:    def romanToInt(self, s: str) -&gt; int:        numeral_map = {&quot;I&quot; : 1, &quot;V&quot; : 5, &quot;X&quot; : 10, &quot;L&quot; : 50, &quot;C&quot; : 100, &quot;D&quot; : 500, &quot;M&quot; : 1000}        result = 0        for i in range(len(s)):            if i&gt;0 and numeral_map[s[i]] &gt; numeral_map[s[i-1]]:                result += numeral_map[s[i]] - 2*numeral_map[s[i-1]]            else:                result += numeral_map[s[i]]        return result</code></pre><p>注意对i-1的元素要减两次</p><h1 id="解法2、"><a href="#解法2、" class="headerlink" title="解法2、"></a>解法2、</h1><pre><code>class Solution:    def romanToInt(self, s: str) -&gt; int:        d = {&#39;I&#39;:1, &#39;IV&#39;:3, &#39;V&#39;:5, &#39;IX&#39;:8, &#39;X&#39;:10, &#39;XL&#39;:30, &#39;L&#39;:50, &#39;XC&#39;:80, &#39;C&#39;:100, &#39;CD&#39;:300, &#39;D&#39;:500, &#39;CM&#39;:800, &#39;M&#39;:1000}        return sum([d.get(s[max(i-1, 0):i+1], d[n]) for i, n in enumerate(s)])</code></pre><ul><li>构建一个字典记录所有罗马数字子串，注意长度为2的子串记录的值是（实际值-子串内左边罗马数字代表的数值）</li><li>这样一来，遍历整个s的时候判断当前位置和前一个位置的两个字符组成的字符串是否在字典内，如果在就记录值，不在就说明当前位置不存在小数字在前面的情况，直接记录当前位置字符对应值</li><li>举个例子，遍历经过IV的时候先记录I的对应值1再往前移动一步记录IV的值3，加起来正好是IV的真实值4。max函数在这里是为了防止遍历第一个字符的时候出现[-1:0]的情况</li></ul><p>1、列表生成式</p><p>2、dict.get()<br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-50.png" alt="dict.get()"></p><p>3、循环或者切片等希望从0开始执行时，可借助max(i-1, 0)来达成</p><h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、<a href="https://www.bilibili.com/video/av45841108" target="_blank" rel="noopener">https://www.bilibili.com/video/av45841108</a><br>2、对应题目下<strong>Knife丶</strong>的题解</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode in Python-9. Palindrome Number 回文数</title>
+      <link href="/2019/07/26/LeetCode-in-Python-9-Palindrome-Number-%E5%9B%9E%E6%96%87%E6%95%B0/"/>
+      <url>/2019/07/26/LeetCode-in-Python-9-Palindrome-Number-%E5%9B%9E%E6%96%87%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li><li><a href="#%e8%a7%a3%e6%b3%951%e8%ae%a1%e7%ae%97%e5%8f%8d%e5%ba%8f%e7%9a%84%e5%80%bc">解法1、计算反序的值</a></li><li><a href="#%e8%a7%a3%e6%b3%952%e5%ad%97%e7%ac%a6%e4%b8%b2%e9%80%86%e5%ba%8f%e6%af%94%e8%be%83">解法2、字符串逆序比较</a></li><li><a href="#%e8%a7%a3%e6%b3%953">解法3、</a></li><li><a href="#%e8%a7%a3%e6%b3%954">解法4、</a></li><li><a href="#%e5%87%ba%e5%a4%84">出处</a><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-9-Palindrome-Number-回文数/2019-07-26-17-26-17.png" alt="回文数"></li></ul><h1 id="解法1、计算反序的值"><a href="#解法1、计算反序的值" class="headerlink" title="解法1、计算反序的值"></a>解法1、计算反序的值</h1><pre><code class="python">class Solution:    def isPalindrome(self, x: int) -&gt; bool:        num = 0        a = abs(x)        while(a!=0):            temp = a % 10            num = num * 10 + temp            a = a // 10        if x &gt;= 0 and x == num:            return True        else:            return False</code></pre><h1 id="解法2、字符串逆序比较"><a href="#解法2、字符串逆序比较" class="headerlink" title="解法2、字符串逆序比较"></a>解法2、字符串逆序比较</h1><pre><code class="python">class Solution:    def isPalindrome(self, x: int) -&gt; bool:        if x &gt;= 0 and int(str(x)[::-1]) == x:            return True        else:            return False</code></pre><h1 id="解法3、"><a href="#解法3、" class="headerlink" title="解法3、"></a>解法3、</h1><pre><code class="python">class Solution:    def isPalindrome(self, x: int) -&gt; bool:        return str(x) == str(x)[::-1]</code></pre><h1 id="解法4、"><a href="#解法4、" class="headerlink" title="解法4、"></a>解法4、</h1><pre><code class="Python">class Solution:    def isPalindrome(self, x: int) -&gt; bool:        r = list(map(lambda i: int(10**-i * x % 10), range(int(math.log10(x)), -1, -1))) if x &gt; 0 else [0, x]        return r == r[::-1]</code></pre><ul><li>思路是一样的，这里把整数转成了列表而不是字符串</li><li>比如一个整数12321，我想取出百位数可以这么做：12321 * 10^{int(log_{10}12321)} % 10 = 123 % 10 = 3</li></ul><p><img src="https://img-blog.csdnimg.cn/20190517173955999.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1pPTUIxRTEyMzQ1Ng==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>1、map() 会根据提供的函数对指定序列做映射。<br>第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。</p><p><em>map(function, iterable, …)<br>function – 函数<br>iterable – 一个或多个序列</em></p><p>2、</p><h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、<a href="https://www.bilibili.com/video/av45840363" target="_blank" rel="noopener">https://www.bilibili.com/video/av45840363</a><br>3、4、对应题目下<strong>Knife丶</strong>的题解</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode in Python-7. Reverse Integer 整数反转</title>
+      <link href="/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/"/>
+      <url>/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li><li><a href="#%e8%a7%a3%e6%b3%951%e5%88%a9%e7%94%a8%e6%95%b0%e5%80%bc%e5%8f%8d%e8%bd%ac%e6%95%b0%e5%ad%97">解法1、利用数值反转数字</a></li><li><a href="#%e8%a7%a3%e6%b3%952%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8f%8d%e8%bd%ac">解法2、字符串反转</a></li><li><a href="#%e8%a7%a3%e6%b3%953">解法3、</a></li><li><a href="#%e5%87%ba%e5%a4%84">出处</a></li></ul><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-整数反转/2019-07-26-17-19-04.png" alt="整数反转"></p><h1 id="解法1、利用数值反转数字"><a href="#解法1、利用数值反转数字" class="headerlink" title="解法1、利用数值反转数字"></a>解法1、利用数值反转数字</h1><pre><code class="python">class Solution:    def reverse(self, x: int) -&gt; int:        num = 0        a = abs(x)        while(a!=0):            temp = a % 10            num = num * 10 + temp            a = a // 10        if x &gt; 0 and num &lt; 2**31:            return num        elif x &lt; 0 and num &lt;= 2**31:            return -num        else:            return 0</code></pre><p>借助temp反转数字</p><h1 id="解法2、字符串反转"><a href="#解法2、字符串反转" class="headerlink" title="解法2、字符串反转"></a>解法2、字符串反转</h1><pre><code class="python">class Solution:    def reverse(self, x: int) -&gt; int:        abs_num = abs(x)        abs_num_ = int(str(abs_num)[::-1])        if abs_num_&lt;-2**31 or abs_num_&gt;2**31-1:            return 0        if x&lt;0:            return -abs_num_        return abs_num_</code></pre><h1 id="解法3、"><a href="#解法3、" class="headerlink" title="解法3、"></a>解法3、</h1><pre><code class="python">class Solution:    def reverse(self, x):        r = x // max(1, abs(x)) * int(str(abs(x))[::-1])        return r if r.bit_length() &lt; 32 or r == -2**31 else 0</code></pre><ul><li>x // max(1, abs(x))意味着 0：x为0， 1：x为正， -1：x为负，相当于被废弃的函数cmp</li><li>[::-1]代表序列反转</li><li>2^31 和 -2^31 的比特数为32，其中正负号占用了一位</li><li>32位整数范围 [−2^31， 2^31 − 1] 中正数范围小一个是因为0的存在<h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1>1、<a href="https://www.bilibili.com/video/av45840031" target="_blank" rel="noopener">https://www.bilibili.com/video/av45840031</a><br>3、对应题目下<strong>Knife丶</strong>的题解</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vscode技巧</title>
+      <link href="/2019/07/26/vscode%E6%8A%80%E5%B7%A7/"/>
+      <url>/2019/07/26/vscode%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e6%93%8d%e4%bd%9c%e7%9b%b8%e5%85%b3">操作相关</a></li><li><a href="#%e8%87%aa%e5%8a%a8%e7%94%9f%e6%88%90%e7%9b%ae%e5%bd%95">自动生成目录</a></li></ul><h1 id="操作相关"><a href="#操作相关" class="headerlink" title="操作相关"></a>操作相关</h1><ul><li><p>禅（全屏）模式：<code>Ctrl+KZ</code>（按两次<code>Esc</code>退出）</p></li><li><p>并排编辑：<code>Ctrl+\</code>            按<code>Ctrl+1</code>、<code>Ctrl+2</code>、<code>Ctrl+3</code>在编辑器之间切换；</p></li><li><p>先将鼠标放在向右分割按钮上，然后按住<code>Alt</code>键，按钮变为向下分割按钮：</p></li><li><p>多光标选择</p><ul><li>任意位置多光标：==Alt==（按住不放） + 鼠标任意位置单击；</li><li>同一列多光标：Ctrl+Alt+↑或者Ctrl+Alt+↓；</li><li>多个单词同时选中：先选中单词，然后按Ctrl+Shift+L；</li><li>列（框选）：按住Shift+Alt并拖动鼠标；</li><li>快速滚动：Alt+滚轮；</li><li>某一行上下移动：Alt+↑或↓；</li><li>收缩/扩展选择：Shift+Alt+←或→；</li><li>修剪尾随空格：Ctrl+K Ctrl+X；</li><li>重命名符号：先选中一个符号，然后按F2；</li><li>智能感知：按Ctrl+Space可手动触发感知；</li></ul></li></ul><h1 id="自动生成目录"><a href="#自动生成目录" class="headerlink" title="自动生成目录"></a>自动生成目录</h1><ul><li>markdown all in one插件自带功能</li><li>ctrl+shift+p</li><li>ctoc<br><img src="//night-zhang.github.io/2019/07/26/vscode技巧/2019-07-26-17-15-13.png" alt="2019-07-26-17-15-13.png"></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> vscode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vscode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode in Python-1. Two Sum 两数之和</title>
+      <link href="/2019/07/26/LeetCode-in-Python-1-Two-Sum-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
+      <url>/2019/07/26/LeetCode-in-Python-1-Two-Sum-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0">题目描述</a></li><li><a href="#%e8%a7%a3%e6%b3%951%e5%88%87%e7%89%87%e5%90%8e%e6%9f%a5%e6%89%be">解法1、切片后查找</a></li><li><a href="#%e8%a7%a3%e6%b3%952hash%e5%ad%97%e5%85%b8">解法2、hash字典</a></li><li><a href="#%e8%a7%a3%e6%b3%953%e5%90%8c2">解法3、同2</a></li><li><a href="#%e5%87%ba%e5%a4%84">出处</a></li></ul><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-1-Two-Sum-两数之和/2019-07-26-16-57-41.png" alt="两数之和"></p><h1 id="解法1、切片后查找"><a href="#解法1、切片后查找" class="headerlink" title="解法1、切片后查找"></a>解法1、切片后查找</h1><pre><code class="python">class Solution:    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:        for i in nums:            j = target - i            start_index = nums.index(i)            next_index = start_index + 1            temp_nums = nums[next_index:]            if j in temp_nums:                return [nums.index(i), next_index + temp_nums.index(j)]</code></pre><p>注意返回值index的转换</p><h1 id="解法2、hash字典"><a href="#解法2、hash字典" class="headerlink" title="解法2、hash字典"></a>解法2、hash字典</h1><pre><code class="python">class Solution:    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:        dict = {}        for i in range(len(nums)):            if target - nums[i] not in dict:                dict[nums[i]] = i            else:                return [dict[target-nums[i]], i]</code></pre><h1 id="解法3、同2"><a href="#解法3、同2" class="headerlink" title="解法3、同2"></a>解法3、同2</h1><pre><code class="python">class Solution:    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:        dict = {}        for i, num in enumerate(nums):            if target - num in dict:                return [dict[target-num], i]            dict[num] = i</code></pre><p>借助枚举函数，方法同2</p><h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、2、<a href="https://www.bilibili.com/video/av45727557" target="_blank" rel="noopener">https://www.bilibili.com/video/av45727557</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux简介</title>
+      <link href="/2019/07/26/Linux%E7%AE%80%E4%BB%8B/"/>
+      <url>/2019/07/26/Linux%E7%AE%80%E4%BB%8B/</url>
+      
+        <content type="html"><![CDATA[<p>对于任何一个研发人员来说，Linux是最强大的操作系统，没有之一！为什么这么说呢，原因有下：</p><ul><li>高效： 简单粗暴有效的命令可以高效的完成很多的日常开发工作</li><li>稳定：Linux运行的稳定性能用来作后台服务器再好不过了</li><li>安全：Linux开源，由很多的开发者共同维护，所以可利用漏洞少之又少</li><li>开放：Linux源码开放</li><li>多用户：真正的可以多用户同时工作</li></ul><p>那么这么强大的一个系统因何而来呢？</p><h2 id="1-GNU-Linux的诞生"><a href="#1-GNU-Linux的诞生" class="headerlink" title="1.GNU/Linux的诞生"></a>1.GNU/Linux的诞生</h2><p>1969年AT&amp;T（美国贝尔实验室）有两个人——<strong>Ken，Dennis</strong>为了适配他们的游戏而研发出了<strong>Unix操作系统</strong>，并且抛弃了汇编，顺便发明了<strong>C语言</strong>，用C完成了整个操作系统，而Unix就是这个话题中的万恶之源~</p><p>其实Unix是开源免费的，因为它只是单机版，没有太大的作用，一段时间后在UC Berkeley诞生出了伟大的TCP/IP协议，使得所有的计算机都可以很好地连通，Unix演变成了BSD，以至于后来的FreeBSD，NetBSD，MacOS，iOS等等……</p><p>然而别忘了，这一切的起源是Unix，当然不可能看着BSD就这么火，Unix开始收费了，对于公司而言，收费就收费呗，无非成本价有点高，然而别忘了还有我们这群苦逼的学生，又想学习使用Unix，又买不起Unix，所以美国一个计算机科学教授Andrew Tnanebaum根据Unix写出了<strong>Minix</strong>操作系统用来教学，青出于蓝而胜于蓝，1991年美国大二学生<strong>Linus Torvalds</strong>觉得Minix不太行，所以自己写了一个<strong>Linux内核</strong>，然而它再强大，也只是一个内核~</p><p>凑巧的是，在那个年代<strong>GNU</strong>（GNU is Not Uinx）也是一个致力于自由的类unix操作系统，它发展了几乎内核以外的所有软件，并且创建了通用软件许可证<strong>GPL</strong>（General Public License） —— 免费得到源码永久使用权、可以任意修改、但是有义务公开修改后的代码~<br>于是乎，Linux和GNU一拍即合，天造地设的一对就这样诞生了，强强联手，演变成现在最强大的操作系统 —— <strong>GNU/Linux</strong>。</p><p><img src="//night-zhang.github.io/2019/07/26/Linux简介/2019-07-26-16-47-45.png" alt="2019-07-26-16-47-45.png"></p><h2 id="2-GNU-Linux衍生的发行版"><a href="#2-GNU-Linux衍生的发行版" class="headerlink" title="2.GNU/Linux衍生的发行版"></a>2.GNU/Linux衍生的发行版</h2><p>当然，Linux内核和GNU合起来也还不够，对于用户的使用，还应包含命令行Shell或桌面环境（KDE、GNOME、Unity等），所以就衍生出来很多的Linux发行版，主要有三大分支：</p><ul><li>redhat</li><li>debian</li><li>openSUSE</li></ul><p><img src="//night-zhang.github.io/2019/07/26/Linux简介/2019-07-26-16-47-55.png" alt="2019-07-26-16-47-55.png"></p><p>这些发行版如果按应用场景来分，主要有两类：</p><ul><li>以命令行Shell为主的服务器发行版：CentOS/RHEL、openSUSE、Ubuntu Server</li><li>以桌面环境为主的桌面发行版：Ubuntu、Linux Mint、Fedora<h2 id="3-嵌入式Linux"><a href="#3-嵌入式Linux" class="headerlink" title="3. 嵌入式Linux"></a>3. 嵌入式Linux</h2>标准Linux运行在通用计算机上或者云端，虽然包含了很多功能，但是需要的硬件配置较高，如图是Ubuntu 18.04.2 LTS发行版需要的系统要求：<br><img src="//night-zhang.github.io/2019/07/26/Linux简介/2019-07-26-16-48-18.png" alt="2019-07-26-16-48-18.png"><br>在资源极其有限的嵌入式系统中，显然这样的性能是绝对不可能满足的，那么，如何使强大的Linux内核应用在嵌入式系统中呢？</li></ul><p>嵌入式系统有一个非常鲜明的特点 —— 通常都是针对某一个具体应用，所以将标准的Linux根据情况进行裁剪，只保留需要的功能（比如路由器中运行的Linux就不需要界面功能），因此只需要少量的Flash和RAM就可以完美的运行在嵌入式设备中。</p><h2 id="4-嵌入式Linux知识架构"><a href="#4-嵌入式Linux知识架构" class="headerlink" title="4.嵌入式Linux知识架构"></a>4.嵌入式Linux知识架构</h2><p><img src="//night-zhang.github.io/2019/07/26/Linux简介/2019-07-26-16-47-16.png" alt="2019-07-26-16-47-16.png"></p><h2 id="5-如何学Linux"><a href="#5-如何学Linux" class="headerlink" title="5.如何学Linux"></a>5.如何学Linux</h2><p>如此强大有效的一个操作系统，仅作学习之用的话选择其中一个自己喜欢的发行版就好，我的学习旅程是：</p><p>首先在虚拟机上学习：</p><ul><li><p>会操作：基本Linux命令，Linux文件系统</p></li><li><p>会编程：shell脚本编程，基本C编程，网络编程，GUI编程<br>然后在开发板上学习，选用ARM9或ARM11：</p></li><li><p>会启动：移植并成功启动</p></li><li><p>会驱动：可以编写常见驱动程序</p></li></ul><hr><p>作者：Mculover666<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/Mculover666/article/details/87558456" target="_blank" rel="noopener">https://blog.csdn.net/Mculover666/article/details/87558456</a> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> 转载 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>名词解释</title>
       <link href="/2019/07/25/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
       <url>/2019/07/25/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
       
-        <content type="html"><![CDATA[<h1 id="OSS-（操作支持子系统）"><a href="#OSS-（操作支持子系统）" class="headerlink" title="OSS （操作支持子系统）"></a>OSS （操作支持子系统）</h1><blockquote><p>OSS是一种操作支持子系统。操作支持子系统（OSS）需完成许多任务，包括移动用户管理、移动设备管理以及网路操作和维护。</p></blockquote><h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h1><blockquote><p>不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序。</p></blockquote><blockquote><p>最常见的有两种：<br>1． Little-endian：将低序字节存储在起始地址（低位编址）<br>2． Big-endian：将高序字节存储在起始地址（高位编址）</p></blockquote><blockquote><p>LE（little-endian）：<br>最符合人的思维的字节序：地址低位存储值的低位，地址高位存储值的高位。<br>怎么讲是最符合人的思维的字节序，是因为从人的第一观感来说：低位值小，就应该放在内存地址小的地方，也即内存地址低位；反之，高位值就应该放在内存地址大的地方，也即内存地址高位</p></blockquote><blockquote><p>BE（big-endian）：<br>最直观的字节序：地址低位存储值的高位，地址高位存储值的低位。<br>为什么说直观，不要考虑对应关系：只需要把内存地址从左到右按照由低到高的顺序写出，把值按照通常的高位到低位的顺序写出；两者对照，一个字节一个字节的填充进去</p></blockquote><p>例子：如果我们将0x1234abcd写入到以0x0000开始的内存中，则结果为<br>内存 big-endian    little-endian<br>0x0000    0x12    0xcd<br>0x0001    0x34    0xab<br>0x0002    0xab    0x34<br>0x0003    0xcd    0x12</p><p>x86系列的CPU都是little-endian的字节序。</p><h1 id="BSS端"><a href="#BSS端" class="headerlink" title="BSS端"></a>BSS端</h1><blockquote><p>BSS（Block Started by Symbol）通常是指用来存放程序中未初始化的全局变量和静态变量的一块内存区域。特点是:可读写的，在程序执行之前BSS段会自动清0。所以，未初始的全局变量在程序执行之前已经成0了。</p></blockquote><ul><li>存放全局、静态变量</li><li>执行之前为0</li></ul><blockquote><p>扩展：可执行程序包括BSS段、数据段（data段）、代码段（也称文本段text段）。</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="OSS-（操作支持子系统）"><a href="#OSS-（操作支持子系统）" class="headerlink" title="OSS （操作支持子系统）"></a>OSS （操作支持子系统）</h1><blockquote><p>OSS是一种操作支持子系统。操作支持子系统（OSS）需完成许多任务，包括移动用户管理、移动设备管理以及网路操作和维护。</p></blockquote><h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h1><blockquote><p>不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序。</p></blockquote><blockquote><p>最常见的有两种：<br>1． Little-endian：将低序字节存储在起始地址（低位编址）<br>2． Big-endian：将高序字节存储在起始地址（高位编址）</p></blockquote><blockquote><p>LE（little-endian）：<br>最符合人的思维的字节序：地址低位存储值的低位，地址高位存储值的高位。<br>怎么讲是最符合人的思维的字节序，是因为从人的第一观感来说：低位值小，就应该放在内存地址小的地方，也即内存地址低位；反之，高位值就应该放在内存地址大的地方，也即内存地址高位</p></blockquote><blockquote><p>BE（big-endian）：<br>最直观的字节序：地址低位存储值的高位，地址高位存储值的低位。<br>为什么说直观，不要考虑对应关系：只需要把内存地址从左到右按照由低到高的顺序写出，把值按照通常的高位到低位的顺序写出；两者对照，一个字节一个字节的填充进去</p></blockquote><p>例子：如果我们将0x1234abcd写入到以0x0000开始的内存中，则结果为<br>|内存 |big-endian    |little-endian|<br>|—|—-|—|<br>|0x0000    |0x12    |0xcd|<br>|0x0001    |0x34    |0xab|<br>|0x0002    |0xab    |0x34|<br>|0x0003    |0xcd    |0x12|</p><p>x86系列的CPU都是little-endian的字节序。</p><h1 id="BSS端"><a href="#BSS端" class="headerlink" title="BSS端"></a>BSS端</h1><blockquote><p>BSS（Block Started by Symbol）通常是指用来存放程序中未初始化的全局变量和静态变量的一块内存区域。特点是:可读写的，在程序执行之前BSS段会自动清0。所以，未初始的全局变量在程序执行之前已经成0了。</p></blockquote><ul><li>存放全局、静态变量</li><li>执行之前为0</li></ul><blockquote><p>扩展：可执行程序包括BSS段、数据段（data段）、代码段（也称文本段text段）。</p></blockquote>]]></content>
       
       
       <categories>
@@ -58,7 +310,7 @@
       <link href="/2019/07/24/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/"/>
       <url>/2019/07/24/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<h2 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a>pycharm创建虚拟环境出错</h2><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780832508.png" alt="1563780832508"></p><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780797384.png" alt="1563780797384"></p><h2 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a>Anaconda安装的时候千万不要关闭弹出来的命令行</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="npm安装提醒audit"><a href="#npm安装提醒audit" class="headerlink" title="npm安装提醒audit"></a>npm安装提醒audit</h2><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/2019-07-25-22-31-11.png" alt="2019-07-25-22-31-11.png"><br>此处版本不合理问题，如果按照提示执行<code>npm audit</code>相关指令还是没效果，可以不用理会，不影响正常使用</p><h2 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a>pycharm创建虚拟环境出错</h2><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780832508.png" alt="1563780832508"></p><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780797384.png" alt="1563780797384"></p><h2 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a>Anaconda安装的时候千万不要关闭弹出来的命令行</h2><p>弹出来的命令行是在安装相关的组件，不然conda什么的都会没有。。。</p>]]></content>
       
       
       <categories>

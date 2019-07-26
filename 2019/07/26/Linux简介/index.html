@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>日常笔记 | 夜晚将会美丽、</title>
-  <meta name="keywords" content=" 笔记 ">
-  <meta name="description" content="日常笔记 | 夜晚将会美丽、">
+  <title>Linux简介 | 夜晚将会美丽、</title>
+  <meta name="keywords" content=" linux , 转载 ">
+  <meta name="description" content="Linux简介 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="前言近期在做固件分析的相关知识，由于不明白VxWorks系统不了解，所以想先从正向了解一下系统的基础知识再进行逆向分析。 简介 VxWorks 是美国 Wind River System 公司（ 简称风河 公司 ，即 WRS 公司）推出的一个==实时操作系统==。   VxWorks操作系统由以下5部分构成：板级支持包BSP、微内核wind、网络系统、文件系统以及I/O系统   实时多任务操作系统">
 <meta name="keywords" content="VxWorks">
@@ -405,33 +405,33 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-日常笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Linux简介" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">日常笔记</h1>
+        <h1 class="article-title">Linux简介</h1>
     
     <div class="article-meta">
-        
-        <span class="top"><a href="javascript:">置顶</a></span>
         
         
         
         <span class="book">
             
-                <a href="javascript:" data-rel="笔记">笔记</a>
+                <a href="javascript:" data-rel="linux">linux</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">笔记</a>
+            <a href="javascript:" class="color1">linux</a>
+            
+            <a href="javascript:" class="color3">转载</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-26 08:50:02'>2019-07-24 16:41</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-26 16:52:08'>2019-07-26 16:46</time>
         
     </div>
     <div class="article-meta">
@@ -464,7 +464,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#npm安装提醒audit"><span class="toc-text">npm安装提醒audit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pycharm创建虚拟环境出错"><span class="toc-text">pycharm创建虚拟环境出错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Anaconda安装的时候千万不要关闭弹出来的命令行"><span class="toc-text">Anaconda安装的时候千万不要关闭弹出来的命令行</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-GNU-Linux的诞生"><span class="toc-text">1.GNU/Linux的诞生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-GNU-Linux衍生的发行版"><span class="toc-text">2.GNU/Linux衍生的发行版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-嵌入式Linux"><span class="toc-text">3. 嵌入式Linux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-嵌入式Linux知识架构"><span class="toc-text">4.嵌入式Linux知识架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-如何学Linux"><span class="toc-text">5.如何学Linux</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -479,11 +479,48 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="npm安装提醒audit"><a href="#npm安装提醒audit" class="headerlink" title="npm安装提醒audit"></a>npm安装提醒audit</h2><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/2019-07-25-22-31-11.png" alt="2019-07-25-22-31-11.png"><br>此处版本不合理问题，如果按照提示执行<code>npm audit</code>相关指令还是没效果，可以不用理会，不影响正常使用</p>
-<h2 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a>pycharm创建虚拟环境出错</h2><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p>
-<p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780832508.png" alt="1563780832508"></p>
-<p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780797384.png" alt="1563780797384"></p>
-<h2 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a>Anaconda安装的时候千万不要关闭弹出来的命令行</h2><p>弹出来的命令行是在安装相关的组件，不然conda什么的都会没有。。。</p>
+        <p>对于任何一个研发人员来说，Linux是最强大的操作系统，没有之一！为什么这么说呢，原因有下：</p>
+<ul>
+<li>高效： 简单粗暴有效的命令可以高效的完成很多的日常开发工作</li>
+<li>稳定：Linux运行的稳定性能用来作后台服务器再好不过了</li>
+<li>安全：Linux开源，由很多的开发者共同维护，所以可利用漏洞少之又少</li>
+<li>开放：Linux源码开放</li>
+<li>多用户：真正的可以多用户同时工作</li>
+</ul>
+<p>那么这么强大的一个系统因何而来呢？</p>
+<h2 id="1-GNU-Linux的诞生"><a href="#1-GNU-Linux的诞生" class="headerlink" title="1.GNU/Linux的诞生"></a>1.GNU/Linux的诞生</h2><p>1969年AT&amp;T（美国贝尔实验室）有两个人——<strong>Ken，Dennis</strong>为了适配他们的游戏而研发出了<strong>Unix操作系统</strong>，并且抛弃了汇编，顺便发明了<strong>C语言</strong>，用C完成了整个操作系统，而Unix就是这个话题中的万恶之源~</p>
+<p>其实Unix是开源免费的，因为它只是单机版，没有太大的作用，一段时间后在UC Berkeley诞生出了伟大的TCP/IP协议，使得所有的计算机都可以很好地连通，Unix演变成了BSD，以至于后来的FreeBSD，NetBSD，MacOS，iOS等等……</p>
+<p>然而别忘了，这一切的起源是Unix，当然不可能看着BSD就这么火，Unix开始收费了，对于公司而言，收费就收费呗，无非成本价有点高，然而别忘了还有我们这群苦逼的学生，又想学习使用Unix，又买不起Unix，所以美国一个计算机科学教授Andrew Tnanebaum根据Unix写出了<strong>Minix</strong>操作系统用来教学，青出于蓝而胜于蓝，1991年美国大二学生<strong>Linus Torvalds</strong>觉得Minix不太行，所以自己写了一个<strong>Linux内核</strong>，然而它再强大，也只是一个内核~</p>
+<p>凑巧的是，在那个年代<strong>GNU</strong>（GNU is Not Uinx）也是一个致力于自由的类unix操作系统，它发展了几乎内核以外的所有软件，并且创建了通用软件许可证<strong>GPL</strong>（General Public License） —— 免费得到源码永久使用权、可以任意修改、但是有义务公开修改后的代码~<br>于是乎，Linux和GNU一拍即合，天造地设的一对就这样诞生了，强强联手，演变成现在最强大的操作系统 —— <strong>GNU/Linux</strong>。</p>
+<p><img src="//night-zhang.github.io/2019/07/26/Linux简介/2019-07-26-16-47-45.png" alt="2019-07-26-16-47-45.png"></p>
+<h2 id="2-GNU-Linux衍生的发行版"><a href="#2-GNU-Linux衍生的发行版" class="headerlink" title="2.GNU/Linux衍生的发行版"></a>2.GNU/Linux衍生的发行版</h2><p>当然，Linux内核和GNU合起来也还不够，对于用户的使用，还应包含命令行Shell或桌面环境（KDE、GNOME、Unity等），所以就衍生出来很多的Linux发行版，主要有三大分支：</p>
+<ul>
+<li>redhat</li>
+<li>debian</li>
+<li>openSUSE</li>
+</ul>
+<p><img src="//night-zhang.github.io/2019/07/26/Linux简介/2019-07-26-16-47-55.png" alt="2019-07-26-16-47-55.png"></p>
+<p>这些发行版如果按应用场景来分，主要有两类：</p>
+<ul>
+<li>以命令行Shell为主的服务器发行版：CentOS/RHEL、openSUSE、Ubuntu Server</li>
+<li>以桌面环境为主的桌面发行版：Ubuntu、Linux Mint、Fedora<h2 id="3-嵌入式Linux"><a href="#3-嵌入式Linux" class="headerlink" title="3. 嵌入式Linux"></a>3. 嵌入式Linux</h2>标准Linux运行在通用计算机上或者云端，虽然包含了很多功能，但是需要的硬件配置较高，如图是Ubuntu 18.04.2 LTS发行版需要的系统要求：<br><img src="//night-zhang.github.io/2019/07/26/Linux简介/2019-07-26-16-48-18.png" alt="2019-07-26-16-48-18.png"><br>在资源极其有限的嵌入式系统中，显然这样的性能是绝对不可能满足的，那么，如何使强大的Linux内核应用在嵌入式系统中呢？</li>
+</ul>
+<p>嵌入式系统有一个非常鲜明的特点 —— 通常都是针对某一个具体应用，所以将标准的Linux根据情况进行裁剪，只保留需要的功能（比如路由器中运行的Linux就不需要界面功能），因此只需要少量的Flash和RAM就可以完美的运行在嵌入式设备中。</p>
+<h2 id="4-嵌入式Linux知识架构"><a href="#4-嵌入式Linux知识架构" class="headerlink" title="4.嵌入式Linux知识架构"></a>4.嵌入式Linux知识架构</h2><p><img src="//night-zhang.github.io/2019/07/26/Linux简介/2019-07-26-16-47-16.png" alt="2019-07-26-16-47-16.png"></p>
+<h2 id="5-如何学Linux"><a href="#5-如何学Linux" class="headerlink" title="5.如何学Linux"></a>5.如何学Linux</h2><p>如此强大有效的一个操作系统，仅作学习之用的话选择其中一个自己喜欢的发行版就好，我的学习旅程是：</p>
+<p>首先在虚拟机上学习：</p>
+<ul>
+<li><p>会操作：基本Linux命令，Linux文件系统</p>
+</li>
+<li><p>会编程：shell脚本编程，基本C编程，网络编程，GUI编程<br>然后在开发板上学习，选用ARM9或ARM11：</p>
+</li>
+<li><p>会启动：移植并成功启动</p>
+</li>
+<li><p>会驱动：可以编写常见驱动程序</p>
+</li>
+</ul>
+<hr>
+<p>作者：Mculover666<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/Mculover666/article/details/87558456" target="_blank" rel="noopener">https://blog.csdn.net/Mculover666/article/details/87558456</a> </p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -497,12 +534,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>日常笔记</p>
+    <p><span class="copy-title">文章标题:</span>Linux简介</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-24, 16:41:55</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-26, 08:50:02</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/24/日常笔记/" title="日常笔记">https://night-zhang.github.io/2019/07/24/日常笔记/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-26, 16:46:20</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-26, 16:52:08</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/26/Linux简介/" title="Linux简介">https://night-zhang.github.io/2019/07/26/Linux简介/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

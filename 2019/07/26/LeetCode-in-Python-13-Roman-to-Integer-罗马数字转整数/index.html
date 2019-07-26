@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>日常笔记 | 夜晚将会美丽、</title>
-  <meta name="keywords" content=" 笔记 ">
-  <meta name="description" content="日常笔记 | 夜晚将会美丽、">
+  <title>LeetCode in Python-13. Roman to Integer 罗马数字转整数 | 夜晚将会美丽、</title>
+  <meta name="keywords" content=" LeetCode ">
+  <meta name="description" content="LeetCode in Python-13. Roman to Integer 罗马数字转整数 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="前言近期在做固件分析的相关知识，由于不明白VxWorks系统不了解，所以想先从正向了解一下系统的基础知识再进行逆向分析。 简介 VxWorks 是美国 Wind River System 公司（ 简称风河 公司 ，即 WRS 公司）推出的一个==实时操作系统==。   VxWorks操作系统由以下5部分构成：板级支持包BSP、微内核wind、网络系统、文件系统以及I/O系统   实时多任务操作系统">
 <meta name="keywords" content="VxWorks">
@@ -405,33 +405,31 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-日常笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">日常笔记</h1>
+        <h1 class="article-title">LeetCode in Python-13. Roman to Integer 罗马数字转整数</h1>
     
     <div class="article-meta">
-        
-        <span class="top"><a href="javascript:">置顶</a></span>
         
         
         
         <span class="book">
             
-                <a href="javascript:" data-rel="笔记">笔记</a>
+                <a href="javascript:" data-rel="Leetcode">Leetcode</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">笔记</a>
+            <a href="javascript:" class="color4">LeetCode</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-26 08:50:02'>2019-07-24 16:41</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-26 17:29:48'>2019-07-26 17:27</time>
         
     </div>
     <div class="article-meta">
@@ -464,7 +462,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#npm安装提醒audit"><span class="toc-text">npm安装提醒audit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pycharm创建虚拟环境出错"><span class="toc-text">pycharm创建虚拟环境出错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Anaconda安装的时候千万不要关闭弹出来的命令行"><span class="toc-text">Anaconda安装的时候千万不要关闭弹出来的命令行</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法1、字典map"><span class="toc-text">解法1、字典map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法2、"><span class="toc-text">解法2、</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#出处"><span class="toc-text">出处</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -479,11 +477,38 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="npm安装提醒audit"><a href="#npm安装提醒audit" class="headerlink" title="npm安装提醒audit"></a>npm安装提醒audit</h2><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/2019-07-25-22-31-11.png" alt="2019-07-25-22-31-11.png"><br>此处版本不合理问题，如果按照提示执行<code>npm audit</code>相关指令还是没效果，可以不用理会，不影响正常使用</p>
-<h2 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a>pycharm创建虚拟环境出错</h2><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p>
-<p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780832508.png" alt="1563780832508"></p>
-<p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780797384.png" alt="1563780797384"></p>
-<h2 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a>Anaconda安装的时候千万不要关闭弹出来的命令行</h2><p>弹出来的命令行是在安装相关的组件，不然conda什么的都会没有。。。</p>
+        <ul>
+<li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li>
+<li><a href="#%e8%a7%a3%e6%b3%951%e5%ad%97%e5%85%b8map">解法1、字典map</a></li>
+<li><a href="#%e8%a7%a3%e6%b3%952">解法2、</a></li>
+<li><a href="#%e5%87%ba%e5%a4%84">出处</a></li>
+</ul>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-31.png" alt="罗马数字转整数"><br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-37.png" alt="罗马数字转整数"></p>
+<h1 id="解法1、字典map"><a href="#解法1、字典map" class="headerlink" title="解法1、字典map"></a>解法1、字典map</h1><pre><code class="python">class Solution:
+    def romanToInt(self, s: str) -&gt; int:
+        numeral_map = {&quot;I&quot; : 1, &quot;V&quot; : 5, &quot;X&quot; : 10, &quot;L&quot; : 50, &quot;C&quot; : 100, &quot;D&quot; : 500, &quot;M&quot; : 1000}
+        result = 0
+
+        for i in range(len(s)):
+            if i&gt;0 and numeral_map[s[i]] &gt; numeral_map[s[i-1]]:
+                result += numeral_map[s[i]] - 2*numeral_map[s[i-1]]
+            else:
+                result += numeral_map[s[i]]
+
+        return result</code></pre>
+<p>注意对i-1的元素要减两次</p>
+<h1 id="解法2、"><a href="#解法2、" class="headerlink" title="解法2、"></a>解法2、</h1><pre><code>class Solution:
+    def romanToInt(self, s: str) -&gt; int:
+        d = {&#39;I&#39;:1, &#39;IV&#39;:3, &#39;V&#39;:5, &#39;IX&#39;:8, &#39;X&#39;:10, &#39;XL&#39;:30, &#39;L&#39;:50, &#39;XC&#39;:80, &#39;C&#39;:100, &#39;CD&#39;:300, &#39;D&#39;:500, &#39;CM&#39;:800, &#39;M&#39;:1000}
+        return sum([d.get(s[max(i-1, 0):i+1], d[n]) for i, n in enumerate(s)])</code></pre><ul>
+<li>构建一个字典记录所有罗马数字子串，注意长度为2的子串记录的值是（实际值-子串内左边罗马数字代表的数值）</li>
+<li>这样一来，遍历整个s的时候判断当前位置和前一个位置的两个字符组成的字符串是否在字典内，如果在就记录值，不在就说明当前位置不存在小数字在前面的情况，直接记录当前位置字符对应值</li>
+<li>举个例子，遍历经过IV的时候先记录I的对应值1再往前移动一步记录IV的值3，加起来正好是IV的真实值4。max函数在这里是为了防止遍历第一个字符的时候出现[-1:0]的情况</li>
+</ul>
+<p>1、列表生成式</p>
+<p>2、dict.get()<br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-50.png" alt="dict.get()"></p>
+<p>3、循环或者切片等希望从0开始执行时，可借助max(i-1, 0)来达成</p>
+<h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、<a href="https://www.bilibili.com/video/av45841108" target="_blank" rel="noopener">https://www.bilibili.com/video/av45841108</a><br>2、对应题目下<strong>Knife丶</strong>的题解</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -497,12 +522,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>日常笔记</p>
+    <p><span class="copy-title">文章标题:</span>LeetCode in Python-13. Roman to Integer 罗马数字转整数</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-24, 16:41:55</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-26, 08:50:02</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/24/日常笔记/" title="日常笔记">https://night-zhang.github.io/2019/07/24/日常笔记/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-26, 17:27:54</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-26, 17:29:48</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/" title="LeetCode in Python-13. Roman to Integer 罗马数字转整数">https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
