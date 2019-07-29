@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>LeetCode in Python-9. Palindrome Number 回文数 | 夜晚将会美丽、</title>
-  <meta name="keywords" content=" LeetCode ">
-  <meta name="description" content="LeetCode in Python-9. Palindrome Number 回文数 | 夜晚将会美丽、">
+  <title>Linux鸟哥阅读笔记 | 夜晚将会美丽、</title>
+  <meta name="keywords" content=" Linux ">
+  <meta name="description" content="Linux鸟哥阅读笔记 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
 <meta name="keywords" content="LeetCode">
@@ -440,9 +440,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-LeetCode-in-Python-9-Palindrome-Number-回文数" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Linux鸟哥阅读笔记" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">LeetCode in Python-9. Palindrome Number 回文数</h1>
+        <h1 class="article-title">Linux鸟哥阅读笔记</h1>
     
     <div class="article-meta">
         
@@ -450,21 +450,21 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="Leetcode">Leetcode</a>
+                <a href="javascript:" data-rel="Linux">Linux</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">LeetCode</a>
+            <a href="javascript:" class="color1">Linux</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-26 17:26:52'>2019-07-26 17:25</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-29 13:42:16'>2019-07-29 09:57</time>
         
     </div>
     <div class="article-meta">
@@ -497,7 +497,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法1、计算反序的值"><span class="toc-text">解法1、计算反序的值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法2、字符串逆序比较"><span class="toc-text">解法2、字符串逆序比较</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法3、"><span class="toc-text">解法3、</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法4、"><span class="toc-text">解法4、</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#出处"><span class="toc-text">出处</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux基础"><span class="toc-text">linux基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tips"><span class="toc-text">tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习步骤"><span class="toc-text">学习步骤</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux指令"><span class="toc-text">linux指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础指令"><span class="toc-text">基础指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#man-manual操作说明"><span class="toc-text">man(manual操作说明)</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -513,48 +513,64 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%951%e8%ae%a1%e7%ae%97%e5%8f%8d%e5%ba%8f%e7%9a%84%e5%80%bc">解法1、计算反序的值</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%952%e5%ad%97%e7%ac%a6%e4%b8%b2%e9%80%86%e5%ba%8f%e6%af%94%e8%be%83">解法2、字符串逆序比较</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%953">解法3、</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%954">解法4、</a></li>
-<li><a href="#%e5%87%ba%e5%a4%84">出处</a><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-9-Palindrome-Number-回文数/2019-07-26-17-26-17.png" alt="回文数"></li>
+<li><a href="#linux%e5%9f%ba%e7%a1%80">linux基础</a><ul>
+<li><a href="#tips">tips</a></li>
+<li><a href="#%e5%ad%a6%e4%b9%a0%e6%ad%a5%e9%aa%a4">学习步骤</a></li>
 </ul>
-<h1 id="解法1、计算反序的值"><a href="#解法1、计算反序的值" class="headerlink" title="解法1、计算反序的值"></a>解法1、计算反序的值</h1><pre><code class="python">class Solution:
-    def isPalindrome(self, x: int) -&gt; bool:
-        num = 0
-        a = abs(x)
-
-        while(a!=0):
-            temp = a % 10
-            num = num * 10 + temp
-            a = a // 10
-
-        if x &gt;= 0 and x == num:
-            return True
-        else:
-            return False</code></pre>
-<h1 id="解法2、字符串逆序比较"><a href="#解法2、字符串逆序比较" class="headerlink" title="解法2、字符串逆序比较"></a>解法2、字符串逆序比较</h1><pre><code class="python">class Solution:
-    def isPalindrome(self, x: int) -&gt; bool:
-        if x &gt;= 0 and int(str(x)[::-1]) == x:
-            return True
-        else:
-            return False</code></pre>
-<h1 id="解法3、"><a href="#解法3、" class="headerlink" title="解法3、"></a>解法3、</h1><pre><code class="python">class Solution:
-    def isPalindrome(self, x: int) -&gt; bool:
-        return str(x) == str(x)[::-1]</code></pre>
-<h1 id="解法4、"><a href="#解法4、" class="headerlink" title="解法4、"></a>解法4、</h1><pre><code class="Python">class Solution:
-    def isPalindrome(self, x: int) -&gt; bool:
-        r = list(map(lambda i: int(10**-i * x % 10), range(int(math.log10(x)), -1, -1))) if x &gt; 0 else [0, x]
-        return r == r[::-1]</code></pre>
+</li>
+<li><a href="#linux%e6%8c%87%e4%bb%a4">linux指令</a><ul>
+<li><a href="#%e5%9f%ba%e7%a1%80%e6%8c%87%e4%bb%a4">基础指令</a></li>
+<li><a href="#manmanual%e6%93%8d%e4%bd%9c%e8%af%b4%e6%98%8e">man(manual操作说明)</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a>linux基础</h1><h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><ul>
+<li>安卓算linux核心的一个分支，专门用来针对手机平板这种arm机器设计的</li>
+<li>学习这些基础知识也是为了让自己能掌握搜索的keyword</li>
+<li>一切皆文件</li>
+<li>/usr算可执行程序及相关的文件摆放目录</li>
+</ul>
+<h2 id="学习步骤"><a href="#学习步骤" class="headerlink" title="学习步骤"></a>学习步骤</h2><ul>
+<li>计算机硬件知识（基本OK）</li>
+<li>指令</li>
+<li>权限、user</li>
+<li>shell、shell script</li>
+<li>网络基础的创建</li>
+<li>架站</li>
+</ul>
+<p>硬件相关</p>
 <ul>
-<li>思路是一样的，这里把整数转成了列表而不是字符串</li>
-<li>比如一个整数12321，我想取出百位数可以这么做：12321 * 10^{int(log_{10}12321)} % 10 = 123 % 10 = 3</li>
+<li>操作系统也是软件，是通过嵌入硬件的BIOS的调用的</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/20190517173955999.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1pPTUIxRTEyMzQ1Ng==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>1、map() 会根据提供的函数对指定序列做映射。<br>第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。</p>
-<p><em>map(function, iterable, …)<br>function – 函数<br>iterable – 一个或多个序列</em></p>
-<p>2、</p>
-<h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、<a href="https://www.bilibili.com/video/av45840363" target="_blank" rel="noopener">https://www.bilibili.com/video/av45840363</a><br>3、4、对应题目下<strong>Knife丶</strong>的题解</p>
+<h1 id="linux指令"><a href="#linux指令" class="headerlink" title="linux指令"></a>linux指令</h1><h2 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h2><table>
+<thead>
+<tr>
+<th align="center">指令</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">date</td>
+<td align="center">显示日期与时间</td>
+</tr>
+<tr>
+<td align="center">cal</td>
+<td align="center">显示日历</td>
+</tr>
+<tr>
+<td align="center">bc</td>
+<td align="center">计算器</td>
+</tr>
+<tr>
+<td align="center">[Ctrl]-c</td>
+<td align="center">中断目前程序</td>
+</tr>
+<tr>
+<td align="center">[shift]+{[PageUP]|[Page Down]}</td>
+<td align="center">在<strong>纯文本</strong>的画面中翻页</td>
+</tr>
+</tbody></table>
+<h2 id="man-manual操作说明"><a href="#man-manual操作说明" class="headerlink" title="man(manual操作说明)"></a>man(manual操作说明)</h2><p>man结果中的，命令的代号说明。<strong>重点1、5、8</strong><br>| 代号  |                                  代表内容                                  |<br>| :—: | :————————————————————————: |<br>|   1   |              使用者在shell环境中可以操作的指令或可可执行文件               |<br>|   2   |                        系统核心可调用的函数与工具等                        |<br>|   3   | 一些常用的函数（function） 与函数库（library） ，大部分为C的函数库（libc） |<br>|   4   |                     设备文件的说明，通常在/dev下的文件                     |<br>|   5   |                        配置文件或者是某些文件的格式                        |<br>|   6   |                               游戏（games）                                |<br>|   7   |      惯例与协定等，例如Linux文件系统、网络协定、ASCII code等等的说明       |<br>|   8   |                          系统管理员可用的管理指令                          |<br>|   9   |                             跟kernel有关的文件                             |</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -568,12 +584,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>LeetCode in Python-9. Palindrome Number 回文数</p>
+    <p><span class="copy-title">文章标题:</span>Linux鸟哥阅读笔记</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-26, 17:25:52</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-26, 17:26:52</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/26/LeetCode-in-Python-9-Palindrome-Number-回文数/" title="LeetCode in Python-9. Palindrome Number 回文数">https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-9-Palindrome-Number-回文数/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-29, 09:57:32</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-29, 13:42:16</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/29/Linux鸟哥阅读笔记/" title="Linux鸟哥阅读笔记">https://night-zhang.github.io/2019/07/29/Linux鸟哥阅读笔记/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
