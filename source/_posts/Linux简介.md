@@ -2,10 +2,10 @@
 title: Linux简介
 date: 2019-07-26 16:46:20
 tags:
-- linux
+- Linux
 - 转载
 categories:
-- linux
+- Linux
 ---
 对于任何一个研发人员来说，Linux是最强大的操作系统，没有之一！为什么这么说呢，原因有下：
 
