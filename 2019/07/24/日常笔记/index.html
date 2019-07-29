@@ -6,20 +6,18 @@
   <meta name="keywords" content=" 笔记 ">
   <meta name="description" content="日常笔记 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
-<meta name="keywords" content="LeetCode">
+<meta name="description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode in Python-28. Implement strStr() 实现strStr()">
-<meta property="og:url" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/index.html">
+<meta property="og:title" content="shell命令行快捷键">
+<meta property="og:url" content="https://night-zhang.github.io/2019/07/29/shell命令行快捷键/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
+<meta property="og:description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/2019-07-26-17-37-05.png">
-<meta property="og:updated_time" content="2019-07-26T09:37:44.000Z">
+<meta property="og:updated_time" content="2019-07-29T06:32:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode in Python-28. Implement strStr() 实现strStr()">
-<meta name="twitter:description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
-<meta name="twitter:image" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/2019-07-26-17-37-05.png">
+<meta name="twitter:title" content="shell命令行快捷键">
+<meta name="twitter:description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -227,7 +225,7 @@
     <div></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="16">
-
+<input type="hidden" id="yelog_site_word_count" value="8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -466,10 +464,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-29 09:28:30'>2019-07-24 16:41</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-29 20:05:50'>2019-07-24 16:41</time>
         
     </div>
     <div class="article-meta">
+        
+        <span>字数:452</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -499,7 +499,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#声明"><span class="toc-text">声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CentOS"><span class="toc-text">CentOS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#界面相关"><span class="toc-text">界面相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建win10-tensorflow-gpu环境时注意顺序"><span class="toc-text">搭建win10 tensorflow-gpu环境时注意顺序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#npm安装提醒audit"><span class="toc-text">npm安装提醒audit</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pycharm创建虚拟环境出错"><span class="toc-text">pycharm创建虚拟环境出错</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Anaconda安装的时候千万不要关闭弹出来的命令行"><span class="toc-text">Anaconda安装的时候千万不要关闭弹出来的命令行</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#声明"><span class="toc-text">声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#import-tensorflow出错"><span class="toc-text">import tensorflow出错</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建win10-tensorflow-gpu环境时注意顺序"><span class="toc-text">搭建win10 tensorflow-gpu环境时注意顺序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#npm安装提醒audit"><span class="toc-text">npm安装提醒audit</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pycharm创建虚拟环境出错"><span class="toc-text">pycharm创建虚拟环境出错</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Anaconda安装的时候千万不要关闭弹出来的命令行"><span class="toc-text">Anaconda安装的时候千万不要关闭弹出来的命令行</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -515,20 +515,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><a href="#%e5%a3%b0%e6%98%8e">声明</a></li>
-<li><a href="#centos">CentOS</a><ul>
-<li><a href="#%e7%95%8c%e9%9d%a2%e7%9b%b8%e5%85%b3">界面相关</a></li>
+<li><a href="#%e5%a3%b0%e6%98%8e"><strong>声明</strong></a></li>
+<li><a href="#import-tensorflow%e5%87%ba%e9%94%99"><strong>import tensorflow出错</strong></a></li>
+<li><a href="#%e6%90%ad%e5%bb%bawin10-tensorflow-gpu%e7%8e%af%e5%a2%83%e6%97%b6%e6%b3%a8%e6%84%8f%e9%a1%ba%e5%ba%8f"><strong>搭建win10 tensorflow-gpu环境时注意顺序</strong></a></li>
+<li><a href="#npm%e5%ae%89%e8%a3%85%e6%8f%90%e9%86%92audit"><strong>npm安装提醒audit</strong></a></li>
+<li><a href="#pycharm%e5%88%9b%e5%bb%ba%e8%99%9a%e6%8b%9f%e7%8e%af%e5%a2%83%e5%87%ba%e9%94%99"><strong>pycharm创建虚拟环境出错</strong></a></li>
+<li><a href="#anaconda%e5%ae%89%e8%a3%85%e7%9a%84%e6%97%b6%e5%80%99%e5%8d%83%e4%b8%87%e4%b8%8d%e8%a6%81%e5%85%b3%e9%97%ad%e5%bc%b9%e5%87%ba%e6%9d%a5%e7%9a%84%e5%91%bd%e4%bb%a4%e8%a1%8c"><strong>Anaconda安装的时候千万不要关闭弹出来的命令行</strong></a></li>
 </ul>
-</li>
-<li><a href="#%e6%90%ad%e5%bb%bawin10-tensorflow-gpu%e7%8e%af%e5%a2%83%e6%97%b6%e6%b3%a8%e6%84%8f%e9%a1%ba%e5%ba%8f">搭建win10 tensorflow-gpu环境时注意顺序</a></li>
-<li><a href="#npm%e5%ae%89%e8%a3%85%e6%8f%90%e9%86%92audit">npm安装提醒audit</a></li>
-<li><a href="#pycharm%e5%88%9b%e5%bb%ba%e8%99%9a%e6%8b%9f%e7%8e%af%e5%a2%83%e5%87%ba%e9%94%99">pycharm创建虚拟环境出错</a></li>
-<li><a href="#anaconda%e5%ae%89%e8%a3%85%e7%9a%84%e6%97%b6%e5%80%99%e5%8d%83%e4%b8%87%e4%b8%8d%e8%a6%81%e5%85%b3%e9%97%ad%e5%bc%b9%e5%87%ba%e6%9d%a5%e7%9a%84%e5%91%bd%e4%bb%a4%e8%a1%8c">Anaconda安装的时候千万不要关闭弹出来的命令行</a></li>
-</ul>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>本文没什么技术含量，仅仅作为个人遇到坑之后的记录与反思</p>
-<h1 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h1><h2 id="界面相关"><a href="#界面相关" class="headerlink" title="界面相关"></a>界面相关</h2><p>Linux默认的情况下会提供六个Terminal来让使用者登陆， 切换的方式为使用：[Ctrl] + [Alt] + [F1]<del>[F6]的组合按钮，系统会将[F1] /</del> [F6]命名为<strong>tty1 ~ tty6</strong>的操作接口环境。tty2/~tty6一开始是不存在的！按下 [ctrl]+[alt]+[F2]，系统才产生出额外的 tty2, tty3。</p>
-<p>启动窗口界面：<code>startx</code></p>
-<h1 id="搭建win10-tensorflow-gpu环境时注意顺序"><a href="#搭建win10-tensorflow-gpu环境时注意顺序" class="headerlink" title="搭建win10 tensorflow-gpu环境时注意顺序"></a>搭建win10 tensorflow-gpu环境时注意顺序</h1><p>大部分教程都是教你：</p>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a><strong>声明</strong></h1><p>本文没什么技术含量，仅仅作为个人遇到坑之后的记录与反思</p>
+<h1 id="import-tensorflow出错"><a href="#import-tensorflow出错" class="headerlink" title="import tensorflow出错"></a><strong>import tensorflow出错</strong></h1><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/2019-07-29-20-03-00.png" alt="numpy版本兼容问题"><br>tensorflow 对numpy1.17存在部分兼容性问题，版本小于1.17即可：<code>python -m pip install --upgrade numpy==1.16.4</code></p>
+<p><a href="https://github.com/tensorflow/tensorflow/issues/30427" target="_blank" rel="noopener">参考</a></p>
+<h1 id="搭建win10-tensorflow-gpu环境时注意顺序"><a href="#搭建win10-tensorflow-gpu环境时注意顺序" class="headerlink" title="搭建win10 tensorflow-gpu环境时注意顺序"></a><strong>搭建win10 tensorflow-gpu环境时注意顺序</strong></h1><p>大部分教程都是教你：</p>
 <ul>
 <li>1、先下python某版本（eg.3.5）<code>conda create -n tensorflow-gpu python=3.5</code></li>
 <li>2、再下某版本cuda以及对应版本cudnn</li>
@@ -537,13 +534,13 @@
 <p>由于教程都是会越来越旧，所以安装的tensorflow可能需要的gpu版本不对<br><img src="//night-zhang.github.io/2019/07/24/日常笔记/2019-07-27-10-37-51.png" alt="gpu版本不对"><br>所以最好是132的顺序</p>
 <p><em>别费事,cuda9.0对应tensorflow1.9;cuda10.0对应tensorflow1.14</em></p>
 <p>查看虚拟环境<code>conda info --envs</code></p>
-<h1 id="npm安装提醒audit"><a href="#npm安装提醒audit" class="headerlink" title="npm安装提醒audit"></a>npm安装提醒audit</h1><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/2019-07-25-22-31-11.png" alt="2019-07-25-22-31-11.png"><br>此处版本不合理问题，如果按照提示执行<code>npm audit</code>相关指令还是没效果，可以不用理会，不影响正常使用</p>
+<h1 id="npm安装提醒audit"><a href="#npm安装提醒audit" class="headerlink" title="npm安装提醒audit"></a><strong>npm安装提醒audit</strong></h1><p><img src="//night-zhang.github.io/2019/07/24/日常笔记/2019-07-25-22-31-11.png" alt="2019-07-25-22-31-11.png"><br>此处版本不合理问题，如果按照提示执行<code>npm audit</code>相关指令还是没效果，可以不用理会，不影响正常使用</p>
 <p><em>注意仔细看字，别因为是英文就一目十行，当时遇到这个问题其实不是问题，结果没出现只是因为别的地方开关没开，要专心</em></p>
-<h1 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a>pycharm创建虚拟环境出错</h1><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p>
+<h1 id="pycharm创建虚拟环境出错"><a href="#pycharm创建虚拟环境出错" class="headerlink" title="pycharm创建虚拟环境出错"></a><strong>pycharm创建虚拟环境出错</strong></h1><p>用anaconda3创建虚拟环境出错，改用2，或者手动下载python3的纯净包</p>
 <p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780832508.png" alt="1563780832508"></p>
 <p><img src="//night-zhang.github.io/2019/07/24/日常笔记/1563780797384.png" alt="1563780797384"></p>
 <p><em>似乎是anaconda3包的问题，重装电脑之后尽量不要两个anaconda版本一起使用</em></p>
-<h1 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a>Anaconda安装的时候千万不要关闭弹出来的命令行</h1><p>弹出来的命令行是在安装相关的组件，不然conda什么的都会没有。。。</p>
+<h1 id="Anaconda安装的时候千万不要关闭弹出来的命令行"><a href="#Anaconda安装的时候千万不要关闭弹出来的命令行" class="headerlink" title="Anaconda安装的时候千万不要关闭弹出来的命令行"></a><strong>Anaconda安装的时候千万不要关闭弹出来的命令行</strong></h1><p>弹出来的命令行是在安装相关的组件，不然conda什么的都会没有。。。</p>
 <p><em>做动作之前要考虑一下，别随便乱点</em></p>
 
       
@@ -559,10 +556,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>日常笔记</p>
-    
+    <p><span class="copy-title">文章字数:</span><span class="post-count">452</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
     <p><span class="copy-title">发布时间:</span>2019-07-24, 16:41:55</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-29, 09:28:30</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-29, 20:05:50</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/24/日常笔记/" title="日常笔记">https://night-zhang.github.io/2019/07/24/日常笔记/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

@@ -6,20 +6,18 @@
   <meta name="keywords" content=" Linux ">
   <meta name="description" content="shell命令行快捷键 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
-<meta name="keywords" content="LeetCode">
+<meta name="description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode in Python-28. Implement strStr() 实现strStr()">
-<meta property="og:url" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/index.html">
+<meta property="og:title" content="shell命令行快捷键">
+<meta property="og:url" content="https://night-zhang.github.io/2019/07/29/shell命令行快捷键/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
+<meta property="og:description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/2019-07-26-17-37-05.png">
-<meta property="og:updated_time" content="2019-07-26T09:37:44.000Z">
+<meta property="og:updated_time" content="2019-07-29T06:32:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode in Python-28. Implement strStr() 实现strStr()">
-<meta name="twitter:description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
-<meta name="twitter:image" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/2019-07-26-17-37-05.png">
+<meta name="twitter:title" content="shell命令行快捷键">
+<meta name="twitter:description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -227,7 +225,7 @@
     <div></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="16">
-
+<input type="hidden" id="yelog_site_word_count" value="8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -464,10 +462,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-29 10:46:38'>2019-07-29 10:15</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-29 14:32:52'>2019-07-29 10:15</time>
         
     </div>
     <div class="article-meta">
+        
+        <span>字数:445</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -497,7 +497,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#光标移动"><span class="toc-text">光标移动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#other"><span class="toc-text">other</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#光标移动"><span class="toc-text">光标移动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编辑"><span class="toc-text">编辑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#查找"><span class="toc-text">查找</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#other"><span class="toc-text">other</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -513,20 +513,37 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h1><ul>
-<li>Ctrl + a: 跳到命令行首</li>
-<li>Ctrl + e: 跳到命令行尾</li>
-<li>Ctrl + u: 删除光标至命令行首的内容</li>
-<li>Ctrl + k: 删除光标至命令行尾的内容</li>
-<li>Ctrl + f 或 -&gt;：按字符右移（往命令行尾部方向，前移）</li>
-<li>Ctrl + b 或 &lt;-：按字符左移（往命令行尾部方向，后移）</li>
+<li>ctrl + 方向键左键    光标移动到前一个单词开头</li>
+<li>ctrl + 方向键右键    光标移动到后一个单词结尾</li>
 <li>Alt + f: 按单词右移 (往命令行尾部方向，前移）</li>
 <li>Alt + b: 按单词左移（往命令行首部方向，后移）</li>
-<li>Ctrl + +:字体放大</li>
-<li>Ctrl + -：字体缩小</li>
+<li>ctrl + a      将光标移动到命令行开头</li>
+<li>ctrl + e      将光标移动到命令行结尾处</li>
+<li>ctrl + f      光标向后移动一个字符，相当于VIM里l（不能使用左右方向键时可以用到）</li>
+<li>ctrl + b      光标向前移动一个字符，相当于VIM里h</li>
+<li>ctrl + p      显示上一条命令（不能使用上下方向键时可以用到）</li>
+<li>ctrl + n      显示下一条命令</li>
 </ul>
-<h1 id="other"><a href="#other" class="headerlink" title="other"></a>other</h1><p>Ctrl+l  清屏（clear）</p>
-<p>Esc+.   (键盘按键)上一个命令的最后一个参数</p>
-<p>!$      （命令）上一个命令的最后一个参数,用法如：ls !$ </p>
+<p><em>关键是按单词移动，其他都可以用上下左右home，end解决</em></p>
+<h1 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h1><ul>
+<li>Ctrl + c:     删除整行</li>
+<li>Ctrl + Y:     粘贴到光标后</li>
+<li>ctrl + u      剪切光标<strong>前面所有</strong>字符</li>
+<li>ctrl + k      剪切光标<strong>后面所有</strong>字符</li>
+<li>Ctrl + w:     剪切从光标位置到当前<strong>单词起始</strong>位置</li>
+<li>Alt + d:      剪切从光标位置到当前<strong>单词末尾</strong>位置</li>
+</ul>
+<h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><ul>
+<li>ctrl + r      输入若干字符（关键词），会搜索包含所输入关键词的历史命令。继续按Ctrl+r则会继续向前搜索包含关键词的历史命令。找到目标命令后，可以直接按enter键执行找到的命令。如果还想修改参数则可以按右箭头。</li>
+<li>Ctrl + g:     从Ctrl+r的搜索模式中跳出<h1 id="other"><a href="#other" class="headerlink" title="other"></a>other</h1></li>
+<li>ctrl + l      清屏相当于命令clear</li>
+<li>Ctrl + +      字体放大</li>
+<li>Ctrl + -      字体缩小</li>
+<li>ctrl + s      锁住终端</li>
+<li>ctrl + q      解锁终端</li>
+<li>!!               执行历史命令中的最后一条命令</li>
+<li>!$              显示上一条命令中的最后一个参数，相当于esc + .</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -541,10 +558,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>shell命令行快捷键</p>
-    
+    <p><span class="copy-title">文章字数:</span><span class="post-count">445</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
     <p><span class="copy-title">发布时间:</span>2019-07-29, 10:15:48</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-29, 10:46:38</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-29, 14:32:52</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/29/shell命令行快捷键/" title="shell命令行快捷键">https://night-zhang.github.io/2019/07/29/shell命令行快捷键/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

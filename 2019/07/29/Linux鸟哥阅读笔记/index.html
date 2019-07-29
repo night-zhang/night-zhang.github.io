@@ -6,20 +6,18 @@
   <meta name="keywords" content=" Linux ">
   <meta name="description" content="Linux鸟哥阅读笔记 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
-<meta name="keywords" content="LeetCode">
+<meta name="description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode in Python-28. Implement strStr() 实现strStr()">
-<meta property="og:url" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/index.html">
+<meta property="og:title" content="shell命令行快捷键">
+<meta property="og:url" content="https://night-zhang.github.io/2019/07/29/shell命令行快捷键/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
+<meta property="og:description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/2019-07-26-17-37-05.png">
-<meta property="og:updated_time" content="2019-07-26T09:37:44.000Z">
+<meta property="og:updated_time" content="2019-07-29T06:32:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode in Python-28. Implement strStr() 实现strStr()">
-<meta name="twitter:description" content="题目 解法1、 出处  题目 解法1、class Solution:     def strStr(self, haystack: str, needle: str) -&amp;gt; int:         for i in range(len(haystack) - len(needle) + 1):             if haystack[i:i+len(needle)] == nee">
-<meta name="twitter:image" content="https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-28-Implement-strStr-实现strStr/2019-07-26-17-37-05.png">
+<meta name="twitter:title" content="shell命令行快捷键">
+<meta name="twitter:description" content="光标移动 ctrl + 方向键左键    光标移动到前一个单词开头 ctrl + 方向键右键    光标移动到后一个单词结尾 Alt + f: 按单词右移 (往命令行尾部方向，前移） Alt + b: 按单词左移（往命令行首部方向，后移） ctrl + a      将光标移动到命令行开头 ctrl + e      将光标移动到命令行结尾处 ctrl + f      光标向后移动一个字符，相当">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -227,7 +225,7 @@
     <div></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="16">
-
+<input type="hidden" id="yelog_site_word_count" value="8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -464,10 +462,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-29 13:42:16'>2019-07-29 09:57</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-29 20:27:00'>2019-07-29 09:57</time>
         
     </div>
     <div class="article-meta">
+        
+        <span>字数:788</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -497,7 +497,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux基础"><span class="toc-text">linux基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tips"><span class="toc-text">tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习步骤"><span class="toc-text">学习步骤</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux指令"><span class="toc-text">linux指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础指令"><span class="toc-text">基础指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#man-manual操作说明"><span class="toc-text">man(manual操作说明)</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#目录结构（逐步完善）"><span class="toc-text">目录结构（逐步完善）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux基础"><span class="toc-text">Linux基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tips"><span class="toc-text">tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习步骤"><span class="toc-text">学习步骤</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux指令"><span class="toc-text">Linux指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础指令"><span class="toc-text">基础指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找相关指令用法"><span class="toc-text">查找相关指令用法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关机相关"><span class="toc-text">关机相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CentOS界面相关"><span class="toc-text">CentOS界面相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#权限相关"><span class="toc-text">权限相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#更改权限"><span class="toc-text">更改权限</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -513,18 +513,62 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><a href="#linux%e5%9f%ba%e7%a1%80">linux基础</a><ul>
+<li><a href="#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84%e9%80%90%e6%ad%a5%e5%ae%8c%e5%96%84">目录结构（逐步完善）</a></li>
+<li><a href="#linux%e5%9f%ba%e7%a1%80"><strong>Linux基础</strong></a><ul>
 <li><a href="#tips">tips</a></li>
 <li><a href="#%e5%ad%a6%e4%b9%a0%e6%ad%a5%e9%aa%a4">学习步骤</a></li>
 </ul>
 </li>
-<li><a href="#linux%e6%8c%87%e4%bb%a4">linux指令</a><ul>
+<li><a href="#linux%e6%8c%87%e4%bb%a4"><strong>Linux指令</strong></a><ul>
 <li><a href="#%e5%9f%ba%e7%a1%80%e6%8c%87%e4%bb%a4">基础指令</a></li>
-<li><a href="#manmanual%e6%93%8d%e4%bd%9c%e8%af%b4%e6%98%8e">man(manual操作说明)</a></li>
+<li><a href="#%e6%9f%a5%e6%89%be%e7%9b%b8%e5%85%b3%e6%8c%87%e4%bb%a4%e7%94%a8%e6%b3%95">查找相关指令用法</a></li>
+</ul>
+</li>
+<li><a href="#%e5%85%b3%e6%9c%ba%e7%9b%b8%e5%85%b3"><strong>关机相关</strong></a><ul>
+<li><a href="#centos%e7%95%8c%e9%9d%a2%e7%9b%b8%e5%85%b3">CentOS界面相关</a></li>
+</ul>
+</li>
+<li><a href="#%e6%9d%83%e9%99%90%e7%9b%b8%e5%85%b3"><strong>权限相关</strong></a><ul>
+<li><a href="#%e6%9b%b4%e6%94%b9%e6%9d%83%e9%99%90">更改权限</a></li>
 </ul>
 </li>
 </ul>
-<h1 id="linux基础"><a href="#linux基础" class="headerlink" title="linux基础"></a>linux基础</h1><h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><ul>
+<h1 id="目录结构（逐步完善）"><a href="#目录结构（逐步完善）" class="headerlink" title="目录结构（逐步完善）"></a>目录结构（逐步完善）</h1><ul>
+<li><p><code>/</code> （root, 根目录） ：与开机系统有关；</p>
+</li>
+<li><p><code>/usr</code> （unix software resource） ：与软件安装/执行有关；</p>
+</li>
+<li><p><code>/var</code> （variable） ：与系统运行过程有关。</p>
+</li>
+<li><p><code>/usr</code> （软件放置处） </p>
+</li>
+<li><p><code>/etc</code> （配置文件）</p>
+</li>
+<li><p><code>/opt</code> （第三方协力软件） </p>
+</li>
+<li><p><code>/boot</code> （开机与核心档）</p>
+</li>
+<li><p><code>/var/mail</code> （使用者邮件信箱） </p>
+</li>
+<li><p><code>/var/run</code> （程序相关）</p>
+</li>
+<li><p><code>/var/spool/news</code> （新闻群组） </p>
+</li>
+<li><p><code>/var/lock</code> （程序相关）</p>
+</li>
+<li><p><code>/usr/share/doc</code>  存放各个命令的说明文档</p>
+</li>
+<li><p><code>/etc/group</code>  存放群组信息</p>
+</li>
+<li><p><code>/etc/passwd</code> 存放帐号</p>
+</li>
+<li><p><code>/var/log/wtmp</code>  登录的数据记录</p>
+</li>
+<li><p><code>/dev/sda</code>    设备文件</p>
+</li>
+<li></li>
+</ul>
+<h1 id="Linux基础"><a href="#Linux基础" class="headerlink" title="Linux基础"></a><strong>Linux基础</strong></h1><h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><ul>
 <li>安卓算linux核心的一个分支，专门用来针对手机平板这种arm机器设计的</li>
 <li>学习这些基础知识也是为了让自己能掌握搜索的keyword</li>
 <li>一切皆文件</li>
@@ -542,7 +586,7 @@
 <ul>
 <li>操作系统也是软件，是通过嵌入硬件的BIOS的调用的</li>
 </ul>
-<h1 id="linux指令"><a href="#linux指令" class="headerlink" title="linux指令"></a>linux指令</h1><h2 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h2><table>
+<h1 id="Linux指令"><a href="#Linux指令" class="headerlink" title="Linux指令"></a><strong>Linux指令</strong></h1><h2 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h2><table>
 <thead>
 <tr>
 <th align="center">指令</th>
@@ -570,7 +614,48 @@
 <td align="center">在<strong>纯文本</strong>的画面中翻页</td>
 </tr>
 </tbody></table>
-<h2 id="man-manual操作说明"><a href="#man-manual操作说明" class="headerlink" title="man(manual操作说明)"></a>man(manual操作说明)</h2><p>man结果中的，命令的代号说明。<strong>重点1、5、8</strong><br>| 代号  |                                  代表内容                                  |<br>| :—: | :————————————————————————: |<br>|   1   |              使用者在shell环境中可以操作的指令或可可执行文件               |<br>|   2   |                        系统核心可调用的函数与工具等                        |<br>|   3   | 一些常用的函数（function） 与函数库（library） ，大部分为C的函数库（libc） |<br>|   4   |                     设备文件的说明，通常在/dev下的文件                     |<br>|   5   |                        配置文件或者是某些文件的格式                        |<br>|   6   |                               游戏（games）                                |<br>|   7   |      惯例与协定等，例如Linux文件系统、网络协定、ASCII code等等的说明       |<br>|   8   |                          系统管理员可用的管理指令                          |<br>|   9   |                             跟kernel有关的文件                             |</p>
+<h2 id="查找相关指令用法"><a href="#查找相关指令用法" class="headerlink" title="查找相关指令用法"></a>查找相关指令用法</h2><p>1、–help</p>
+<p>2、man(manual操作说明)</p>
+<p>3、info的信息是分段的，类似man</p>
+<p>4、<code>/usr/share/doc</code>下查阅</p>
+<h1 id="关机相关"><a href="#关机相关" class="headerlink" title="关机相关"></a><strong>关机相关</strong></h1><ul>
+<li>将数据同步写入硬盘中的指令： sync</li>
+</ul>
+<p>建议多次使用</p>
+<ul>
+<li>惯用的关机指令： shutdown</li>
+</ul>
+<p>加<code>-c</code>可以取消关机</p>
+<ul>
+<li>重新开机，关机： reboot, halt, poweroff</li>
+</ul>
+<h2 id="CentOS界面相关"><a href="#CentOS界面相关" class="headerlink" title="CentOS界面相关"></a>CentOS界面相关</h2><p>Linux默认的情况下会提供六个Terminal来让使用者登陆， 切换的方式为使用：[Ctrl] + [Alt] + [F1]<del>[F6]的组合按钮，系统会将[F1] /</del> [F6]命名为<strong>tty1 ~ tty6</strong>的操作接口环境。tty2/~tty6一开始是不存在的！按下 [ctrl]+[alt]+[F2]，系统才产生出额外的 tty2, tty3。</p>
+<p>启动窗口界面：<code>startx</code></p>
+<h1 id="权限相关"><a href="#权限相关" class="headerlink" title="权限相关"></a><strong>权限相关</strong></h1><p>User, Group, Others<br><img src="//night-zhang.github.io/2019/07/29/Linux鸟哥阅读笔记/2019-07-29-15-42-50.png" alt="ls -l"><br>档案类型标志位含义：</p>
+<ul>
+<li>当为[ d ]则是目录，例如上表文件名为“.config”的那一行；</li>
+<li>当为[ - ]则是文件，例如上表文件名为“initial-setup-ks.cfg”那一行；</li>
+<li>若是[ l ]则表示为链接文件（link file） ；</li>
+<li>若是[ b ]则表示为设备文件里面的可供储存的周边设备（可随机存取设备） ；</li>
+<li>若是[ c ]则表示为设备文件里面的序列埠设备，例如键盘、鼠标（一次性读取设备） 。</li>
+</ul>
+<h2 id="更改权限"><a href="#更改权限" class="headerlink" title="更改权限"></a>更改权限</h2><ul>
+<li>chgrp ：改变文件所属群组<ul>
+<li>eg:<code>chgrp users foo1.txt</code></li>
+<li>群组相关存放在<code>/etc/groupp</code>内</li>
+</ul>
+</li>
+<li>chown ：改变文件拥有者<ul>
+<li>帐号相关存放在<code>/etc/passwd</code></li>
+</ul>
+</li>
+<li>chmod ：改变文件的权限, SUID, SGID, SBIT等等的特性<ul>
+<li><code>&gt; r:4 &gt; w:2 &gt; x:1</code></li>
+<li><code>&gt; owner = rwx = 4+2+1 = 7 &gt; group = rwx = 4+2+1 = 7 &gt; others= --- = 0+0+0 = 0</code></li>
+<li><code>| chmod | u g o a | +（加入） -（除去） =（设置） | r w x | 文件或目录 |</code></li>
+</ul>
+</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -585,10 +670,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>Linux鸟哥阅读笔记</p>
-    
+    <p><span class="copy-title">文章字数:</span><span class="post-count">788</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
     <p><span class="copy-title">发布时间:</span>2019-07-29, 09:57:32</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-29, 13:42:16</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-29, 20:27:00</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/29/Linux鸟哥阅读笔记/" title="Linux鸟哥阅读笔记">https://night-zhang.github.io/2019/07/29/Linux鸟哥阅读笔记/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
