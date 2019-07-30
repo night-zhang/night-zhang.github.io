@@ -6,8 +6,8 @@ tags:
 categories:
 - vscode
 ---
-- [操作相关](#%e6%93%8d%e4%bd%9c%e7%9b%b8%e5%85%b3)
-- [插件](#%e6%8f%92%e4%bb%b6)
+- [**操作相关**](#%e6%93%8d%e4%bd%9c%e7%9b%b8%e5%85%b3)
+- [**插件**](#%e6%8f%92%e4%bb%b6)
   - [中文扩展](#%e4%b8%ad%e6%96%87%e6%89%a9%e5%b1%95)
   - [MarkDown](#markdown)
     - [自动生成目录](#%e8%87%aa%e5%8a%a8%e7%94%9f%e6%88%90%e7%9b%ae%e5%bd%95)
@@ -15,7 +15,7 @@ categories:
   - [图标更改](#%e5%9b%be%e6%a0%87%e6%9b%b4%e6%94%b9)
   - [远程](#%e8%bf%9c%e7%a8%8b)
 
-# 操作相关
+# **操作相关**
 
 - 禅（全屏）模式：`Ctrl+KZ`（按两次`Esc`退出）
 
@@ -38,7 +38,7 @@ categories:
 
 
 
-# 插件
+# **插件**
 ## 中文扩展
 **Chinese (Simplified) Language Pack for Visual Studio Code**
 

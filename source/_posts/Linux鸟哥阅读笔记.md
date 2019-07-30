@@ -1,12 +1,12 @@
 ---
-title: Linux鸟哥阅读笔记
+title: Linux鸟哥阅读笔记(1)——目录、基础指令
 date: 2019-07-29 09:57:32
 categories:
 - Linux
 tags:
 - Linux
 ---
-- [目录结构（逐步完善）](#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84%e9%80%90%e6%ad%a5%e5%ae%8c%e5%96%84)
+- [**目录结构**](#%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84)
 - [**Linux基础**](#linux%e5%9f%ba%e7%a1%80)
   - [tips](#tips)
   - [学习步骤](#%e5%ad%a6%e4%b9%a0%e6%ad%a5%e9%aa%a4)
@@ -18,26 +18,32 @@ tags:
 - [**权限相关**](#%e6%9d%83%e9%99%90%e7%9b%b8%e5%85%b3)
   - [更改权限](#%e6%9b%b4%e6%94%b9%e6%9d%83%e9%99%90)
 
-# 目录结构（逐步完善）
+# **目录结构**
+![FHS四种交互类型](Linux鸟哥阅读笔记/2019-07-30-16-35-17.png)
+
+![目录树](Linux鸟哥阅读笔记/2019-07-30-16-36-30.png)
+
 - `/` （root, 根目录） ：与开机系统有关；
+
+- `/bin`    可执行文件
+- `/boot`   开机用的文件
+- `/etc`    配置文件
+- `/lib`    函数库
+- `/opt`    第三方软件
+- `/srv`    网络服务所需的数据目录
+- `/tmp`    暂存文件
+- `/home`   使用者主文件夹
+- `/root`   root主文件夹
+
 - `/usr` （unix software resource） ：与软件安装/执行有关；
+  - `/usr/share/doc`  存放各个命令的说明文档
 - `/var` （variable） ：与系统运行过程有关。
+  - `/var/mail` （使用者邮件信箱） 
+  - `/var/run` （程序相关）
+  - `/var/spool/news` （新闻群组） 
+  - `/var/lock` （程序相关）
+  - `/var/log/wtmp`  登录的数据记录
 
-- `/usr` （软件放置处） 
-- `/etc` （配置文件）
-- `/opt` （第三方协力软件） 
-- `/boot` （开机与核心档）
-- `/var/mail` （使用者邮件信箱） 
-- `/var/run` （程序相关）
-- `/var/spool/news` （新闻群组） 
-- `/var/lock` （程序相关）
-
-- `/usr/share/doc`  存放各个命令的说明文档
-- `/etc/group`  存放群组信息
-- `/etc/passwd` 存放帐号
-- `/var/log/wtmp`  登录的数据记录
-- `/dev/sda`    设备文件
-- 
 
 
 # **Linux基础**
