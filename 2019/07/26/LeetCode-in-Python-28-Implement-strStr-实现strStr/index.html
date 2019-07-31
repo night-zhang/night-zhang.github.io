@@ -6,36 +6,27 @@
   <meta name="keywords" content=" LeetCode ">
   <meta name="description" content="LeetCode in Python-28. Implement strStr() 实现strStr() | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="地址 第1题：欢迎来到NWUCTF! 第2题：How to get flag? (1) 第3题：How to get flag? (2) 第4题：base64是啥 第5题：Let’s learn html 第6题：Let’s learn javascript 第7题：Let’s learn CSS 第8题：Let’s learn javascript :D  地址nwuctf.nwu.edu.c">
+<meta name="description" content="re1 pyc Let’s learn C crackme nwu  re1看结果是hello world,目测主函数只是打印，答案就藏在里面 IDA打开，找到main函数，先aHelloWorld入栈，然后call子函数，然后。。。反正我也不是每句都认识，把子函数，或者数据地址都点点看 刚开始跳转sub_4011F2发现太乱了，就回来点下一个off_407030，马上找到答案，其他的就不看了。">
 <meta name="keywords" content="CTF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CTF入门之西北大学NWUCTF练习(1)预备知识">
-<meta property="og:url" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/index.html">
+<meta property="og:title" content="CTF入门之西北大学NWUCTF练习(2)re逆向练习">
+<meta property="og:url" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="地址 第1题：欢迎来到NWUCTF! 第2题：How to get flag? (1) 第3题：How to get flag? (2) 第4题：base64是啥 第5题：Let’s learn html 第6题：Let’s learn javascript 第7题：Let’s learn CSS 第8题：Let’s learn javascript :D  地址nwuctf.nwu.edu.c">
+<meta property="og:description" content="re1 pyc Let’s learn C crackme nwu  re1看结果是hello world,目测主函数只是打印，答案就藏在里面 IDA打开，找到main函数，先aHelloWorld入栈，然后call子函数，然后。。。反正我也不是每句都认识，把子函数，或者数据地址都点点看 刚开始跳转sub_4011F2发现太乱了，就回来点下一个off_407030，马上找到答案，其他的就不看了。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-41-02.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-41-32.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-01.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-40.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-55.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-45-38.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-46-38.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-48-26.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-49-07.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-50-51.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-50-39.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-52-43.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-55-53.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-56-34.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-19-38.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-33-09.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-42-42.png">
-<meta property="og:updated_time" content="2019-07-31T02:53:18.000Z">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-06-23.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-06-55.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-08-53.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-11-26.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-23-01.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-29-53.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-55-14.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-15-27-32.png">
+<meta property="og:updated_time" content="2019-07-31T07:34:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CTF入门之西北大学NWUCTF练习(1)预备知识">
-<meta name="twitter:description" content="地址 第1题：欢迎来到NWUCTF! 第2题：How to get flag? (1) 第3题：How to get flag? (2) 第4题：base64是啥 第5题：Let’s learn html 第6题：Let’s learn javascript 第7题：Let’s learn CSS 第8题：Let’s learn javascript :D  地址nwuctf.nwu.edu.c">
-<meta name="twitter:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-41-02.png">
+<meta name="twitter:title" content="CTF入门之西北大学NWUCTF练习(2)re逆向练习">
+<meta name="twitter:description" content="re1 pyc Let’s learn C crackme nwu  re1看结果是hello world,目测主函数只是打印，答案就藏在里面 IDA打开，找到main函数，先aHelloWorld入栈，然后call子函数，然后。。。反正我也不是每句都认识，把子函数，或者数据地址都点点看 刚开始跳转sub_4011F2发现太乱了，就回来点下一个off_407030，马上找到答案，其他的就不看了。">
+<meta name="twitter:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-06-23.png">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -216,7 +207,7 @@
     
         
             
-            <li><div data-rel="固件分析">固件分析<small>(1)</small></div>
+            <li><div data-rel="vscode">vscode<small>(1)</small></div>
                 
             </li>
             
@@ -224,7 +215,7 @@
     
         
             
-            <li><div data-rel="vscode">vscode<small>(1)</small></div>
+            <li><div data-rel="固件分析">固件分析<small>(1)</small></div>
                 
             </li>
             
@@ -303,11 +294,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">VxWorks</a>
+        <a href="javascript:" class="color2">vscode</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">vscode</a>
+        <a href="javascript:" class="color3">VxWorks</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -679,7 +670,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#CTF','#LeetCode','#Linux','#转载','#Vim','#VxWorks','#vscode','#名词','#笔记',],
+            'data': ['#CTF','#LeetCode','#Linux','#转载','#Vim','#vscode','#VxWorks','#名词','#笔记',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
