@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>LeetCode in Python-13. Roman to Integer 罗马数字转整数 | 夜晚将会美丽、</title>
-  <meta name="keywords" content=" LeetCode ">
-  <meta name="description" content="LeetCode in Python-13. Roman to Integer 罗马数字转整数 | 夜晚将会美丽、">
+  <title>CTF入门之西北大学NWUCTF练习 | 夜晚将会美丽、</title>
+  <meta name="keywords" content=" CTF ">
+  <meta name="description" content="CTF入门之西北大学NWUCTF练习 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="目录处理 cd：变换目录 pwd：显示目前的目录 mkdir：创建一个新的目录 rmdir：删除一个空的目录  $PATH环境变量 echo $PATH  显示环境变量 内容以 : 分隔 PATH=&amp;quot;${PATH}:...绝对路径...&amp;quot;   添加环境变量">
 <meta name="keywords" content="Linux">
@@ -466,9 +466,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CTF入门之西北大学NWUCTF练习" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">LeetCode in Python-13. Roman to Integer 罗马数字转整数</h1>
+        <h1 class="article-title">CTF入门之西北大学NWUCTF练习</h1>
     
     <div class="article-meta">
         
@@ -476,26 +476,26 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="Leetcode">Leetcode</a>
+                <a href="javascript:" data-rel="CTF">CTF</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">LeetCode</a>
+            <a href="javascript:" class="color4">CTF</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-26 17:29:48'>2019-07-26 17:27</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-31 10:48:20'>2019-07-31 09:36</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:444</span>
+        <span>字数:209</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -525,7 +525,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法1、字典map"><span class="toc-text">解法1、字典map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法2、"><span class="toc-text">解法2、</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#出处"><span class="toc-text">出处</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#地址"><span class="toc-text">地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一题：欢迎来到NWUCTF"><span class="toc-text">第一题：欢迎来到NWUCTF!</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二题：How-to-get-flag-1"><span class="toc-text">第二题：How to get flag? (1)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二题：How-to-get-flag-2"><span class="toc-text">第二题：How to get flag? (2)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#base64是啥"><span class="toc-text">base64是啥</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Let’s-learn-html"><span class="toc-text">Let’s learn html</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Let’s-learn-javascript"><span class="toc-text">Let’s learn javascript</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Let’s-learn-CSS"><span class="toc-text">Let’s learn CSS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Let’s-learn-javascript-D"><span class="toc-text">Let’s learn javascript :D</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -540,38 +540,16 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%951%e5%ad%97%e5%85%b8map">解法1、字典map</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%952">解法2、</a></li>
-<li><a href="#%e5%87%ba%e5%a4%84">出处</a></li>
-</ul>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-31.png" alt="罗马数字转整数"><br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-37.png" alt="罗马数字转整数"></p>
-<h1 id="解法1、字典map"><a href="#解法1、字典map" class="headerlink" title="解法1、字典map"></a>解法1、字典map</h1><pre><code class="python">class Solution:
-    def romanToInt(self, s: str) -&gt; int:
-        numeral_map = {&quot;I&quot; : 1, &quot;V&quot; : 5, &quot;X&quot; : 10, &quot;L&quot; : 50, &quot;C&quot; : 100, &quot;D&quot; : 500, &quot;M&quot; : 1000}
-        result = 0
-
-        for i in range(len(s)):
-            if i&gt;0 and numeral_map[s[i]] &gt; numeral_map[s[i-1]]:
-                result += numeral_map[s[i]] - 2*numeral_map[s[i-1]]
-            else:
-                result += numeral_map[s[i]]
-
-        return result</code></pre>
-<p>注意对i-1的元素要减两次</p>
-<h1 id="解法2、"><a href="#解法2、" class="headerlink" title="解法2、"></a>解法2、</h1><pre><code>class Solution:
-    def romanToInt(self, s: str) -&gt; int:
-        d = {&#39;I&#39;:1, &#39;IV&#39;:3, &#39;V&#39;:5, &#39;IX&#39;:8, &#39;X&#39;:10, &#39;XL&#39;:30, &#39;L&#39;:50, &#39;XC&#39;:80, &#39;C&#39;:100, &#39;CD&#39;:300, &#39;D&#39;:500, &#39;CM&#39;:800, &#39;M&#39;:1000}
-        return sum([d.get(s[max(i-1, 0):i+1], d[n]) for i, n in enumerate(s)])</code></pre><ul>
-<li>构建一个字典记录所有罗马数字子串，注意长度为2的子串记录的值是（实际值-子串内左边罗马数字代表的数值）</li>
-<li>这样一来，遍历整个s的时候判断当前位置和前一个位置的两个字符组成的字符串是否在字典内，如果在就记录值，不在就说明当前位置不存在小数字在前面的情况，直接记录当前位置字符对应值</li>
-<li>举个例子，遍历经过IV的时候先记录I的对应值1再往前移动一步记录IV的值3，加起来正好是IV的真实值4。max函数在这里是为了防止遍历第一个字符的时候出现[-1:0]的情况</li>
-</ul>
-<p>1、列表生成式</p>
-<p>2、dict.get()<br><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/2019-07-26-17-28-50.png" alt="dict.get()"></p>
-<p>3、循环或者切片等希望从0开始执行时，可借助max(i-1, 0)来达成</p>
-<h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p>1、<a href="https://www.bilibili.com/video/av45841108" target="_blank" rel="noopener">https://www.bilibili.com/video/av45841108</a><br>2、对应题目下<strong>Knife丶</strong>的题解</p>
+        <h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a><strong>地址</strong></h1><p><code>nwuctf.nwu.edu.cn</code>，西北大学的ctf练习靶场，个人感觉对0基础初学者还是比较贴心的</p>
+<p>做的时候我们尽量先从预备知识开始做</p>
+<h1 id="第一题：欢迎来到NWUCTF"><a href="#第一题：欢迎来到NWUCTF" class="headerlink" title="第一题：欢迎来到NWUCTF!"></a><strong>第一题：欢迎来到<strong>NWU</strong>CTF!</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-41-02.png" alt="题设"><br>我们直接F12即可找到答案<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-41-32.png" alt="解"><br>答案：<code>nwuctf{fl2_tO_g3T_Yur_f1rst_F1ag}</code></p>
+<h1 id="第二题：How-to-get-flag-1"><a href="#第二题：How-to-get-flag-1" class="headerlink" title="第二题：How to get flag? (1)"></a><strong>第二题：How to get flag? (1)</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-01.png" alt="2019-07-31-09-44-01.png"><br>首先题目给了两个学习资料：HTTP请求和url详解，题目又提示输入flag<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-40.png" alt><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-55.png" alt><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-45-38.png" alt><br>直接使用GET请求即可<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-46-38.png" alt></p>
+<h1 id="第二题：How-to-get-flag-2"><a href="#第二题：How-to-get-flag-2" class="headerlink" title="第二题：How to get flag? (2)"></a><strong>第二题：How to get flag? (2)</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-48-26.png" alt><br>直接postman在post请求的body中添加flag参数即可<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-49-07.png" alt></p>
+<h1 id="base64是啥"><a href="#base64是啥" class="headerlink" title="base64是啥"></a><strong>base64是啥</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-50-51.png" alt="题设"><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-50-39.png" alt="在线解码"></p>
+<h1 id="Let’s-learn-html"><a href="#Let’s-learn-html" class="headerlink" title="Let’s learn html"></a><strong>Let’s learn html</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-52-43.png" alt="Let&#39;s learn html"><br>发现怎么输都不对，看提示说细心一点，又推荐HTML表单资料，长度改为6即可<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-55-53.png" alt="改长度为6"><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-56-34.png" alt></p>
+<h1 id="Let’s-learn-javascript"><a href="#Let’s-learn-javascript" class="headerlink" title="Let’s learn javascript"></a><strong>Let’s learn javascript</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-19-38.png" alt="Let&#39;s learn javascript"><br>不知道哪里下手QAQ</p>
+<h1 id="Let’s-learn-CSS"><a href="#Let’s-learn-CSS" class="headerlink" title="Let’s learn CSS"></a><strong>Let’s learn CSS</strong></h1><p>去掉偏移属性即可<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-33-09.png" alt="Let&#39;s learn CSS"></p>
+<h1 id="Let’s-learn-javascript-D"><a href="#Let’s-learn-javascript-D" class="headerlink" title="Let’s learn javascript :D"></a><strong>Let’s learn javascript :D</strong></h1><p>这题又不会。。。<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-42-42.png" alt="Let&#39;s learn javascript :D"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -585,12 +563,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>LeetCode in Python-13. Roman to Integer 罗马数字转整数</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">444</span></p>
+    <p><span class="copy-title">文章标题:</span>CTF入门之西北大学NWUCTF练习</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">209</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-26, 17:27:54</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-26, 17:29:48</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/" title="LeetCode in Python-13. Roman to Integer 罗马数字转整数">https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-13-Roman-to-Integer-罗马数字转整数/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-31, 09:36:46</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-31, 10:48:20</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/31/CTF入门之西北大学NWUCTF练习/" title="CTF入门之西北大学NWUCTF练习">https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

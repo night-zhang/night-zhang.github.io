@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CTF入门之西北大学NWUCTF练习</title>
+      <link href="/2019/07/31/CTF%E5%85%A5%E9%97%A8%E4%B9%8B%E8%A5%BF%E5%8C%97%E5%A4%A7%E5%AD%A6NWUCTF%E7%BB%83%E4%B9%A0/"/>
+      <url>/2019/07/31/CTF%E5%85%A5%E9%97%A8%E4%B9%8B%E8%A5%BF%E5%8C%97%E5%A4%A7%E5%AD%A6NWUCTF%E7%BB%83%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a><strong>地址</strong></h1><p><code>nwuctf.nwu.edu.cn</code>，西北大学的ctf练习靶场，个人感觉对0基础初学者还是比较贴心的</p><p>做的时候我们尽量先从预备知识开始做</p><h1 id="第一题：欢迎来到NWUCTF"><a href="#第一题：欢迎来到NWUCTF" class="headerlink" title="第一题：欢迎来到NWUCTF!"></a><strong>第一题：欢迎来到<strong>NWU</strong>CTF!</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-41-02.png" alt="题设"><br>我们直接F12即可找到答案<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-41-32.png" alt="解"><br>答案：<code>nwuctf{fl2_tO_g3T_Yur_f1rst_F1ag}</code></p><h1 id="第二题：How-to-get-flag-1"><a href="#第二题：How-to-get-flag-1" class="headerlink" title="第二题：How to get flag? (1)"></a><strong>第二题：How to get flag? (1)</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-01.png" alt="2019-07-31-09-44-01.png"><br>首先题目给了两个学习资料：HTTP请求和url详解，题目又提示输入flag<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-40.png" alt><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-44-55.png" alt><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-45-38.png" alt><br>直接使用GET请求即可<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-46-38.png" alt></p><h1 id="第二题：How-to-get-flag-2"><a href="#第二题：How-to-get-flag-2" class="headerlink" title="第二题：How to get flag? (2)"></a><strong>第二题：How to get flag? (2)</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-48-26.png" alt><br>直接postman在post请求的body中添加flag参数即可<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-49-07.png" alt></p><h1 id="base64是啥"><a href="#base64是啥" class="headerlink" title="base64是啥"></a><strong>base64是啥</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-50-51.png" alt="题设"><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-50-39.png" alt="在线解码"></p><h1 id="Let’s-learn-html"><a href="#Let’s-learn-html" class="headerlink" title="Let’s learn html"></a><strong>Let’s learn html</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-52-43.png" alt="Let&#39;s learn html"><br>发现怎么输都不对，看提示说细心一点，又推荐HTML表单资料，长度改为6即可<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-55-53.png" alt="改长度为6"><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-09-56-34.png" alt></p><h1 id="Let’s-learn-javascript"><a href="#Let’s-learn-javascript" class="headerlink" title="Let’s learn javascript"></a><strong>Let’s learn javascript</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-19-38.png" alt="Let&#39;s learn javascript"><br>不知道哪里下手QAQ</p><h1 id="Let’s-learn-CSS"><a href="#Let’s-learn-CSS" class="headerlink" title="Let’s learn CSS"></a><strong>Let’s learn CSS</strong></h1><p>去掉偏移属性即可<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-33-09.png" alt="Let&#39;s learn CSS"></p><h1 id="Let’s-learn-javascript-D"><a href="#Let’s-learn-javascript-D" class="headerlink" title="Let’s learn javascript :D"></a><strong>Let’s learn javascript :D</strong></h1><p>这题又不会。。。<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习/2019-07-31-10-42-42.png" alt="Let&#39;s learn javascript :D"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CTF </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CTF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux鸟哥阅读笔记(2)</title>
       <link href="/2019/07/30/Linux%E9%B8%9F%E5%93%A5%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0-2/"/>
       <url>/2019/07/30/Linux%E9%B8%9F%E5%93%A5%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0-2/</url>
@@ -356,11 +381,11 @@
     
     
     <entry>
-      <title>名词解释</title>
+      <title>名词解释(持续更新)</title>
       <link href="/2019/07/25/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
       <url>/2019/07/25/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
       
-        <content type="html"><![CDATA[<ul><li><a href="#%e5%a3%b0%e6%98%8e">声明</a></li><li><a href="#%e6%95%b0%e5%ad%a6%e7%ac%a6%e5%8f%b7%e2%85%a1">数学符号Ⅱ()</a></li><li><a href="#%e7%89%a9%e8%81%94%e7%bd%91">物联网</a></li><li><a href="#oss-%e6%93%8d%e4%bd%9c%e6%94%af%e6%8c%81%e5%ad%90%e7%b3%bb%e7%bb%9f">OSS （操作支持子系统）</a></li><li><a href="#endian">Endian</a></li><li><a href="#bss%e7%ab%af">BSS端</a><h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1>本文仅为个人日常遇到的专用名次的记录</li></ul><h1 id="数学符号Ⅱ"><a href="#数学符号Ⅱ" class="headerlink" title="数学符号Ⅱ()"></a>数学符号Ⅱ()</h1><p>示性函数：表示当括号内条件成立时取值为1，否则为0.</p><h1 id="物联网"><a href="#物联网" class="headerlink" title="物联网"></a>物联网</h1><p>物联网（The Internet of Things，简称IOT）是指通过 各种信息传感器、射频识别技术、全球定位系统、红外感应器、激光扫描器等各种装置与技术，实时采集任何需要监控、 连接、互动的物体或过程，采集其声、光、热、电、力学、化 学、生物、位置等各种需要的信息，通过各类可能的网络接入，实现物与物、物与人的泛在连接，实现对物品和过程的智能化感知、识别和管理。物联网是一个基于互联网、传统电信网等的信息承载体，它让所有能够被独立寻址的普通物理对象形成互联互通的网络。</p><p><em>采集所有事物相关信息 → 网络接入 → 实现万物互联</em></p><h1 id="OSS-（操作支持子系统）"><a href="#OSS-（操作支持子系统）" class="headerlink" title="OSS （操作支持子系统）"></a>OSS （操作支持子系统）</h1><blockquote><p>OSS是一种操作支持子系统。操作支持子系统（OSS）需完成许多任务，包括移动用户管理、移动设备管理以及网路操作和维护。</p></blockquote><h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h1><blockquote><p>不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序。</p></blockquote><blockquote><p>最常见的有两种：<br>1． Little-endian：将低序字节存储在起始地址（低位编址）<br>2． Big-endian：将高序字节存储在起始地址（高位编址）</p></blockquote><blockquote><p>LE（little-endian）：<br>最符合人的思维的字节序：地址低位存储值的低位，地址高位存储值的高位。<br>怎么讲是最符合人的思维的字节序，是因为从人的第一观感来说：低位值小，就应该放在内存地址小的地方，也即内存地址低位；反之，高位值就应该放在内存地址大的地方，也即内存地址高位</p></blockquote><blockquote><p>BE（big-endian）：<br>最直观的字节序：地址低位存储值的高位，地址高位存储值的低位。<br>为什么说直观，不要考虑对应关系：只需要把内存地址从左到右按照由低到高的顺序写出，把值按照通常的高位到低位的顺序写出；两者对照，一个字节一个字节的填充进去</p></blockquote><p>例子：如果我们将0x1234abcd写入到以0x0000开始的内存中，则结果为<br>| 内存   | big-endian | little-endian |<br>| —— | ———- | ————- |<br>| 0x0000 | 0x12       | 0xcd          |<br>| 0x0001 | 0x34       | 0xab          |<br>| 0x0002 | 0xab       | 0x34          |<br>| 0x0003 | 0xcd       | 0x12          |</p><p>x86系列的CPU都是little-endian的字节序。</p><h1 id="BSS端"><a href="#BSS端" class="headerlink" title="BSS端"></a>BSS端</h1><blockquote><p>BSS（Block Started by Symbol）通常是指用来存放程序中未初始化的<strong>全局变量和静态变量</strong>的一块内存区域。特点是:可读写的，在程序执行之前BSS段会自动清0。所以，未初始的全局变量在程序执行之前已经成0了。</p></blockquote><ul><li>存放全局、静态变量</li><li>执行之前为0</li></ul><blockquote><p>扩展：可执行程序包括BSS段、数据段（data段）、代码段（也称文本段text段）。</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<ul><li><a href="#%e5%a3%b0%e6%98%8e">声明</a></li><li><a href="#elf%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f"><strong>ELF（文件格式）</strong></a></li><li><a href="#%e6%95%b0%e5%ad%a6%e7%ac%a6%e5%8f%b7%e2%85%a1">数学符号Ⅱ()</a></li><li><a href="#%e7%89%a9%e8%81%94%e7%bd%91">物联网</a></li><li><a href="#oss-%e6%93%8d%e4%bd%9c%e6%94%af%e6%8c%81%e5%ad%90%e7%b3%bb%e7%bb%9f">OSS （操作支持子系统）</a></li><li><a href="#endian">Endian</a></li><li><a href="#bss%e7%ab%af">BSS端</a><h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1>本文仅为个人日常遇到的专用名次的记录</li></ul><h1 id="ELF（文件格式）"><a href="#ELF（文件格式）" class="headerlink" title="ELF（文件格式）"></a><strong>ELF（文件格式）</strong></h1><blockquote><p>在计算机科学中，是一种用于二进制文件、可执行文件、目标代码、共享库和核心转储格式文件。</p></blockquote><p>Unix及类Unix系统下可执行文件、共享库等二进制文件标准格式</p><h1 id="数学符号Ⅱ"><a href="#数学符号Ⅱ" class="headerlink" title="数学符号Ⅱ()"></a>数学符号Ⅱ()</h1><p>示性函数：表示当括号内条件成立时取值为1，否则为0.</p><h1 id="物联网"><a href="#物联网" class="headerlink" title="物联网"></a>物联网</h1><p>物联网（The Internet of Things，简称IOT）是指通过 各种信息传感器、射频识别技术、全球定位系统、红外感应器、激光扫描器等各种装置与技术，实时采集任何需要监控、 连接、互动的物体或过程，采集其声、光、热、电、力学、化 学、生物、位置等各种需要的信息，通过各类可能的网络接入，实现物与物、物与人的泛在连接，实现对物品和过程的智能化感知、识别和管理。物联网是一个基于互联网、传统电信网等的信息承载体，它让所有能够被独立寻址的普通物理对象形成互联互通的网络。</p><p><em>采集所有事物相关信息 → 网络接入 → 实现万物互联</em></p><h1 id="OSS-（操作支持子系统）"><a href="#OSS-（操作支持子系统）" class="headerlink" title="OSS （操作支持子系统）"></a>OSS （操作支持子系统）</h1><blockquote><p>OSS是一种操作支持子系统。操作支持子系统（OSS）需完成许多任务，包括移动用户管理、移动设备管理以及网路操作和维护。</p></blockquote><h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h1><blockquote><p>不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序。</p></blockquote><blockquote><p>最常见的有两种：<br>1． Little-endian：将低序字节存储在起始地址（低位编址）<br>2． Big-endian：将高序字节存储在起始地址（高位编址）</p></blockquote><blockquote><p>LE（little-endian）：<br>最符合人的思维的字节序：地址低位存储值的低位，地址高位存储值的高位。<br>怎么讲是最符合人的思维的字节序，是因为从人的第一观感来说：低位值小，就应该放在内存地址小的地方，也即内存地址低位；反之，高位值就应该放在内存地址大的地方，也即内存地址高位</p></blockquote><blockquote><p>BE（big-endian）：<br>最直观的字节序：地址低位存储值的高位，地址高位存储值的低位。<br>为什么说直观，不要考虑对应关系：只需要把内存地址从左到右按照由低到高的顺序写出，把值按照通常的高位到低位的顺序写出；两者对照，一个字节一个字节的填充进去</p></blockquote><p>例子：如果我们将0x1234abcd写入到以0x0000开始的内存中，则结果为<br>| 内存   | big-endian | little-endian |<br>| —— | ———- | ————- |<br>| 0x0000 | 0x12       | 0xcd          |<br>| 0x0001 | 0x34       | 0xab          |<br>| 0x0002 | 0xab       | 0x34          |<br>| 0x0003 | 0xcd       | 0x12          |</p><p>x86系列的CPU都是little-endian的字节序。</p><h1 id="BSS端"><a href="#BSS端" class="headerlink" title="BSS端"></a>BSS端</h1><blockquote><p>BSS（Block Started by Symbol）通常是指用来存放程序中未初始化的<strong>全局变量和静态变量</strong>的一块内存区域。特点是:可读写的，在程序执行之前BSS段会自动清0。所以，未初始的全局变量在程序执行之前已经成0了。</p></blockquote><ul><li>存放全局、静态变量</li><li>执行之前为0</li></ul><blockquote><p>扩展：可执行程序包括BSS段、数据段（data段）、代码段（也称文本段text段）。</p></blockquote>]]></content>
       
       
       <categories>
@@ -406,7 +431,7 @@
     
     
     <entry>
-      <title>日常笔记</title>
+      <title>日常笔记(持续更新)</title>
       <link href="/2019/07/24/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/"/>
       <url>/2019/07/24/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/</url>
       
