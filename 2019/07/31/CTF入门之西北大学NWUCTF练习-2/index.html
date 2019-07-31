@@ -22,7 +22,8 @@
 <meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-29-53.png">
 <meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-55-14.png">
 <meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-15-27-32.png">
-<meta property="og:updated_time" content="2019-07-31T07:34:36.000Z">
+<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-15-45-05.png">
+<meta property="og:updated_time" content="2019-07-31T08:00:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CTF入门之西北大学NWUCTF练习(2)re逆向练习">
 <meta name="twitter:description" content="re1 pyc Let’s learn C crackme nwu  re1看结果是hello world,目测主函数只是打印，答案就藏在里面 IDA打开，找到main函数，先aHelloWorld入栈，然后call子函数，然后。。。反正我也不是每句都认识，把子函数，或者数据地址都点点看 刚开始跳转sub_4011F2发现太乱了，就回来点下一个off_407030，马上找到答案，其他的就不看了。">
@@ -171,7 +172,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(19)</small></div></li>
+    <li><div class="all active">全部文章<small>(21)</small></div></li>
     
         
             
@@ -199,6 +200,14 @@
     
         
             
+            <li><div data-rel="Python">Python<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
             <li><div data-rel="Vim">Vim<small>(1)</small></div>
                 
             </li>
@@ -215,7 +224,7 @@
     
         
             
-            <li><div data-rel="固件分析">固件分析<small>(1)</small></div>
+            <li><div data-rel="笔记">笔记<small>(2)</small></div>
                 
             </li>
             
@@ -223,7 +232,7 @@
     
         
             
-            <li><div data-rel="笔记">笔记<small>(2)</small></div>
+            <li><div data-rel="固件分析">固件分析<small>(1)</small></div>
                 
             </li>
             
@@ -241,8 +250,8 @@
     </div>
     <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="19">
-<input type="hidden" id="yelog_site_word_count" value="9.1k">
+<input type="hidden" id="yelog_site_posts_number" value="21">
+<input type="hidden" id="yelog_site_word_count" value="12.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -290,6 +299,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Python</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">Vim</a>
     </li>
     
@@ -298,11 +311,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">VxWorks</a>
+        <a href="javascript:" class="color3">名词</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">名词</a>
+        <a href="javascript:" class="color3">VxWorks</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -333,6 +346,22 @@
            data-author="" >
             <span class="post-title" title="日常笔记(持续更新)">日常笔记(持续更新)</span>
             <span class="post-date" title="2019-07-24 16:41:55">2019/07/24</span>
+        </a>
+        
+        <a  class="Python "
+           href="/2019/07/31/Python字节码介绍/"
+           data-tag="转载,Python"
+           data-author="" >
+            <span class="post-title" title="Python字节码介绍">Python字节码介绍</span>
+            <span class="post-date" title="2019-07-31 16:58:47">2019/07/31</span>
+        </a>
+        
+        <a  class="Python "
+           href="/2019/07/31/Python中时间类型的互转/"
+           data-tag="Python"
+           data-author="" >
+            <span class="post-title" title="Python中时间类型的互转">Python中时间类型的互转</span>
+            <span class="post-date" title="2019-07-31 16:09:30">2019/07/31</span>
         </a>
         
         <a  class="CTF "
@@ -507,12 +536,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-31 15:34:36'>2019-07-31 10:52</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-31 16:00:42'>2019-07-31 10:52</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:638</span>
+        <span>字数:651</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -570,7 +599,6 @@
 <h1 id="pyc"><a href="#pyc" class="headerlink" title="pyc"></a><strong>pyc</strong></h1><p>题目是一个pyc文件，首先对其进行反编译<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-23-01.png" alt="反编译"><br>发现很多0和o，本地创建后，以比较常见的名称替换恢复后，代码如下</p>
 <pre><code class="python">#!/usr/bin/env python
 # encoding: utf-8
-# 如果觉得不错，可以推荐给你的朋友！http://tool.lu/pyc
 
 def bar1():
 
@@ -639,7 +667,8 @@ int main()
 <p>似乎没有结果，好像是有错，不太知道怎么改，有会的老铁麻烦指点一下</p>
 <p>那就暂时只好手动一个个的恢复：<code>nwuctf{CcCCCCccCcCCcCCcC}</code>，手写了几个才发现，妈的全是c，大小写对应上即可。</p>
 <h1 id="crackme"><a href="#crackme" class="headerlink" title="crackme"></a><strong>crackme</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-15-27-32.png" alt><br>题目一直说是VB6写的，但是不懂VB，查查也无从下手，IDA扔一下也没看出什么来，先跳过吧</p>
-<h1 id="nwu"><a href="#nwu" class="headerlink" title="nwu"></a><strong>nwu</strong></h1>
+<h1 id="nwu"><a href="#nwu" class="headerlink" title="nwu"></a><strong>nwu</strong></h1><p>提示先扔到IDA里看一下，基本上也看不出来什么<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-15-45-05.png" alt><br>只能看出来栈区大小是34字节</p>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
     </div>
@@ -653,10 +682,10 @@ int main()
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>CTF入门之西北大学NWUCTF练习(2)re逆向练习</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">638</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">651</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
     <p><span class="copy-title">发布时间:</span>2019-07-31, 10:52:22</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-31, 15:34:36</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-31, 16:00:42</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/31/CTF入门之西北大学NWUCTF练习-2/" title="CTF入门之西北大学NWUCTF练习(2)re逆向练习">https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -739,7 +768,7 @@ int main()
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#CTF','#LeetCode','#Linux','#转载','#Vim','#vscode','#VxWorks','#名词','#笔记',],
+            'data': ['#CTF','#LeetCode','#Linux','#转载','#Python','#Vim','#vscode','#名词','#VxWorks','#笔记',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
