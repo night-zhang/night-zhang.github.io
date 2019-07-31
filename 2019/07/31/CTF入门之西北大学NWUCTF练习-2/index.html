@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>LeetCode in Python-7. Reverse Integer 整数反转 | 夜晚将会美丽、</title>
-  <meta name="keywords" content=" LeetCode ">
-  <meta name="description" content="LeetCode in Python-7. Reverse Integer 整数反转 | 夜晚将会美丽、">
+  <title>CTF入门之西北大学NWUCTF练习(2)re逆向练习 | 夜晚将会美丽、</title>
+  <meta name="keywords" content=" CTF ">
+  <meta name="description" content="CTF入门之西北大学NWUCTF练习(2)re逆向练习 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="地址 第1题：欢迎来到NWUCTF! 第2题：How to get flag? (1) 第3题：How to get flag? (2) 第4题：base64是啥 第5题：Let’s learn html 第6题：Let’s learn javascript 第7题：Let’s learn CSS 第8题：Let’s learn javascript :D  地址nwuctf.nwu.edu.c">
 <meta name="keywords" content="CTF">
@@ -492,9 +492,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-LeetCode-in-Python-7-Reverse-Integer-整数反转" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CTF入门之西北大学NWUCTF练习-2" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">LeetCode in Python-7. Reverse Integer 整数反转</h1>
+        <h1 class="article-title">CTF入门之西北大学NWUCTF练习(2)re逆向练习</h1>
     
     <div class="article-meta">
         
@@ -502,26 +502,26 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="Leetcode">Leetcode</a>
+                <a href="javascript:" data-rel="CTF">CTF</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">LeetCode</a>
+            <a href="javascript:" class="color4">CTF</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-26 17:25:12'>2019-07-26 17:18</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-31 15:34:36'>2019-07-31 10:52</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:278</span>
+        <span>字数:638</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -551,7 +551,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法1、利用数值反转数字"><span class="toc-text">解法1、利用数值反转数字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法2、字符串反转"><span class="toc-text">解法2、字符串反转</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法3、"><span class="toc-text">解法3、</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#出处"><span class="toc-text">出处</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#re1"><span class="toc-text">re1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pyc"><span class="toc-text">pyc</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Let’s-learn-C"><span class="toc-text">Let’s learn C</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#crackme"><span class="toc-text">crackme</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#nwu"><span class="toc-text">nwu</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -567,49 +567,88 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%951%e5%88%a9%e7%94%a8%e6%95%b0%e5%80%bc%e5%8f%8d%e8%bd%ac%e6%95%b0%e5%ad%97">解法1、利用数值反转数字</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%952%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8f%8d%e8%bd%ac">解法2、字符串反转</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%953">解法3、</a></li>
-<li><a href="#%e5%87%ba%e5%a4%84">出处</a></li>
+<li><a href="#re1"><strong>re1</strong></a></li>
+<li><a href="#pyc"><strong>pyc</strong></a></li>
+<li><a href="#lets-learn-c"><strong>Let’s learn C</strong></a></li>
+<li><a href="#crackme"><strong>crackme</strong></a></li>
+<li><a href="#nwu"><strong>nwu</strong></a></li>
 </ul>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-整数反转/2019-07-26-17-19-04.png" alt="整数反转"></p>
-<h1 id="解法1、利用数值反转数字"><a href="#解法1、利用数值反转数字" class="headerlink" title="解法1、利用数值反转数字"></a>解法1、利用数值反转数字</h1><pre><code class="python">class Solution:
-    def reverse(self, x: int) -&gt; int:
-        num = 0
-        a = abs(x)
-        while(a!=0):
-            temp = a % 10
-            num = num * 10 + temp
-            a = a // 10
-        if x &gt; 0 and num &lt; 2**31:
-            return num
-        elif x &lt; 0 and num &lt;= 2**31:
-            return -num
-        else:
-            return 0</code></pre>
-<p>借助temp反转数字</p>
-<h1 id="解法2、字符串反转"><a href="#解法2、字符串反转" class="headerlink" title="解法2、字符串反转"></a>解法2、字符串反转</h1><pre><code class="python">class Solution:
-    def reverse(self, x: int) -&gt; int:
-        abs_num = abs(x)
-        abs_num_ = int(str(abs_num)[::-1])
+<h1 id="re1"><a href="#re1" class="headerlink" title="re1"></a><strong>re1</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-06-23.png" alt="题目"><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-06-55.png" alt="运行结果"><br>看结果是hello world,目测主函数只是打印，答案就藏在里面</p>
+<p>IDA打开，找到main函数，先aHelloWorld入栈，然后call子函数，然后。。。<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-08-53.png" alt="main"><br>反正我也不是每句都认识，把子函数，或者数据地址都点点看</p>
+<p>刚开始跳转sub_4011F2发现太乱了，就回来点下一个off_407030，马上找到答案，其他的就不看了。<del>反正也看不懂</del><br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-11-26.png" alt="答案"></p>
+<h1 id="pyc"><a href="#pyc" class="headerlink" title="pyc"></a><strong>pyc</strong></h1><p>题目是一个pyc文件，首先对其进行反编译<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-23-01.png" alt="反编译"><br>发现很多0和o，本地创建后，以比较常见的名称替换恢复后，代码如下</p>
+<pre><code class="python">#!/usr/bin/env python
+# encoding: utf-8
+# 如果觉得不错，可以推荐给你的朋友！http://tool.lu/pyc
 
-        if abs_num_&lt;-2**31 or abs_num_&gt;2**31-1:
-            return 0
-        if x&lt;0:
-            return -abs_num_
-        return abs_num_</code></pre>
-<h1 id="解法3、"><a href="#解法3、" class="headerlink" title="解法3、"></a>解法3、</h1><pre><code class="python">class Solution:
-    def reverse(self, x):
-        r = x // max(1, abs(x)) * int(str(abs(x))[::-1])
-        return r if r.bit_length() &lt; 32 or r == -2**31 else 0</code></pre>
-<ul>
-<li>x // max(1, abs(x))意味着 0：x为0， 1：x为正， -1：x为负，相当于被废弃的函数cmp</li>
-<li>[::-1]代表序列反转</li>
-<li>2^31 和 -2^31 的比特数为32，其中正负号占用了一位</li>
-<li>32位整数范围 [−2^31， 2^31 − 1] 中正数范围小一个是因为0的存在<h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1>1、<a href="https://www.bilibili.com/video/av45840031" target="_blank" rel="noopener">https://www.bilibili.com/video/av45840031</a><br>3、对应题目下<strong>Knife丶</strong>的题解</li>
-</ul>
+def bar1():
 
+    try:
+        bar2 = int(raw_input(&#39;please enter your key:&#39;))
+    except Exception:
+        None
+        None
+        None
+        bar2 = 1
+
+    return bar2
+
+
+def bar3(bar4):
+    bar5 = 0xD8EA21CE54EAA6F16593CC9D3F9B6AEEB2124692BAD8A1B3A12953B394C9FCA82538529753D0CCA7FBCB90D9708CAFB080852772D1907A62418F27EFE7FB27EFL
+    bar6 = 0x21FF2254681BD592E13F732612B964DA42A68735FF7D96600E3104CCD366FFA3056FE0A803A5AE51E215A9CD544C29116EF912E7B516781B0A781630BABF68B0L
+    # pow函数是计算x的y次方，如果z在存在，则再对结果进行取模，其结果等效于pow(x,y) %z
+    if pow(2, bar4, bar5) == bar6:
+        print &#39;nwuctf{key}&#39; 
+    else:
+        print &#39;sorry, please try again!&#39;
+
+while True:
+    bar7 = bar1()
+    bar3(bar7)
+</code></pre>
+<p>就算运行一下也还是因为太长出错<br><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-29-53.png" alt><br>剩下的就一目了然了嘛<del>不会了</del></p>
+<h1 id="Let’s-learn-C"><a href="#Let’s-learn-C" class="headerlink" title="Let’s learn C"></a><strong>Let’s learn C</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-14-55-14.png" alt="题设"><br>代码复制，格式化后如下</p>
+<pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main()
+{
+    FILE *txt;
+    char rflag[30];
+    char *tflag = &quot;nxwfxf|EfGCDEfgCdEFgCDeF\x81&quot;;
+    int i, j;
+    txt = fopen(&quot;flag.txt&quot;, &quot;r&quot;);
+    fgets(rflag, 26, txt);
+    for (i = 0; i &lt; 5; i++)
+        for (j = 0; j &lt; 5; j++)
+            rflag[i * 5 + j] = rflag[i * 5 + j] + j;//每位加0到4进行偏移
+    if (strcmp(tflag, rflag) == 0)//比较
+        puts(&quot;good!&quot;);
+    else
+        puts(&quot;error&quot;);
+    fclose(txt);
+    return 0;
+}</code></pre>
+<p>可以看出代码是从flag.txt中读取答案，然后对每一位进行偏移0到4的偏移量（j的值），也就是说把tflag给减去相应的偏移量（x81即0x81-4=0x7D对应的ASII码，即}）</p>
+<p>首先想着直接在写一份代码，进行循环减偏移量</p>
+<pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main()
+{
+
+    char *tflag = &quot;nxwfxf|EfGCDEfgCdEFgCDeF\x81&quot;;
+    int i, j;
+
+    for (i = 0; i &lt; 5; i++)
+        for (j = 0; j &lt; 5; j++)
+            tflag[i * 5 + j] = tflag[i * 5 + j] - j;
+    printf(&quot;%s&quot;, tflag);
+    return 0;
+}</code></pre>
+<p>似乎没有结果，好像是有错，不太知道怎么改，有会的老铁麻烦指点一下</p>
+<p>那就暂时只好手动一个个的恢复：<code>nwuctf{CcCCCCccCcCCcCCcC}</code>，手写了几个才发现，妈的全是c，大小写对应上即可。</p>
+<h1 id="crackme"><a href="#crackme" class="headerlink" title="crackme"></a><strong>crackme</strong></h1><p><img src="//night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/2019-07-31-15-27-32.png" alt><br>题目一直说是VB6写的，但是不懂VB，查查也无从下手，IDA扔一下也没看出什么来，先跳过吧</p>
+<h1 id="nwu"><a href="#nwu" class="headerlink" title="nwu"></a><strong>nwu</strong></h1>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
     </div>
@@ -622,12 +661,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>LeetCode in Python-7. Reverse Integer 整数反转</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">278</span></p>
+    <p><span class="copy-title">文章标题:</span>CTF入门之西北大学NWUCTF练习(2)re逆向练习</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">638</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-26, 17:18:23</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-26, 17:25:12</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-整数反转/" title="LeetCode in Python-7. Reverse Integer 整数反转">https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-整数反转/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-31, 10:52:22</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-31, 15:34:36</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/31/CTF入门之西北大学NWUCTF练习-2/" title="CTF入门之西北大学NWUCTF练习(2)re逆向练习">https://night-zhang.github.io/2019/07/31/CTF入门之西北大学NWUCTF练习-2/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
