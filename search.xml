@@ -8,7 +8,7 @@
       <link href="/2019/08/12/python%E5%B8%B8%E7%94%A8%E6%8E%A5%E6%94%B6%E8%BE%93%E5%85%A5%E6%96%B9%E5%BC%8F/"/>
       <url>/2019/08/12/python%E5%B8%B8%E7%94%A8%E6%8E%A5%E6%94%B6%E8%BE%93%E5%85%A5%E6%96%B9%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[<h1 id="1、接收“数组长度和数字数组”"><a href="#1、接收“数组长度和数字数组”" class="headerlink" title="1、接收“数组长度和数字数组”"></a>1、接收“数组长度和数字数组”</h1><p>第一行：数组长度；<br>第二行：数组空格间隔</p><pre><code class="python">n = int(input())arr = input()arr_ = [int(n) for n in arr.split()]...</code></pre><h1 id="2、接收数组长度和逐行输入数组内容"><a href="#2、接收数组长度和逐行输入数组内容" class="headerlink" title="2、接收数组长度和逐行输入数组内容"></a>2、接收数组长度和逐行输入数组内容</h1><p>第一行：数组长度n；<br>第二至n+1行：数组内容</p><pre><code class="python">n = int(input())arr = []for i in range(n):    tmp = int(input())    arr.append(tmp)</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="1、接收“数组长度和数字数组”"><a href="#1、接收“数组长度和数字数组”" class="headerlink" title="1、接收“数组长度和数字数组”"></a>1、接收“数组长度和数字数组”</h1><p>第一行：数组长度；<br>第二行：数组空格间隔</p><pre><code class="python">n = int(input())arr = input()# python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来# eg: &quot;1 2 3&quot;arr_ = [int(n) for n in arr.split()]...</code></pre><h1 id="2、接收数组长度和逐行输入数组内容"><a href="#2、接收数组长度和逐行输入数组内容" class="headerlink" title="2、接收数组长度和逐行输入数组内容"></a>2、接收数组长度和逐行输入数组内容</h1><p>第一行：数组长度n；<br>第二至n+1行：数组内容</p><pre><code class="python">n = int(input())arr = []for i in range(n):    tmp = int(input())    arr.append(tmp)</code></pre>]]></content>
       
       
       <categories>
