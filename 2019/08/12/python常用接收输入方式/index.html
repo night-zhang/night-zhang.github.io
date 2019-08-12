@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>LeetCode in Python-7. Reverse Integer 整数反转 | 夜晚将会美丽、</title>
-  <meta name="keywords" content=" LeetCode ">
-  <meta name="description" content="LeetCode in Python-7. Reverse Integer 整数反转 | 夜晚将会美丽、">
+  <title>python常用接收输入方式 | 夜晚将会美丽、</title>
+  <meta name="keywords" content=" Python ">
+  <meta name="description" content="python常用接收输入方式 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="草稿 //创建草稿： $ hexo new draft &amp;quot;new draft&amp;quot;  //草稿转文章（或手动移动_draft下相关文件至_post）： $ hexo publish [layout] &amp;lt;filename&amp;gt;  //强行预览草稿，更改配置文件： render_drafts: true  //启动草稿server： $ hexo server --drafts">
 <meta name="keywords" content="hexo">
@@ -530,9 +530,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-LeetCode-in-Python-7-Reverse-Integer-整数反转" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-python常用接收输入方式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">LeetCode in Python-7. Reverse Integer 整数反转</h1>
+        <h1 class="article-title">python常用接收输入方式</h1>
     
     <div class="article-meta">
         
@@ -540,26 +540,26 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="Leetcode">Leetcode</a>
+                <a href="javascript:" data-rel="Python">Python</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color4">LeetCode</a>
+            <a href="javascript:" class="color2">Python</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-26 17:25:12'>2019-07-26 17:18</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-12 09:04:10'>2019-08-12 08:59</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:278</span>
+        <span>字数:90</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -589,7 +589,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法1、利用数值反转数字"><span class="toc-text">解法1、利用数值反转数字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法2、字符串反转"><span class="toc-text">解法2、字符串反转</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解法3、"><span class="toc-text">解法3、</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#出处"><span class="toc-text">出处</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1、接收“数组长度和数字数组”"><span class="toc-text">1、接收“数组长度和数字数组”</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2、接收数组长度和逐行输入数组内容"><span class="toc-text">2、接收数组长度和逐行输入数组内容</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -604,49 +604,18 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><a href="#%e9%a2%98%e7%9b%ae">题目</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%951%e5%88%a9%e7%94%a8%e6%95%b0%e5%80%bc%e5%8f%8d%e8%bd%ac%e6%95%b0%e5%ad%97">解法1、利用数值反转数字</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%952%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8f%8d%e8%bd%ac">解法2、字符串反转</a></li>
-<li><a href="#%e8%a7%a3%e6%b3%953">解法3、</a></li>
-<li><a href="#%e5%87%ba%e5%a4%84">出处</a></li>
-</ul>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="//night-zhang.github.io/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-整数反转/2019-07-26-17-19-04.png" alt="整数反转"></p>
-<h1 id="解法1、利用数值反转数字"><a href="#解法1、利用数值反转数字" class="headerlink" title="解法1、利用数值反转数字"></a>解法1、利用数值反转数字</h1><pre><code class="python">class Solution:
-    def reverse(self, x: int) -&gt; int:
-        num = 0
-        a = abs(x)
-        while(a!=0):
-            temp = a % 10
-            num = num * 10 + temp
-            a = a // 10
-        if x &gt; 0 and num &lt; 2**31:
-            return num
-        elif x &lt; 0 and num &lt;= 2**31:
-            return -num
-        else:
-            return 0</code></pre>
-<p>借助temp反转数字</p>
-<h1 id="解法2、字符串反转"><a href="#解法2、字符串反转" class="headerlink" title="解法2、字符串反转"></a>解法2、字符串反转</h1><pre><code class="python">class Solution:
-    def reverse(self, x: int) -&gt; int:
-        abs_num = abs(x)
-        abs_num_ = int(str(abs_num)[::-1])
+        <h1 id="1、接收“数组长度和数字数组”"><a href="#1、接收“数组长度和数字数组”" class="headerlink" title="1、接收“数组长度和数字数组”"></a>1、接收“数组长度和数字数组”</h1><p>第一行：数组长度；<br>第二行：数组空格间隔</p>
+<pre><code class="python">n = int(input())
+arr = input()
 
-        if abs_num_&lt;-2**31 or abs_num_&gt;2**31-1:
-            return 0
-        if x&lt;0:
-            return -abs_num_
-        return abs_num_</code></pre>
-<h1 id="解法3、"><a href="#解法3、" class="headerlink" title="解法3、"></a>解法3、</h1><pre><code class="python">class Solution:
-    def reverse(self, x):
-        r = x // max(1, abs(x)) * int(str(abs(x))[::-1])
-        return r if r.bit_length() &lt; 32 or r == -2**31 else 0</code></pre>
-<ul>
-<li>x // max(1, abs(x))意味着 0：x为0， 1：x为正， -1：x为负，相当于被废弃的函数cmp</li>
-<li>[::-1]代表序列反转</li>
-<li>2^31 和 -2^31 的比特数为32，其中正负号占用了一位</li>
-<li>32位整数范围 [−2^31， 2^31 − 1] 中正数范围小一个是因为0的存在<h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1>1、<a href="https://www.bilibili.com/video/av45840031" target="_blank" rel="noopener">https://www.bilibili.com/video/av45840031</a><br>3、对应题目下<strong>Knife丶</strong>的题解</li>
-</ul>
+arr_ = [int(n) for n in arr.split()]
+...</code></pre>
+<h1 id="2、接收数组长度和逐行输入数组内容"><a href="#2、接收数组长度和逐行输入数组内容" class="headerlink" title="2、接收数组长度和逐行输入数组内容"></a>2、接收数组长度和逐行输入数组内容</h1><p>第一行：数组长度n；<br>第二至n+1行：数组内容</p>
+<pre><code class="python">n = int(input())
+arr = []
+for i in range(n):
+    tmp = int(input())
+    arr.append(tmp)</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -660,12 +629,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>LeetCode in Python-7. Reverse Integer 整数反转</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">278</span></p>
+    <p><span class="copy-title">文章标题:</span>python常用接收输入方式</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">90</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-26, 17:18:23</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-26, 17:25:12</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-整数反转/" title="LeetCode in Python-7. Reverse Integer 整数反转">https://night-zhang.github.io/2019/07/26/LeetCode-in-Python-7-Reverse-Integer-整数反转/</a>
+    <p><span class="copy-title">发布时间:</span>2019-08-12, 08:59:29</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-12, 09:04:10</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/12/python常用接收输入方式/" title="python常用接收输入方式">https://night-zhang.github.io/2019/08/12/python常用接收输入方式/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

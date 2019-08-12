@@ -6,20 +6,18 @@
   <meta name="keywords" content=" LeetCode ">
   <meta name="description" content="LeetCode in Python-9. Palindrome Number 回文数 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="了解 Python 字节码是什么，Python 如何使用它来执行你的代码，以及知道它是如何帮到你的。 Python 如何工作 Python 虚拟机内幕 访问和理解 Python 字节码 字节码的用处 延伸阅读 原文 感想  了解 Python 字节码是什么，Python 如何使用它来执行你的代码，以及知道它是如何帮到你的。如果你曾经编写过 Python，或者只是使用过 Python，你或许经常会">
-<meta name="keywords" content="转载,Python">
+<meta name="description" content="草稿 //创建草稿： $ hexo new draft &amp;quot;new draft&amp;quot;  //草稿转文章（或手动移动_draft下相关文件至_post）： $ hexo publish [layout] &amp;lt;filename&amp;gt;  //强行预览草稿，更改配置文件： render_drafts: true  //启动草稿server： $ hexo server --drafts">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python字节码介绍">
-<meta property="og:url" content="https://night-zhang.github.io/2019/07/31/Python字节码介绍/index.html">
+<meta property="og:title" content="hexo技巧">
+<meta property="og:url" content="https://night-zhang.github.io/2019/08/02/hexo技巧/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="了解 Python 字节码是什么，Python 如何使用它来执行你的代码，以及知道它是如何帮到你的。 Python 如何工作 Python 虚拟机内幕 访问和理解 Python 字节码 字节码的用处 延伸阅读 原文 感想  了解 Python 字节码是什么，Python 如何使用它来执行你的代码，以及知道它是如何帮到你的。如果你曾经编写过 Python，或者只是使用过 Python，你或许经常会">
+<meta property="og:description" content="草稿 //创建草稿： $ hexo new draft &amp;quot;new draft&amp;quot;  //草稿转文章（或手动移动_draft下相关文件至_post）： $ hexo publish [layout] &amp;lt;filename&amp;gt;  //强行预览草稿，更改配置文件： render_drafts: true  //启动草稿server： $ hexo server --drafts">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://night-zhang.github.io/2019/07/31/Python字节码介绍/2019-07-31-17-13-53.png">
-<meta property="og:updated_time" content="2019-08-01T06:17:28.000Z">
+<meta property="og:updated_time" content="2019-08-02T03:26:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python字节码介绍">
-<meta name="twitter:description" content="了解 Python 字节码是什么，Python 如何使用它来执行你的代码，以及知道它是如何帮到你的。 Python 如何工作 Python 虚拟机内幕 访问和理解 Python 字节码 字节码的用处 延伸阅读 原文 感想  了解 Python 字节码是什么，Python 如何使用它来执行你的代码，以及知道它是如何帮到你的。如果你曾经编写过 Python，或者只是使用过 Python，你或许经常会">
-<meta name="twitter:image" content="https://night-zhang.github.io/2019/07/31/Python字节码介绍/2019-07-31-17-13-53.png">
+<meta name="twitter:title" content="hexo技巧">
+<meta name="twitter:description" content="草稿 //创建草稿： $ hexo new draft &amp;quot;new draft&amp;quot;  //草稿转文章（或手动移动_draft下相关文件至_post）： $ hexo publish [layout] &amp;lt;filename&amp;gt;  //强行预览草稿，更改配置文件： render_drafts: true  //启动草稿server： $ hexo server --drafts">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -164,7 +162,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(22)</small></div></li>
+    <li><div class="all active">全部文章<small>(23)</small></div></li>
     
         
             
@@ -192,7 +190,7 @@
     
         
             
-            <li><div data-rel="Python">Python<small>(2)</small></div>
+            <li><div data-rel="Python">Python<small>(3)</small></div>
                 
             </li>
             
@@ -201,14 +199,6 @@
         
             
             <li><div data-rel="Vim">Vim<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="笔记">笔记<small>(2)</small></div>
                 
             </li>
             
@@ -238,6 +228,14 @@
             
         
     
+        
+            
+            <li><div data-rel="笔记">笔记<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -250,8 +248,8 @@
     </div>
     <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="22">
-<input type="hidden" id="yelog_site_word_count" value="12.5k">
+<input type="hidden" id="yelog_site_posts_number" value="23">
+<input type="hidden" id="yelog_site_word_count" value="12.9k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -307,10 +305,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">名词</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">vscode</a>
     </li>
     
@@ -324,6 +318,10 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">笔记</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">名词</a>
     </li>
     
     <div class="clearfix"></div>
@@ -350,6 +348,14 @@
            data-author="" >
             <span class="post-title" title="日常笔记(持续更新)">日常笔记(持续更新)</span>
             <span class="post-date" title="2019-07-24 16:41:55">2019/07/24</span>
+        </a>
+        
+        <a  class="Python "
+           href="/2019/08/12/python常用接收输入方式/"
+           data-tag="Python"
+           data-author="" >
+            <span class="post-title" title="python常用接收输入方式">python常用接收输入方式</span>
+            <span class="post-date" title="2019-08-12 08:59:29">2019/08/12</span>
         </a>
         
         <a  class="hexo "
@@ -741,7 +747,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#CTF','#LeetCode','#Linux','#转载','#Python','#Vim','#名词','#vscode','#hexo','#VxWorks','#笔记',],
+            'data': ['#CTF','#LeetCode','#Linux','#转载','#Python','#Vim','#vscode','#hexo','#VxWorks','#笔记','#名词',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
