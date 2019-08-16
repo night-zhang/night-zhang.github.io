@@ -6,18 +6,21 @@
   <meta name="keywords" content>
   <meta name="description" content="夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="1、接收“数组长度和数字数组”第一行：数组长度；第二行：数组空格间隔 n = int(input()) arr = input() # python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来 # eg: &amp;quot;1 2 3&amp;quot;  arr_ = [int(n) for n in arr.split()] .">
-<meta name="keywords" content="Python">
+<meta name="description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
+<meta name="keywords" content="转载,Windows">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python常用接收输入方式">
-<meta property="og:url" content="https://night-zhang.github.io/2019/08/12/python常用接收输入方式/index.html">
+<meta property="og:title" content="图解说明——究竟什么是Windows句柄">
+<meta property="og:url" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="1、接收“数组长度和数字数组”第一行：数组长度；第二行：数组空格间隔 n = int(input()) arr = input() # python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来 # eg: &amp;quot;1 2 3&amp;quot;  arr_ = [int(n) for n in arr.split()] .">
+<meta property="og:description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-12T01:24:40.000Z">
+<meta property="og:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-14-47.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-15-01.png">
+<meta property="og:updated_time" content="2019-08-16T02:26:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python常用接收输入方式">
-<meta name="twitter:description" content="1、接收“数组长度和数字数组”第一行：数组长度；第二行：数组空格间隔 n = int(input()) arr = input() # python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来 # eg: &amp;quot;1 2 3&amp;quot;  arr_ = [int(n) for n in arr.split()] .">
+<meta name="twitter:title" content="图解说明——究竟什么是Windows句柄">
+<meta name="twitter:description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
+<meta name="twitter:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-14-47.png">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -366,7 +369,7 @@
            href="/2019/08/16/图解说明究竟什么是Windows句柄/"
            data-tag="转载,Windows"
            data-author="" >
-            <span class="post-title" title="图解说明————究竟什么是Windows句柄">图解说明————究竟什么是Windows句柄</span>
+            <span class="post-title" title="图解说明——究竟什么是Windows句柄">图解说明——究竟什么是Windows句柄</span>
             <span class="post-date" title="2019-08-16 10:10:46">2019/08/16</span>
         </a>
         

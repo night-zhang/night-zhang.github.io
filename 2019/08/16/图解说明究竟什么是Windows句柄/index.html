@@ -2,22 +2,25 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>图解说明————究竟什么是Windows句柄 | 夜晚将会美丽、</title>
+  <title>图解说明——究竟什么是Windows句柄 | 夜晚将会美丽、</title>
   <meta name="keywords" content=" 转载 , Windows ">
-  <meta name="description" content="图解说明————究竟什么是Windows句柄 | 夜晚将会美丽、">
+  <meta name="description" content="图解说明——究竟什么是Windows句柄 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="1、接收“数组长度和数字数组”第一行：数组长度；第二行：数组空格间隔 n = int(input()) arr = input() # python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来 # eg: &amp;quot;1 2 3&amp;quot;  arr_ = [int(n) for n in arr.split()] .">
-<meta name="keywords" content="Python">
+<meta name="description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
+<meta name="keywords" content="转载,Windows">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python常用接收输入方式">
-<meta property="og:url" content="https://night-zhang.github.io/2019/08/12/python常用接收输入方式/index.html">
+<meta property="og:title" content="图解说明——究竟什么是Windows句柄">
+<meta property="og:url" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="1、接收“数组长度和数字数组”第一行：数组长度；第二行：数组空格间隔 n = int(input()) arr = input() # python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来 # eg: &amp;quot;1 2 3&amp;quot;  arr_ = [int(n) for n in arr.split()] .">
+<meta property="og:description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-12T01:24:40.000Z">
+<meta property="og:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-14-47.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-15-01.png">
+<meta property="og:updated_time" content="2019-08-16T02:26:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python常用接收输入方式">
-<meta name="twitter:description" content="1、接收“数组长度和数字数组”第一行：数组长度；第二行：数组空格间隔 n = int(input()) arr = input() # python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来 # eg: &amp;quot;1 2 3&amp;quot;  arr_ = [int(n) for n in arr.split()] .">
+<meta name="twitter:title" content="图解说明——究竟什么是Windows句柄">
+<meta name="twitter:description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
+<meta name="twitter:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-14-47.png">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -366,7 +369,7 @@
            href="/2019/08/16/图解说明究竟什么是Windows句柄/"
            data-tag="转载,Windows"
            data-author="" >
-            <span class="post-title" title="图解说明————究竟什么是Windows句柄">图解说明————究竟什么是Windows句柄</span>
+            <span class="post-title" title="图解说明——究竟什么是Windows句柄">图解说明——究竟什么是Windows句柄</span>
             <span class="post-date" title="2019-08-16 10:10:46">2019/08/16</span>
         </a>
         
@@ -552,7 +555,7 @@
     <div class="pjax">
         <article id="post-图解说明究竟什么是Windows句柄" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">图解说明————究竟什么是Windows句柄</h1>
+        <h1 class="article-title">图解说明——究竟什么是Windows句柄</h1>
     
     <div class="article-meta">
         
@@ -576,7 +579,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-16 10:21:56'>2019-08-16 10:10</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-16 10:26:32'>2019-08-16 10:10</time>
         
     </div>
     <div class="article-meta">
@@ -653,7 +656,8 @@
 <li>作用上，Windows使用句柄来标识诸如窗口、位图、画笔等对象，并通过句柄找到这些对象。</li>
 </ul>
 <h1 id="下面，关于句柄，再交代一些关键性细节："><a href="#下面，关于句柄，再交代一些关键性细节：" class="headerlink" title="下面，关于句柄，再交代一些关键性细节："></a>下面，关于句柄，再交代一些关键性细节：</h1><p>1.所谓“唯一”、“不变”是指在程序的一次运行中。如果本次运行完，关闭程序，再次启动程序运行，那么这次运行中，同一对象的句柄的值和上次运行时比较，一般是不一样的。</p>
-<pre><code>其实这理解起来也很自然，所谓“一把归一把，这把是这把，那把是那把，两者不相干”（“把”是形象的说法，就像打牌一样，这里指程序的一次运行）。</code></pre><p>2.句柄是对象生成时系统指定的，属性是只读的，程序员不能修改句柄。</p>
+<p>&emsp;&emsp;其实这理解起来也很自然，所谓“一把归一把，这把是这把，那把是那把，两者不相干”（“把”是形象的说法，就像打牌一样，这里指程序的一次运行）。</p>
+<p>2.句柄是对象生成时系统指定的，属性是只读的，程序员不能修改句柄。</p>
 <p>3.不同的系统中，句柄的大小（字节数）是不同的，可以使用sizeof()来计算句柄的大小。</p>
 <p>4.通过句柄，程序员只能调用系统提供的服务（即API调用），不能像使用指针那样，做其它的事。</p>
 <h1 id="写在后面："><a href="#写在后面：" class="headerlink" title="写在后面："></a>写在后面：</h1><p>1.到此为止，有关Windows句柄就简单介绍到这里。需要说明的是，本文是面向初学者的，旨在让读者对句柄有一个完整而清晰的认知，既要避免知其然而不知其所以然的茫然困惑，又要避免深入源码的艰难晦涩。因此，本文并不能做到绝对的直达本质，同时也可能在个别细节上与真实情况稍有出入，但在下认为这并不贻害初学者对句柄的认识。因为对某一知识的认知，从几乎一无所知或是一知半解到“精通”，往往需要更多新知识的补充，短时间内很难达到，在不影响知识的使用的前提下，先把握整体，在逐步深入细节，不失为一个明智的选择。想进一步深入理解Windows句柄的读者，可以看在下的下一篇文章<a href="https://www.cnblogs.com/zpcdbky/p/4656449.html" target="_blank" rel="noopener">《源码剖析——深入Windows句柄本质》</a>。</p>
@@ -675,12 +679,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>图解说明————究竟什么是Windows句柄</p>
+    <p><span class="copy-title">文章标题:</span>图解说明——究竟什么是Windows句柄</p>
     <p><span class="copy-title">文章字数:</span><span class="post-count">1.6k</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-16, 10:10:46</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-16, 10:21:56</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/16/图解说明究竟什么是Windows句柄/" title="图解说明————究竟什么是Windows句柄">https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/</a>
+    <p><span class="copy-title">最后更新:</span>2019-08-16, 10:26:32</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/16/图解说明究竟什么是Windows句柄/" title="图解说明——究竟什么是Windows句柄">https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
