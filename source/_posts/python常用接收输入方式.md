@@ -16,6 +16,8 @@ tags:
 ```python
 n = int(input())
 arr = input()
+# python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来
+# eg: "1 2 3"
 
 arr_ = [int(n) for n in arr.split()]
 ...
