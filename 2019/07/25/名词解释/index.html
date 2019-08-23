@@ -6,21 +6,21 @@
   <meta name="keywords" content=" 名词 ">
   <meta name="description" content="名词解释(持续更新) | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
-<meta name="keywords" content="转载,Windows">
+<meta name="description" content="build报错“unable to allocate heap” 解决方法 原因分析 参考  build报错“unable to allocate heap”按照原帖VxWorks+Tornado从听说到入门的相关步骤在win10下，进行到“使用偏、step4、build vxworks”时，会有以下报错 wtxtcl D:\zjm\VxWorks相关\Tornado2.2\host\src\h">
+<meta name="keywords" content="Vxworks">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图解说明——究竟什么是Windows句柄">
-<meta property="og:url" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/index.html">
+<meta property="og:title" content="tornado创建项目后build vxworks报错unable to allocate heap, heap_chunk_size 587202560, Win32 error 0">
+<meta property="og:url" content="https://night-zhang.github.io/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
+<meta property="og:description" content="build报错“unable to allocate heap” 解决方法 原因分析 参考  build报错“unable to allocate heap”按照原帖VxWorks+Tornado从听说到入门的相关步骤在win10下，进行到“使用偏、step4、build vxworks”时，会有以下报错 wtxtcl D:\zjm\VxWorks相关\Tornado2.2\host\src\h">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-14-47.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-15-01.png">
-<meta property="og:updated_time" content="2019-08-16T02:26:32.000Z">
+<meta property="og:image" content="https://night-zhang.github.io/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/2019-08-23-14-21-43.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/2019-08-23-14-24-45.png">
+<meta property="og:updated_time" content="2019-08-23T06:28:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图解说明——究竟什么是Windows句柄">
-<meta name="twitter:description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
-<meta name="twitter:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-14-47.png">
+<meta name="twitter:title" content="tornado创建项目后build vxworks报错unable to allocate heap, heap_chunk_size 587202560, Win32 error 0">
+<meta name="twitter:description" content="build报错“unable to allocate heap” 解决方法 原因分析 参考  build报错“unable to allocate heap”按照原帖VxWorks+Tornado从听说到入门的相关步骤在win10下，进行到“使用偏、step4、build vxworks”时，会有以下报错 wtxtcl D:\zjm\VxWorks相关\Tornado2.2\host\src\h">
+<meta name="twitter:image" content="https://night-zhang.github.io/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/2019-08-23-14-21-43.png">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -165,11 +165,11 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(24)</small></div></li>
+    <li><div class="all active">全部文章<small>(25)</small></div></li>
     
         
             
-            <li><div data-rel="Leetcode">Leetcode<small>(8)</small></div>
+            <li><div data-rel="CTF">CTF<small>(2)</small></div>
                 
             </li>
             
@@ -177,7 +177,7 @@
     
         
             
-            <li><div data-rel="CTF">CTF<small>(2)</small></div>
+            <li><div data-rel="Leetcode">Leetcode<small>(8)</small></div>
                 
             </li>
             
@@ -209,6 +209,14 @@
     
         
             
+            <li><div data-rel="Vxworks">Vxworks<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
             <li><div data-rel="vscode">vscode<small>(1)</small></div>
                 
             </li>
@@ -233,7 +241,7 @@
     
         
             
-            <li><div data-rel="笔记">笔记<small>(2)</small></div>
+            <li><div data-rel="固件分析">固件分析<small>(1)</small></div>
                 
             </li>
             
@@ -241,7 +249,7 @@
     
         
             
-            <li><div data-rel="固件分析">固件分析<small>(1)</small></div>
+            <li><div data-rel="笔记">笔记<small>(2)</small></div>
                 
             </li>
             
@@ -259,8 +267,8 @@
     </div>
     <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="24">
-<input type="hidden" id="yelog_site_word_count" value="14.5k">
+<input type="hidden" id="yelog_site_posts_number" value="25">
+<input type="hidden" id="yelog_site_word_count" value="15.5k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -292,11 +300,11 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">LeetCode</a>
+        <a href="javascript:" class="color4">CTF</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">CTF</a>
+        <a href="javascript:" class="color4">LeetCode</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -316,6 +324,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Vxworks</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">vscode</a>
     </li>
     
@@ -328,15 +340,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">笔记</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">VxWorks</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">名词</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">笔记</a>
     </li>
     
     <div class="clearfix"></div>
@@ -363,6 +375,14 @@
            data-author="" >
             <span class="post-title" title="日常笔记(持续更新)">日常笔记(持续更新)</span>
             <span class="post-date" title="2019-07-24 16:41:55">2019/07/24</span>
+        </a>
+        
+        <a  class="Vxworks "
+           href="/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/"
+           data-tag="Vxworks"
+           data-author="" >
+            <span class="post-title" title="tornado创建项目后build vxworks报错unable to allocate heap, heap_chunk_size 587202560, Win32 error 0">tornado创建项目后build vxworks报错unable to allocate heap, heap_chunk_size 587202560, Win32 error 0</span>
+            <span class="post-date" title="2019-08-23 14:11:28">2019/08/23</span>
         </a>
         
         <a  class="Windows "
@@ -579,12 +599,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-05 15:05:58'>2019-07-25 13:47</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-23 09:22:04'>2019-07-25 13:47</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.3k</span>
+        <span>字数:1.4k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -614,7 +634,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#声明"><span class="toc-text">声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python-egg-info"><span class="toc-text">Python egg_info</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#XXE漏洞"><span class="toc-text">XXE漏洞</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ROP系统攻击"><span class="toc-text">ROP系统攻击</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#POC"><span class="toc-text">POC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CWE"><span class="toc-text">CWE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CVE"><span class="toc-text">CVE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ELF（文件格式）"><span class="toc-text">ELF（文件格式）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学符号Ⅱ"><span class="toc-text">数学符号Ⅱ()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物联网"><span class="toc-text">物联网</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OSS-（操作支持子系统）"><span class="toc-text">OSS （操作支持子系统）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Endian"><span class="toc-text">Endian</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BSS端"><span class="toc-text">BSS端</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#声明"><span class="toc-text">声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Python-egg-info"><span class="toc-text">Python egg_info</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PLC"><span class="toc-text">PLC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#XXE漏洞"><span class="toc-text">XXE漏洞</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ROP系统攻击"><span class="toc-text">ROP系统攻击</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#POC"><span class="toc-text">POC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CWE"><span class="toc-text">CWE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CVE"><span class="toc-text">CVE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ELF（文件格式）"><span class="toc-text">ELF（文件格式）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学符号Ⅱ"><span class="toc-text">数学符号Ⅱ()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#物联网"><span class="toc-text">物联网</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OSS-（操作支持子系统）"><span class="toc-text">OSS （操作支持子系统）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Endian"><span class="toc-text">Endian</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BSS端"><span class="toc-text">BSS端</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -632,6 +652,7 @@
         <ul>
 <li><a href="#%e5%a3%b0%e6%98%8e"><strong>声明</strong></a></li>
 <li><a href="#python-egginfo"><strong>Python egg_info</strong></a></li>
+<li><a href="#plc"><strong>PLC</strong></a></li>
 <li><a href="#xxe%e6%bc%8f%e6%b4%9e"><strong>XXE漏洞</strong></a></li>
 <li><a href="#rop%e7%b3%bb%e7%bb%9f%e6%94%bb%e5%87%bb"><strong>ROP系统攻击</strong></a></li>
 <li><a href="#poc"><strong>POC</strong></a></li>
@@ -647,6 +668,7 @@
 <h1 id="Python-egg-info"><a href="#Python-egg-info" class="headerlink" title="Python egg_info"></a><strong>Python egg_info</strong></h1><p>python 中的egg文件:类似于Java 中的jar 包，把一系列的python源码文件、元数据文件、其他资源文件 zip 压缩，重新命名为.egg 文件，目的是作为一个整体进行发布。</p>
 <p><a href="https://stackoverflow.com/questions/2051192/what-is-a-python-egg" target="_blank" rel="noopener">https://stackoverflow.com/questions/2051192/what-is-a-python-egg</a></p>
 <p><a href="https://packaging.python.org/discussions/wheel-vs-egg/" target="_blank" rel="noopener">https://packaging.python.org/discussions/wheel-vs-egg/</a></p>
+<h1 id="PLC"><a href="#PLC" class="headerlink" title="PLC"></a><strong>PLC</strong></h1><p>PLC控制系统，Programmable Logic Controller，可编程逻辑控制器，专为工业生产设计的一种数字运算操作的电子装置，它采用一类可编程的存储器，用于其内部存储程序，执行逻辑运算，顺序控制，定时，计数与算术操作等面向用户的指令，并通过数字或模拟式输入/输出控制各种类型的机械或生产过程。是工业控制的核心部分。</p>
 <h1 id="XXE漏洞"><a href="#XXE漏洞" class="headerlink" title="XXE漏洞"></a><strong>XXE漏洞</strong></h1><p>XXE全称是——XML External Entity,也就是XML外部实体注入攻击.漏洞是在对不安全的外部实体数据进行处理时引发的安全问题</p>
 <h1 id="ROP系统攻击"><a href="#ROP系统攻击" class="headerlink" title="ROP系统攻击"></a><strong>ROP系统攻击</strong></h1><p>ROP全称为Return-oriented Programming（面向返回的编程）是一种新型的基于代码复用技术的攻击，攻击者从已有的库或可执行文件中提取指令片段，构建恶意代码。</p>
 <p>ROP攻击同缓冲区溢出攻击，格式化字符串漏洞攻击不同，是一种全新的攻击方式,它利用代码复用技术。</p>
@@ -702,10 +724,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>名词解释(持续更新)</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">1.3k</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">1.4k</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
     <p><span class="copy-title">发布时间:</span>2019-07-25, 13:47:30</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-05, 15:05:58</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-23, 09:22:04</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/25/名词解释/" title="名词解释(持续更新)">https://night-zhang.github.io/2019/07/25/名词解释/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -788,7 +810,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#LeetCode','#CTF','#Linux','#转载','#Python','#Vim','#vscode','#hexo','#Windows','#笔记','#VxWorks','#名词',],
+            'data': ['#CTF','#LeetCode','#Linux','#转载','#Python','#Vim','#Vxworks','#vscode','#hexo','#Windows','#VxWorks','#名词','#笔记',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
