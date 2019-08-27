@@ -6,21 +6,21 @@
   <meta name="keywords" content=" 软件 ">
   <meta name="description" content="常用软件清单 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="build报错“unable to allocate heap” 解决方法 原因分析 参考  build报错“unable to allocate heap”按照原帖VxWorks+Tornado从听说到入门的相关步骤在win10下，进行到“使用篇、step4、build vxworks”时，会有以下报错 wtxtcl D:\zjm\VxWorks相关\Tornado2.2\host\src\h">
-<meta name="keywords" content="Vxworks">
+<meta name="description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
+<meta name="keywords" content="转载,Windows">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tornado创建项目后build vxworks报错unable to allocate heap, heap_chunk_size 587202560, Win32 error 0">
-<meta property="og:url" content="https://night-zhang.github.io/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/index.html">
+<meta property="og:title" content="图解说明——究竟什么是Windows句柄">
+<meta property="og:url" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/index.html">
 <meta property="og:site_name" content="夜晚将会美丽、">
-<meta property="og:description" content="build报错“unable to allocate heap” 解决方法 原因分析 参考  build报错“unable to allocate heap”按照原帖VxWorks+Tornado从听说到入门的相关步骤在win10下，进行到“使用篇、step4、build vxworks”时，会有以下报错 wtxtcl D:\zjm\VxWorks相关\Tornado2.2\host\src\h">
+<meta property="og:description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://night-zhang.github.io/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/2019-08-23-14-21-43.png">
-<meta property="og:image" content="https://night-zhang.github.io/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/2019-08-23-14-24-45.png">
-<meta property="og:updated_time" content="2019-08-23T06:33:12.000Z">
+<meta property="og:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-14-47.png">
+<meta property="og:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-15-01.png">
+<meta property="og:updated_time" content="2019-08-16T02:26:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tornado创建项目后build vxworks报错unable to allocate heap, heap_chunk_size 587202560, Win32 error 0">
-<meta name="twitter:description" content="build报错“unable to allocate heap” 解决方法 原因分析 参考  build报错“unable to allocate heap”按照原帖VxWorks+Tornado从听说到入门的相关步骤在win10下，进行到“使用篇、step4、build vxworks”时，会有以下报错 wtxtcl D:\zjm\VxWorks相关\Tornado2.2\host\src\h">
-<meta name="twitter:image" content="https://night-zhang.github.io/2019/08/23/tornado创建项目后build-vxworks报错unable-to-allocate-heap-heap-chunk-size-587202560-Win32-error-0/2019-08-23-14-21-43.png">
+<meta name="twitter:title" content="图解说明——究竟什么是Windows句柄">
+<meta name="twitter:description" content="写在前面： 这里需要说明： 让我们先看图，再解释。 简单解释： 下面，关于句柄，再交代一些关键性细节： 写在后面： 转自  写在前面：对于“句柄”，在下一直停留在一知半解的认识层面，近日在下学习Windows编程，决定趁此机会将句柄彻底搞清楚。查阅了一些网络上的资料，发现网络上的讲解大概可以分为两类：一种是以比喻、类比的方式说明，这种方法虽然形象易懂，但并没有从原理上、本质上加以揭示，让人仍然想">
+<meta name="twitter:image" content="https://night-zhang.github.io/2019/08/16/图解说明究竟什么是Windows句柄/2019-08-16-10-14-47.png">
 
 
 <link rel="icon" href="/img/miaomiao.jpg">
@@ -609,12 +609,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-27 09:56:56'>2019-08-27 09:12</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-27 10:06:34'>2019-08-27 09:12</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:238</span>
+        <span>字数:246</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -673,7 +673,9 @@
 <li>微信</li>
 <li>qq浏览器</li>
 <li>谷歌</li>
-<li>网易云音乐<h1 id="装机必备"><a href="#装机必备" class="headerlink" title="装机必备"></a>装机必备</h1></li>
+<li>网易云音乐</li>
+</ul>
+<h1 id="装机必备"><a href="#装机必备" class="headerlink" title="装机必备"></a>装机必备</h1><ul>
 <li>系统相关<ul>
 <li>KMSTools_win10激活神器  ✔</li>
 </ul>
@@ -712,9 +714,11 @@
 </ul>
 </li>
 <li>解锁工具<ul>
-<li>lockhunter解锁文件占用    ✔<h1 id="编程必备"><a href="#编程必备" class="headerlink" title="编程必备"></a>编程必备</h1></li>
+<li>lockhunter解锁文件占用    ✔</li>
 </ul>
 </li>
+</ul>
+<h1 id="编程必备"><a href="#编程必备" class="headerlink" title="编程必备"></a>编程必备</h1><ul>
 <li>工具<ul>
 <li>git</li>
 <li>github desktop</li>
@@ -758,18 +762,25 @@
 </li>
 <li>markdown<ul>
 <li>typora</li>
-<li><h1 id="娱乐必备"><a href="#娱乐必备" class="headerlink" title="娱乐必备"></a>娱乐必备</h1></li>
 </ul>
 </li>
+<li>postman<ul>
+<li>Postman-win64-6.1.4-Setup.exe     ✔</li>
+</ul>
+</li>
+</ul>
+<h1 id="娱乐必备"><a href="#娱乐必备" class="headerlink" title="娱乐必备"></a>娱乐必备</h1><ul>
 <li>音乐<ul>
 <li>网易云</li>
 </ul>
 </li>
 <li>视频<ul>
 <li>qq播放器</li>
-<li>potplayer<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1></li>
+<li>potplayer</li>
 </ul>
 </li>
+</ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ul>
 <li>AIDA64Business（硬件检测）    ✔</li>
 <li>V2RayW（科学上网）    ✔</li>
 <li>Photoshop+CS6.0（阉割破解版）    ✔</li>
@@ -791,10 +802,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>常用软件清单</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">238</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">246</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
     <p><span class="copy-title">发布时间:</span>2019-08-27, 09:12:21</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-27, 09:56:56</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-27, 10:06:34</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/27/常用软件记录/" title="常用软件清单">https://night-zhang.github.io/2019/08/27/常用软件记录/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
