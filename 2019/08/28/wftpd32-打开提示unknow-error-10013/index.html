@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>python常用接收输入方式 | 夜晚将会美丽、</title>
-  <meta name="keywords" content=" Python ">
-  <meta name="description" content="python常用接收输入方式 | 夜晚将会美丽、">
+  <title>打开FTP server或者wftpd32提示 unknow error 10013 | 夜晚将会美丽、</title>
+  <meta name="keywords" content=" Windows ">
+  <meta name="description" content="打开FTP server或者wftpd32提示 unknow error 10013 | 夜晚将会美丽、">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="问题描述近期在进行vxworks的相关环境搭建时打开FTP server总提示unknow error，由于没有详细报错信息或错位编号，打开根目录发现调用的是wftpd32程序。后考虑可能是软件版本问题，去官网下载了最新的wftpd323，还是同样的问题，不过有错误编号 解决方法经查询，该错误是因为FTP默认使用21号端口，本机可能开启其他FTP服务即会出现此问题，关闭或者修改端口即可。 nets">
 <meta name="keywords" content="Windows">
@@ -601,9 +601,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-python常用接收输入方式" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-wftpd32-打开提示unknow-error-10013" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">python常用接收输入方式</h1>
+        <h1 class="article-title">打开FTP server或者wftpd32提示 unknow error 10013</h1>
     
     <div class="article-meta">
         
@@ -611,26 +611,26 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="Python">Python</a>
+                <a href="javascript:" data-rel="Windows">Windows</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color2">Python</a>
+            <a href="javascript:" class="color3">Windows</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-12 09:24:40'>2019-08-12 08:59</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-28 10:04:04'>2019-08-28 09:41</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:131</span>
+        <span>字数:244</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -660,7 +660,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1、接收“数组长度和数字数组”"><span class="toc-text">1、接收“数组长度和数字数组”</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2、接收数组长度和逐行输入数组内容"><span class="toc-text">2、接收数组长度和逐行输入数组内容</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题描述"><span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决方法"><span class="toc-text">解决方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#重启ftp"><span class="toc-text">重启ftp</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -675,20 +675,17 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1、接收“数组长度和数字数组”"><a href="#1、接收“数组长度和数字数组”" class="headerlink" title="1、接收“数组长度和数字数组”"></a>1、接收“数组长度和数字数组”</h1><p>第一行：数组长度；<br>第二行：数组空格间隔</p>
-<pre><code class="python">n = int(input())
-arr = input()
-# python2在使用input时，实际调用的是eval(raw_input(prompt))来获取输入，接收带空格的时候需要用引号括起来
-# eg: &quot;1 2 3&quot;
-
-arr_ = [int(n) for n in arr.split()]
-...</code></pre>
-<h1 id="2、接收数组长度和逐行输入数组内容"><a href="#2、接收数组长度和逐行输入数组内容" class="headerlink" title="2、接收数组长度和逐行输入数组内容"></a>2、接收数组长度和逐行输入数组内容</h1><p>第一行：数组长度n；<br>第二至n+1行：数组内容</p>
-<pre><code class="python">n = int(input())
-arr = []
-for i in range(n):
-    tmp = int(input())
-    arr.append(tmp)</code></pre>
+        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>近期在进行vxworks的相关环境搭建时打开FTP server总提示unknow error，由于没有详细报错信息或错位编号，打开根目录发现调用的是wftpd32程序。<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-42-09.png" alt="wftpd32"><br>后考虑可能是软件版本问题，去官网下载了最新的wftpd323，还是同样的问题，不过有错误编号<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-43-07.png" alt="wftpd323"></p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>经查询，该错误是因为FTP默认使用21号端口，本机可能开启其他FTP服务即会出现此问题，关闭或者修改端口即可。</p>
+<p><code>netstat -aon | findstr &quot;21&quot;</code><br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-44-08.png" alt="查询21号端口占用情况"></p>
+<p><code>tasklist | findstr &quot;14628&quot;</code><br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-44-30.png" alt="根据PID查询任务"></p>
+<p>或任务管理器找到对应进程关闭<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-45-03.png" alt="显示PID"></p>
+<p><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-45-47.png" alt></p>
+<p><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-45-55.png" alt></p>
+<h1 id="重启ftp"><a href="#重启ftp" class="headerlink" title="重启ftp"></a>重启ftp</h1><p>若后续想重启之前的FTP服务，打开iis重启服务即可；也可把之前的FTP端口改为远大于21，例如20000以上<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-47-08.png" alt><br>出现如下报错时，打开服务界面，打开相应服务<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-47-23.png" alt></p>
+<p><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-47-56.png" alt></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.experts-exchange.com/questions/27212929/FTP-Server.html" target="_blank" rel="noopener">https://www.experts-exchange.com/questions/27212929/FTP-Server.html</a></p>
+<p><a href="https://jingyan.baidu.com/article/3c48dd34491d47e10be358b8.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/3c48dd34491d47e10be358b8.html</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 452966517@qq.com </span>
@@ -702,12 +699,12 @@ for i in range(n):
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>python常用接收输入方式</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">131</span></p>
+    <p><span class="copy-title">文章标题:</span>打开FTP server或者wftpd32提示 unknow error 10013</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">244</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Night Zhang">Night Zhang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-08-12, 08:59:29</p>
-    <p><span class="copy-title">最后更新:</span>2019-08-12, 09:24:40</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/12/python常用接收输入方式/" title="python常用接收输入方式">https://night-zhang.github.io/2019/08/12/python常用接收输入方式/</a>
+    <p><span class="copy-title">发布时间:</span>2019-08-28, 09:41:32</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-28, 10:04:04</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/28/wftpd32-打开提示unknow-error-10013/" title="打开FTP server或者wftpd32提示 unknow error 10013">https://night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

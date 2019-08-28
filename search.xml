@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>打开FTP server或者wftpd32提示 unknow error 10013</title>
+      <link href="/2019/08/28/wftpd32-%E6%89%93%E5%BC%80%E6%8F%90%E7%A4%BAunknow-error-10013/"/>
+      <url>/2019/08/28/wftpd32-%E6%89%93%E5%BC%80%E6%8F%90%E7%A4%BAunknow-error-10013/</url>
+      
+        <content type="html"><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>近期在进行vxworks的相关环境搭建时打开FTP server总提示unknow error，由于没有详细报错信息或错位编号，打开根目录发现调用的是wftpd32程序。<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-42-09.png" alt="wftpd32"><br>后考虑可能是软件版本问题，去官网下载了最新的wftpd323，还是同样的问题，不过有错误编号<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-43-07.png" alt="wftpd323"></p><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>经查询，该错误是因为FTP默认使用21号端口，本机可能开启其他FTP服务即会出现此问题，关闭或者修改端口即可。</p><p><code>netstat -aon | findstr &quot;21&quot;</code><br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-44-08.png" alt="查询21号端口占用情况"></p><p><code>tasklist | findstr &quot;14628&quot;</code><br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-44-30.png" alt="根据PID查询任务"></p><p>或任务管理器找到对应进程关闭<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-45-03.png" alt="显示PID"></p><p><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-45-47.png" alt></p><p><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-45-55.png" alt></p><h1 id="重启ftp"><a href="#重启ftp" class="headerlink" title="重启ftp"></a>重启ftp</h1><p>若后续想重启之前的FTP服务，打开iis重启服务即可；也可把之前的FTP端口改为远大于21，例如20000以上<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-47-08.png" alt><br>出现如下报错时，打开服务界面，打开相应服务<br><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-47-23.png" alt></p><p><img src="//night-zhang.github.io/2019/08/28/wftpd32-打开提示unknow-error-10013/2019-08-28-09-47-56.png" alt></p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.experts-exchange.com/questions/27212929/FTP-Server.html" target="_blank" rel="noopener">https://www.experts-exchange.com/questions/27212929/FTP-Server.html</a></p><p><a href="https://jingyan.baidu.com/article/3c48dd34491d47e10be358b8.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/3c48dd34491d47e10be358b8.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用软件清单</title>
       <link href="/2019/08/27/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E8%AE%B0%E5%BD%95/"/>
       <url>/2019/08/27/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E8%AE%B0%E5%BD%95/</url>
